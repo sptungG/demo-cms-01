@@ -46,15 +46,7 @@
         "links": [
           {
             "label": "Giới thiệu",
-            "url": "/about-us"
-          },
-          {
-            "label": "Đội ngũ",
-            "url": "/team"
-          },
-          {
-            "label": "Tuyển dụng",
-            "url": "/careers"
+            "url": "/about"
           }
         ]
       },
