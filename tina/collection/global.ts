@@ -1,7 +1,5 @@
 import type { Collection } from "tinacms";
 import { ColorPickerInput } from "../fields/color";
-import { iconSchema } from "../fields/icon";
-import { icon } from "mermaid/dist/rendering-util/rendering-elements/shapes/icon.js";
 
 const Global: Collection = {
   label: "Global",
@@ -17,7 +15,6 @@ const Global: Collection = {
       label: "Header",
       name: "header",
       fields: [
-        iconSchema as any,
         {
           type: "string",
           label: "Name",
@@ -30,6 +27,21 @@ const Global: Collection = {
           options: [
             { label: "Default", value: "default" },
             { label: "Primary", value: "primary" },
+          ],
+        },
+        {
+          type: "object",
+          label: "Logo",
+          name: "logo",
+          fields: [
+            {
+              type: "string",
+              label: "Logo",
+              name: "path",
+              ui: {
+                component: "image",
+              },
+            },
           ],
         },
         {
@@ -63,28 +75,59 @@ const Global: Collection = {
     },
     {
       type: "object",
-      label: "Footer",
       name: "footer",
+      label: "Footer",
       fields: [
         {
+          type: "string",
+          name: "description",
+          label: "Mô tả ngắn",
+          ui: { component: "textarea" },
+        },
+        {
           type: "object",
-          label: "Social Links",
-          name: "social",
-          list: true,
-          ui: {
-            itemProps: (item) => {
-              return { label: item?.icon?.name || 'undefined' };
-            },
-          },
+          name: "contactInfo",
+          label: "Thông tin liên hệ",
           fields: [
-            iconSchema as any,
+            { type: "string", name: "address", label: "Địa chỉ" },
+            { type: "string", name: "phone", label: "Số điện thoại" },
+            { type: "string", name: "email", label: "Email" },
+          ],
+        },
+        {
+          type: "object",
+          name: "linkColumns",
+          label: "Các cột liên kết",
+          list: true,
+          fields: [
+            { type: "string", name: "title", label: "Tiêu đề cột" },
             {
-              type: "string",
-              label: "Url",
-              name: "url",
+              type: "object",
+              name: "links",
+              label: "Các liên kết",
+              list: true,
+              fields: [
+                { type: "string", name: "label", label: "Nhãn" },
+                { type: "string", name: "url", label: "Đường dẫn" },
+              ],
             },
           ],
         },
+        {
+          type: "object",
+          name: "socialLinks",
+          label: "Mạng xã hội",
+          list: true,
+          fields: [
+            {
+              type: "string",
+              name: "platform",
+              label: "Nền tảng (VD: LinkedIn, Facebook)",
+            },
+            { type: "string", name: "url", label: "Đường dẫn" },
+          ],
+        },
+        { type: "string", name: "copyright", label: "Dòng Copyright" },
       ],
     },
     {

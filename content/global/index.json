@@ -1,12 +1,10 @@
 {
   "header": {
-    "icon": {
-      "name": "Tina",
-      "color": "orange",
-      "style": "float"
+    "name": "VINHAPAC",
+    "color": "primary",
+    "logo": {
+      "path": "/uploads/logo.png"
     },
-    "name": "Tina Starter",
-    "color": "default",
     "nav": [
       {
         "href": "/",
@@ -17,42 +15,69 @@
         "label": "About"
       },
       {
-        "href": "/posts",
-        "label": "Blog"
+        "href": "/services",
+        "label": "Services"
+      },
+      {
+        "href": "/gallery",
+        "label": "Gallery"
+      },
+      {
+        "href": "/contact",
+        "label": "Contact"
       }
     ]
   },
   "footer": {
-    "social": [
+    "description": "VINHAPAC - Đối tác tin cậy của bạn trong lĩnh vực xuất nhập khẩu và phân phối, kết nối thị trường và xây dựng niềm tin.",
+    "contactInfo": {
+      "address": "49/3 Lê Văn Duyệt, Phường 3, Quận Bình Thạnh, TP.HCM",
+      "phone": "123-456-7890",
+      "email": "contact@vinhapac.com"
+    },
+    "linkColumns": [
       {
-        "icon": {
-          "name": "FaLinkedin"
-        },
-        "url": "https://www.linkedin.com/company/tinacms"
+        "title": "Về chúng tôi",
+        "links": [
+          {
+            "label": "Giới thiệu",
+            "url": "/about"
+          }
+        ]
       },
       {
-        "icon": {
-          "name": "FaGithub"
-        },
-        "url": "https://github.com/tinacms/tinacms"
-      },
-      {
-        "icon": {
-          "name": "FaYoutube"
-        },
-        "url": "https://www.youtube.com/@TinaCMS"
-      },
-      {
-        "icon": {
-          "name": "FaXTwitter"
-        },
-        "url": "https://x.com/TinaCMS"
+        "title": "Dịch vụ",
+        "links": [
+          {
+            "label": "Xuất nhập khẩu",
+            "url": "/services/export-import"
+          },
+          {
+            "label": "Phân phối",
+            "url": "/services/distribution"
+          },
+          {
+            "label": "Tư vấn",
+            "url": "/services/consultancy"
+          }
+        ]
       }
-    ]
+    ],
+    "socialLinks": [
+      {
+        "platform": "LinkedIn",
+        "url": "https://linkedin.com/company/vinhapac"
+      },
+      {
+        "platform": "Facebook",
+        "url": "https://facebook.com/vinhapac"
+      }
+    ],
+    "copyright": "© 2024 VINHAPAC. All Rights Reserved."
   },
   "theme": {
     "color": "blue",
     "font": "sans",
-    "darkMode": "light"
+    "darkMode": "dark"
   }
 }
