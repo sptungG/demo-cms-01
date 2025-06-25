@@ -1,11 +1,14 @@
 {
   "header": {
     "icon": {
-      "name": "Tina",
+      "name": "VINHAPAC",
       "color": "orange",
       "style": "float"
     },
-    "name": "Tina Starter",
+    "logo": {
+      "path": "logo.png"
+    },
+    "name": "VINHAPAC",
     "color": "default",
     "nav": [
       {
@@ -17,8 +20,16 @@
         "label": "About"
       },
       {
-        "href": "/posts",
-        "label": "Blog"
+        "href": "/services",
+        "label": "Services"
+      },
+      {
+        "href": "/gallery",
+        "label": "Gallery"
+      },
+      {
+        "href": "/contact",
+        "label": "Contact"
       }
     ]
   },

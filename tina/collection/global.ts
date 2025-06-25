@@ -34,6 +34,18 @@ const Global: Collection = {
         },
         {
           type: "object",
+          label: "Logo",
+          name: "logo",
+          fields: [
+            {
+              type: "string",
+              label: "Logo",
+              name: "path",
+            },
+          ],
+        },
+        {
+          type: "object",
           label: "Nav Links",
           name: "nav",
           list: true,
@@ -73,7 +85,7 @@ const Global: Collection = {
           list: true,
           ui: {
             itemProps: (item) => {
-              return { label: item?.icon?.name || 'undefined' };
+              return { label: item?.icon?.name || "undefined" };
             },
           },
           fields: [
