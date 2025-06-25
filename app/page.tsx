@@ -3,12 +3,14 @@ import client from "@/tina/__generated__/client";
 import Layout from "@/components/layout/layout";
 import ClientPage from "./[...urlSegments]/client-page";
 
-export const revalidate = process.env.NEXT_PUBLIC_ENV === "production" ? 300 : 0;
+export const revalidate =
+  process.env.NEXT_PUBLIC_ENV === "production" ? 300 : 0;
 
 export default async function Home() {
   const data = await client.queries.page({
-    relativePath: `home.mdx`,
+    relativePath: `home.json`,
   });
+  console.log(data);
 
   return (
     <Layout rawPageData={data}>

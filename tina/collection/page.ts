@@ -1,45 +1,45 @@
-import type { Collection } from 'tinacms';
-import { heroBlockSchema } from '@/components/blocks/hero';
-import { contentBlockSchema } from '@/components/blocks/content';
-import { testimonialBlockSchema } from '@/components/blocks/testimonial';
-import { featureBlockSchema } from '@/components/blocks/features';
-import { videoBlockSchema } from '@/components/blocks/video';
-import { calloutBlockSchema } from '@/components/blocks/callout';
-import { statsBlockSchema } from '@/components/blocks/stats';
-import { ctaBlockSchema } from '@/components/blocks/call-to-action';
+import { callToActionBlockSchema } from "@/components/blocks/home/CallToAction";
+import { exportMarketsBlockSchema } from "@/components/blocks/home/ExportMarkets";
+import { featuredProductsBlockSchema } from "@/components/blocks/home/FeaturedProducts";
+import { heroSliderBlockSchema } from "@/components/blocks/home/HeroSlider";
+import { introductionBlockSchema } from "@/components/blocks/home/Introduction";
+import { newsAndEventsBlockSchema } from "@/components/blocks/home/NewsAndEvents";
+import { testimonialsBlockSchema } from "@/components/blocks/home/Testimonials";
+import { whyChooseUsBlockSchema } from "@/components/blocks/home/WhyChooseUs";
+import type { Collection } from "tinacms";
 
 const Page: Collection = {
-  label: 'Pages',
-  name: 'page',
-  path: 'content/pages',
-  format: 'mdx',
+  label: "Pages",
+  name: "page",
+  path: "content/pages",
+  format: "json",
   ui: {
     router: ({ document }) => {
-      const filepath = document._sys.breadcrumbs.join('/');
-      if (filepath === 'home') {
-        return '/';
+      const filepath = document._sys.breadcrumbs.join("/");
+      if (filepath === "home") {
+        return "/";
       }
       return `/${filepath}`;
     },
   },
   fields: [
     {
-      type: 'object',
+      type: "object",
       list: true,
-      name: 'blocks',
-      label: 'Sections',
+      name: "blocks",
+      label: "Sections",
       ui: {
         visualSelector: true,
       },
       templates: [
-        heroBlockSchema,
-        calloutBlockSchema,
-        featureBlockSchema,
-        statsBlockSchema,
-        ctaBlockSchema,
-        contentBlockSchema,
-        testimonialBlockSchema,
-        videoBlockSchema,
+        heroSliderBlockSchema,
+        introductionBlockSchema,
+        featuredProductsBlockSchema,
+        whyChooseUsBlockSchema,
+        exportMarketsBlockSchema,
+        newsAndEventsBlockSchema,
+        testimonialsBlockSchema,
+        callToActionBlockSchema,
       ],
     },
   ],
