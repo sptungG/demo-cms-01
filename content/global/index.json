@@ -1,15 +1,10 @@
 {
   "header": {
-    "icon": {
-      "name": "VINHAPAC",
-      "color": "orange",
-      "style": "float"
-    },
-    "logo": {
-      "path": "logo.png"
-    },
     "name": "VINHAPAC",
-    "color": "default",
+    "color": "primary",
+    "logo": {
+      "path": "/uploads/logo.png"
+    },
     "nav": [
       {
         "href": "/",
@@ -83,6 +78,6 @@
   "theme": {
     "color": "blue",
     "font": "sans",
-    "darkMode": "light"
+    "darkMode": "dark"
   }
 }

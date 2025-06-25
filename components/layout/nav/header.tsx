@@ -40,7 +40,7 @@ export const Header = () => {
             >
               <div className="relative h-8 w-8">
                 <Image
-                  src={`/images/${header.logo!.path as string}`}
+                  src={header.logo!.path as string}
                   fill
                   className="object-contain"
                   alt={header.name || "Logo"}
