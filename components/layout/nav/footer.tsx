@@ -22,15 +22,21 @@ export default function Footer({ data }: { data: any }) {
 
   return (
     <footer className="bg-gray-800 text-gray-300">
-      <div className="container mx-auto px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-8">
+      <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-10 md:py-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-8">
           {/* Cột thông tin công ty */}
-          <div className="md:col-span-2 lg:col-span-2">
-            <h3 className="text-white text-lg font-semibold mb-4">VINHAPAC</h3>
-            <p className="max-w-md">{description}</p>
-            <div className="mt-6 flex space-x-4">
+          <div className="sm:col-span-2 lg:col-span-2">
+            <h3 className="text-white text-xl sm:text-2xl font-semibold mb-3 sm:mb-4">VINHAPAC</h3>
+            <p className="max-w-md text-sm sm:text-base text-gray-300/90 leading-relaxed">{description}</p>
+            <div className="mt-4 sm:mt-6 flex space-x-4">
               {socialLinks.map((social: any) => (
-                <a key={social.platform} href={social.url} target="_blank" rel="noopener noreferrer" className="hover:text-orange-400 transition-colors">
+                <a 
+                  key={social.platform} 
+                  href={social.url} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="hover:text-orange-400 transition-colors duration-300 hover:scale-110"
+                >
                   <span className="sr-only">{social.platform}</span>
                   <SocialIcon platform={social.platform} />
                 </a>
@@ -40,12 +46,15 @@ export default function Footer({ data }: { data: any }) {
 
           {/* Các cột liên kết */}
           {linkColumns.map((column: any) => (
-            <div key={column.title}>
-              <h4 className="text-white font-semibold mb-4">{column.title}</h4>
-              <ul className="space-y-2">
+            <div key={column.title} className="space-y-3 sm:space-y-4">
+              <h4 className="text-white text-base sm:text-lg font-semibold">{column.title}</h4>
+              <ul className="space-y-2 sm:space-y-3">
                 {column.links.map((link: any) => (
                   <li key={link.label}>
-                    <Link href={link.url} className="hover:text-orange-400 transition-colors">
+                    <Link 
+                      href={link.url} 
+                      className="text-sm sm:text-base text-gray-300/90 hover:text-orange-400 transition-colors duration-300"
+                    >
                       {link.label}
                     </Link>
                   </li>
@@ -55,19 +64,27 @@ export default function Footer({ data }: { data: any }) {
           ))}
 
           {/* Cột liên hệ */}
-          <div>
-            <h4 className="text-white font-semibold mb-4">Liên hệ</h4>
-            <address className="not-italic space-y-2">
-              <p>{contactInfo.address}</p>
-              <p>Phone: {contactInfo.phone}</p>
-              <p>Email: <a href={`mailto:${contactInfo.email}`} className="hover:text-orange-400">{contactInfo.email}</a></p>
+          <div className="space-y-3 sm:space-y-4">
+            <h4 className="text-white text-base sm:text-lg font-semibold">Liên hệ</h4>
+            <address className="not-italic space-y-2 sm:space-y-3">
+              <p className="text-sm sm:text-base text-gray-300/90">{contactInfo.address}</p>
+              <p className="text-sm sm:text-base text-gray-300/90">Phone: {contactInfo.phone}</p>
+              <p className="text-sm sm:text-base text-gray-300/90">
+                Email: 
+                <a 
+                  href={`mailto:${contactInfo.email}`} 
+                  className="hover:text-orange-400 transition-colors duration-300"
+                >
+                  {contactInfo.email}
+                </a>
+              </p>
             </address>
           </div>
         </div>
       </div>
-      <div className="bg-gray-900 py-4">
-        <div className="container mx-auto px-6 text-center text-gray-500">
-          <p>{copyright}</p>
+      <div className="bg-gray-900 py-3 sm:py-4">
+        <div className="container mx-auto px-4 sm:px-6 text-center">
+          <p className="text-xs sm:text-sm text-gray-500/90">{copyright}</p>
         </div>
       </div>
     </footer>
