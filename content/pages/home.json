@@ -180,25 +180,6 @@
       "_template": "introduction"
     },
     {
-      "heading": "Sản Phẩm Nổi Bật",
-      "subheading": "Khám phá các dòng sản phẩm chủ lực đã được thị trường quốc tế tin chọn.",
-      "products": [
-        {
-          "name": "Nông Sản Chất Lượng Cao",
-          "image": "/uploads/news.png",
-          "description": "Nông sản chất lượng cao 2025",
-          "link": "/products/agriculture"
-        },
-        {
-          "name": "Nông Sản Chất Lượng Cao",
-          "image": "/uploads/logo.png",
-          "description": "Hạt điều, cà phê, hồ tiêu đạt chuẩn GlobalG.A.P, được chế biến và đóng gói theo tiêu chuẩn HACCP.",
-          "link": "/products/agriculture"
-        }
-      ],
-      "_template": "featuredProducts"
-    },
-    {
       "heading": "Tại Sao Chọn VINHAPAC?",
       "features": [
         {
@@ -223,6 +204,25 @@
         }
       ],
       "_template": "whyChooseUs"
+    },
+    {
+      "heading": "Sản Phẩm Nổi Bật",
+      "subheading": "Khám phá các dòng sản phẩm chủ lực đã được thị trường quốc tế tin chọn.",
+      "products": [
+        {
+          "name": "Nông Sản Chất Lượng Cao",
+          "image": "/uploads/news.png",
+          "description": "Nông sản chất lượng cao 2025",
+          "link": "/products/agriculture"
+        },
+        {
+          "name": "Nông Sản Chất Lượng Cao",
+          "image": "/uploads/logo.png",
+          "description": "Hạt điều, cà phê, hồ tiêu đạt chuẩn GlobalG.A.P, được chế biến và đóng gói theo tiêu chuẩn HACCP.",
+          "link": "/products/agriculture"
+        }
+      ],
+      "_template": "featuredProducts"
     },
     {
       "heading": "Thị Trường Xuất Khẩu",
