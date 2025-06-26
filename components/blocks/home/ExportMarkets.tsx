@@ -4,12 +4,15 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Template } from "tinacms";
+import { countryOptions } from "@/utils/global";
+import WorldMap from "@/components/WorldMap";
+import { IObj } from "@/utils/types";
 
 interface ExportMarketsProps {
   heading: string;
   subheading: string;
   mapImage: string;
-  countries: string[];
+  countries: IObj[];
 }
 
 export const ExportMarkets = ({
@@ -41,46 +44,8 @@ export const ExportMarkets = ({
           </motion.p>
         </div>
 
-        <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-white shadow-lg"
-          >
-            <Image
-              src={mapImage}
-              alt="World Map"
-              fill
-              className="object-contain p-4"
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-          >
-            <div className="grid grid-cols-2 gap-4">
-              {countries.map((country, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="flex items-center rounded-lg bg-background p-4 shadow-md"
-                >
-                  <div className="mr-3 flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-primary">
-                    {index + 1}
-                  </div>
-                  <span className="font-medium text-vina-primary">{country}</span>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
+        <div className="relative w-full aspect-[21/9] overflow-hidden rounded-xl bg-background/80 backdrop-blur-sm flex items-center justify-center p-4">
+          <WorldMap countries={countries as any}/>
         </div>
       </div>
     </section>
@@ -112,11 +77,23 @@ export const exportMarketsBlockSchema: Template = {
       required: true,
     },
     {
-      type: "string",
+      type: "object",
       name: "countries",
       label: "Countries",
       list: true,
-      required: true,
+      fields: [
+        {
+          type: "string",
+          name: "country",
+          label: "Quốc gia",
+        },
+        {
+          type: "string",
+          label: "Mã ISO",
+          name: "iso",
+          options: countryOptions,
+        },
+      ],
     },
   ],
 };

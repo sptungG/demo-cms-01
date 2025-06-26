@@ -11,7 +11,6 @@ export default async function Home() {
     relativePath: `home.json`,
   });
 
-
   return (
     <Layout rawPageData={data}>
       <ClientPage {...data} />

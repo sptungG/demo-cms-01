@@ -99,16 +99,7 @@
       "heading": "Thị Trường Xuất Khẩu",
       "subheading": "Sản phẩm của chúng tôi đã có mặt tại hơn 20 quốc gia và vùng lãnh thổ.",
       "mapImage": "/images/world-map-vinhapac.png",
-      "countries": [
-        "Hoa Kỳ",
-        "Pháp",
-        "Đức",
-        "Nhật Bản",
-        "Hàn Quốc",
-        "Úc",
-        "Canada",
-        "Anh Quốc"
-      ]
+      "countries": []
     },
     {
       "_template": "newsAndEvents",
@@ -232,14 +223,26 @@
       "subheading": "Sản phẩm của chúng tôi đã có mặt tại hơn 20 quốc gia và vùng lãnh thổ.",
       "mapImage": "/uploads/world-map-export-markets.png",
       "countries": [
-        "Anh Quốc",
-        "Canada",
-        "Úc",
-        "Hàn Quốc",
-        "Nhật Bản",
-        "Đức",
-        "Pháp",
-        "Hoa Kỳ"
+        {
+          "country": "Nhật Bản",
+          "iso": "JPN"
+        },
+        {
+          "country": "Ấn Độ",
+          "iso": "IND"
+        },
+        {
+          "country": "Indonesia",
+          "iso": "IDN"
+        },
+        {
+          "country": "Mỹ",
+          "iso": "USA"
+        },
+        {
+          "country": "Việt Nam",
+          "iso": "VNM"
+        }
       ],
       "_template": "exportMarkets"
     },

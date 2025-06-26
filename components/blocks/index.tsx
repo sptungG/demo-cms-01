@@ -7,6 +7,7 @@ import { Testimonials } from "./home/Testimonials";
 import { NewsAndEvents } from "./home/NewsAndEvents";
 import { CallToAction } from "./home/CallToAction";
 import { tinaField } from "tinacms/dist/react";
+import { IObj } from "@/utils/types";
 
 type Maybe<T> = T | null | undefined;
 
@@ -72,7 +73,7 @@ interface ExportMarketsBlock extends BaseBlock {
   heading: string;
   subheading: string;
   mapImage: string;
-  countries: string[];
+  countries: IObj[];
 }
 
 interface TestimonialsBlock extends BaseBlock {
@@ -171,7 +172,7 @@ export const Block = ({ block }: { block: PageBlock }) => {
           heading={block.heading}
           subheading={block.subheading}
           mapImage={block.mapImage}
-          countries={block.countries || []}
+          countries={block.countries as IObj[] || []}
         />
       );
     case "PageBlocksTestimonials":
