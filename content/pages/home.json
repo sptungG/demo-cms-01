@@ -1,0 +1,304 @@
+{
+  "title": "Trang Chủ",
+  "sections": [
+    {
+      "_template": "heroSlider",
+      "slides": [
+        {
+          "slogan": "Chất Lượng Toàn Cầu - Dịch Vụ Tận Tâm",
+          "subSlogan": "Giải pháp xuất nhập khẩu và phân phối toàn diện, đáp ứng những tiêu chuẩn khắt khe nhất.",
+          "backgroundImage": "/images/hero-factory.jpg",
+          "button": {
+            "label": "Xem Sản Phẩm",
+            "link": "/products"
+          }
+        },
+        {
+          "slogan": "Kết Nối Thị Trường - Xây Dựng Niềm Tin",
+          "subSlogan": "Đối tác tin cậy đồng hành cùng doanh nghiệp Việt Nam trên hành trình vươn ra thế giới.",
+          "backgroundImage": "/images/hero-logistics.jpg",
+          "button": {
+            "label": "Liên Hệ Chuyên Gia",
+            "link": "/contact-us"
+          }
+        }
+      ]
+    },
+    {
+      "_template": "introduction",
+      "heading": "Chúng tôi là VINHAPAC",
+      "content": {
+        "type": "root",
+        "children": [
+          {
+            "type": "p",
+            "children": [
+              {
+                "type": "text",
+                "text": "Với hơn 25 năm kinh nghiệm từ mạng lưới công ty mẹ tại Pháp, Mỹ và Thái Lan, VINHAPAC là đơn vị tiên phong trong lĩnh vực xuất nhập khẩu và phân phối đa ngành. Lợi thế của chúng tôi là sự am hiểu sâu sắc thị trường quốc tế, quy trình vận hành chuyên nghiệp và mạng lưới đối tác sản xuất uy tín tại Việt Nam, cam kết mang lại giá trị bền vững cho khách hàng."
+              }
+            ]
+          }
+        ]
+      },
+      "image": "/images/intro-team-meeting.jpg"
+    },
+    {
+      "_template": "featuredProducts",
+      "heading": "Sản Phẩm Nổi Bật",
+      "subheading": "Khám phá các dòng sản phẩm chủ lực đã được thị trường quốc tế tin chọn.",
+      "products": [
+        {
+          "name": "Nông Sản Chất Lượng Cao",
+          "image": "/images/products/cashew.jpg",
+          "description": "Hạt điều, cà phê, hồ tiêu đạt chuẩn GlobalG.A.P, được chế biến và đóng gói theo tiêu chuẩn HACCP.",
+          "link": "/products/agriculture"
+        },
+        {
+          "name": "Hàng May Mặc Xuất Khẩu",
+          "image": "/images/products/garment.jpg",
+          "description": "Sản phẩm dệt kim và may mặc thời trang từ các nhà xưởng hiện đại, đáp ứng đơn hàng số lượng lớn.",
+          "link": "/products/garment"
+        },
+        {
+          "name": "Đồ Gỗ & Nội Thất",
+          "image": "/images/products/furniture.jpg",
+          "description": "Nội thất gỗ tự nhiên với thiết kế tinh xảo, bền đẹp, phù hợp với nhiều phong cách kiến trúc.",
+          "link": "/products/furniture"
+        }
+      ]
+    },
+    {
+      "_template": "whyChooseUs",
+      "heading": "Tại Sao Chọn VINHAPAC?",
+      "features": [
+        {
+          "title": "Chứng Nhận Quốc Tế",
+          "description": "Hệ thống quản lý chất lượng đạt chuẩn ISO 9001, sản phẩm đáp ứng các tiêu chuẩn an toàn như HACCP, GlobalG.A.P.",
+          "icon": "FaCertificate"
+        },
+        {
+          "title": "Năng Lực Sản Xuất",
+          "description": "Hợp tác với mạng lưới nhà xưởng lớn, công nghệ hiện đại, đảm bảo tiến độ và chất lượng cho mọi đơn hàng.",
+          "icon": "FaIndustry"
+        },
+        {
+          "title": "Đội Ngũ Chuyên Gia",
+          "description": "Các chuyên gia giàu kinh nghiệm về logistics, thủ tục hải quan và thị trường, sẵn sàng tư vấn 24/7.",
+          "icon": "FaUsersCog"
+        },
+        {
+          "title": "Kinh Nghiệm Dày Dặn",
+          "description": "Thừa hưởng hơn 25 năm kinh nghiệm trong ngành, xử lý thành công hàng ngàn lô hàng phức tạp.",
+          "icon": "FaAward"
+        }
+      ]
+    },
+    {
+      "_template": "exportMarkets",
+      "heading": "Thị Trường Xuất Khẩu",
+      "subheading": "Sản phẩm của chúng tôi đã có mặt tại hơn 20 quốc gia và vùng lãnh thổ.",
+      "mapImage": "/images/world-map-vinhapac.png",
+      "countries": []
+    },
+    {
+      "_template": "newsAndEvents",
+      "heading": "Tin Tức & Sự Kiện",
+      "posts": [
+        {
+          "title": "Xu hướng ngành Logistics năm 2024 và cơ hội cho doanh nghiệp Việt",
+          "category": "Phân Tích Ngành",
+          "date": "2024-05-15",
+          "image": "/images/news/logistics-trends.jpg",
+          "link": "/blog/logistics-trends-2024"
+        },
+        {
+          "title": "VINHAPAC đạt chứng nhận ISO 9001:2015, khẳng định cam kết chất lượng",
+          "category": "Tin Công Ty",
+          "date": "2024-04-28",
+          "image": "/images/news/iso-certification.jpg",
+          "link": "/blog/vinhapac-iso-9001"
+        }
+      ]
+    },
+    {
+      "_template": "testimonials",
+      "heading": "Đối Tác Nói Về Chúng Tôi",
+      "items": [
+        {
+          "quote": "Sự chuyên nghiệp và minh bạch của VINHAPAC đã giúp chúng tôi tiết kiệm rất nhiều thời gian và chi phí trong khâu tìm nguồn cung ứng. Đối tác rất đáng tin cậy.",
+          "author": "Michael Chen",
+          "authorRole": "Giám đốc Mua hàng, Global Retail Inc.",
+          "logo": "/images/logos/global-retail-logo.png"
+        },
+        {
+          "quote": "Chất lượng hàng may mặc từ VINHAPAC luôn vượt mong đợi. Đội ngũ của họ rất am hiểu kỹ thuật và luôn hỗ trợ chúng tôi nhiệt tình trong quá trình sản xuất.",
+          "author": "Sophie Dubois",
+          "authorRole": "Nhà sáng lập, La Mode Parisienne",
+          "logo": "/images/logos/la-mode-logo.png"
+        }
+      ]
+    },
+    {
+      "_template": "cta",
+      "heading": "Sẵn Sàng Đưa Sản Phẩm Của Bạn Ra Toàn Cầu?",
+      "subheading": "Hãy để các chuyên gia của chúng tôi tư vấn giải pháp xuất nhập khẩu hiệu quả và tối ưu nhất.",
+      "button": {
+        "label": "Yêu Cầu Báo Giá Ngay",
+        "link": "/request-quote"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "slides": [
+        {
+          "slogan": "Kết Nối Thị Trường - Xây Dựng Niềm Tin",
+          "subSlogan": "Đối tác tin cậy đồng hành cùng doanh nghiệp Việt Nam trên hành trình vươn ra thế giới.",
+          "backgroundImage": "/uploads/banner-home.png",
+          "button": {
+            "label": "Liên Hệ Chuyên Gia",
+            "link": "/contact"
+          }
+        },
+        {
+          "slogan": "Chất Lượng Toàn Cầu - Dịch Vụ Tận Tâm",
+          "subSlogan": "Giải pháp xuất nhập khẩu và phân phối toàn diện, đáp ứng những tiêu chuẩn khắt khe nhất.",
+          "backgroundImage": "/uploads/banner-home.png",
+          "button": {
+            "label": "Chi tiết",
+            "link": "/"
+          }
+        }
+      ],
+      "_template": "heroSlider"
+    },
+    {
+      "heading": "Chúng tôi là VINHAPAC",
+      "content": "Với hơn **25** năm kinh nghiệm từ mạng lưới công ty mẹ tại Pháp, Mỹ và Thái Lan, VINHAPAC là đơn vị tiên phong trong lĩnh vực xuất nhập khẩu và phân phối đa ngành. Lợi thế của chúng tôi là sự am hiểu sâu sắc thị trường quốc tế, quy trình vận hành chuyên nghiệp và mạng lưới đối tác sản xuất uy tín tại Việt Nam, cam kết mang lại giá trị bền vững cho khách hàng.\n",
+      "image": "/uploads/we-vinhapac.png",
+      "_template": "introduction"
+    },
+    {
+      "heading": "Sản Phẩm Nổi Bật",
+      "subheading": "Khám phá các dòng sản phẩm chủ lực đã được thị trường quốc tế tin chọn.",
+      "products": [
+        {
+          "name": "Nông Sản Chất Lượng Cao",
+          "image": "/uploads/logo.png",
+          "description": "Hạt điều, cà phê, hồ tiêu đạt chuẩn GlobalG.A.P, được chế biến và đóng gói theo tiêu chuẩn HACCP.",
+          "link": "/products/agriculture"
+        }
+      ],
+      "_template": "featuredProducts"
+    },
+    {
+      "heading": "Tại Sao Chọn VINHAPAC?",
+      "features": [
+        {
+          "title": "Chứng Nhận Quốc Tế",
+          "description": "Hệ thống quản lý chất lượng đạt chuẩn ISO 9001, sản phẩm đáp ứng các tiêu chuẩn an toàn như HACCP, GlobalG.A.P.",
+          "icon": "FaCertificate"
+        },
+        {
+          "title": "Năng Lực Sản Xuất",
+          "description": "Hợp tác với mạng lưới nhà xưởng lớn, công nghệ hiện đại, đảm bảo tiến độ và chất lượng cho mọi đơn hàng.",
+          "icon": "FaIndustry"
+        },
+        {
+          "title": "Đội Ngũ Chuyên Gia",
+          "description": "Các chuyên gia giàu kinh nghiệm về logistics, thủ tục hải quan và thị trường, sẵn sàng tư vấn 24/7.",
+          "icon": "FaUsersCog"
+        },
+        {
+          "title": "Kinh Nghiệm Dày Dặn",
+          "description": "Thừa hưởng hơn 25 năm kinh nghiệm trong ngành, xử lý thành công hàng ngàn lô hàng phức tạp.",
+          "icon": "FaAward"
+        }
+      ],
+      "_template": "whyChooseUs"
+    },
+    {
+      "heading": "Thị Trường Xuất Khẩu",
+      "subheading": "Sản phẩm của chúng tôi đã có mặt tại hơn 20 quốc gia và vùng lãnh thổ.",
+      "mapImage": "/uploads/world-map-export-markets.png",
+      "countries": [
+        {
+          "country": "Nhật Bản",
+          "iso": "JPN"
+        },
+        {
+          "country": "Ấn Độ",
+          "iso": "IND"
+        },
+        {
+          "country": "Indonesia",
+          "iso": "IDN"
+        },
+        {
+          "country": "Mỹ",
+          "iso": "USA"
+        },
+        {
+          "country": "Việt Nam",
+          "iso": "VNM"
+        }
+      ],
+      "_template": "exportMarkets"
+    },
+    {
+      "heading": "Tin Tức & Sự Kiện",
+      "posts": [
+        {
+          "title": "Xu hướng ngành Logistics năm 2024 và cơ hội cho doanh nghiệp Việt",
+          "category": "Phân Tích Ngành",
+          "date": "2024-05-15T00:00:00.000Z",
+          "image": "/uploads/news.png",
+          "link": "/blog/logistics-trends-2024"
+        },
+        {
+          "title": "VINHAPAC đạt chứng nhận ISO 9001:2015, khẳng định cam kết chất lượng",
+          "category": "Tin Công Ty",
+          "date": "2024-04-28T00:00:00.000Z",
+          "image": "/uploads/news.png",
+          "link": "/blog/vinhapac-iso-9001"
+        },
+        {
+          "title": "Xu hướng ngành Logistics năm 2024 và cơ hội cho doanh nghiệp Việt",
+          "category": "Phân Tích Ngành",
+          "date": "2024-05-15T00:00:00.000Z",
+          "image": "/uploads/news.png",
+          "link": "/blog/logistics-trends-2024"
+        }
+      ],
+      "_template": "newsAndEvents"
+    },
+    {
+      "heading": "Đối Tác Nói Về Chúng Tôi",
+      "items": [
+        {
+          "quote": "Sự chuyên nghiệp và minh bạch của VINHAPAC đã giúp chúng tôi tiết kiệm rất nhiều thời gian và chi phí trong khâu tìm nguồn cung ứng. Đối tác rất đáng tin cậy.",
+          "author": "Michael Chen",
+          "authorRole": "Giám đốc Mua hàng, Global Retail Inc.",
+          "logo": "/uploads/globallogo.png"
+        },
+        {
+          "quote": "Chất lượng hàng may mặc từ VINHAPAC luôn vượt mong đợi. Đội ngũ của họ rất am hiểu kỹ thuật và luôn hỗ trợ chúng tôi nhiệt tình trong quá trình sản xuất.",
+          "author": "Sophie Dubois",
+          "authorRole": "Nhà sáng lập, La Mode Parisienne",
+          "logo": "/uploads/globallogo.png"
+        }
+      ],
+      "_template": "testimonials"
+    },
+    {
+      "heading": "Sẵn Sàng Đưa Sản Phẩm Của Bạn Ra Toàn Cầu?",
+      "subheading": "Hãy để các chuyên gia của chúng tôi tư vấn giải pháp xuất nhập khẩu hiệu quả và tối ưu nhất.",
+      "button": {
+        "label": "Tư vấn ngay",
+        "link": "/contact"
+      },
+      "_template": "cta"
+    }
+  ]
+}

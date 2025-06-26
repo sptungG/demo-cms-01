@@ -1,7 +1,6 @@
 // components/layout/Footer.tsx
 "use client"
 import Link from "next/link";
-import Image from "next/image";
 
 // Một component nhỏ để render icon mạng xã hội
 const SocialIcon = ({ platform }: { platform: string }) => {
