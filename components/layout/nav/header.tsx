@@ -66,7 +66,7 @@ export const Header = () => {
                         href={item!.href!}
                         className={`relative rounded-md px-3 py-2 text-sm transition-colors ${
                           isActive
-                            ? "text-vina-primary after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:bg-primary after:content-['']"
+                            ? "text-vina-primary after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:bg-vina-primary after:content-['']"
                             : "text-muted-foreground hover:text-vina-primary"
                         }`}
                       >
