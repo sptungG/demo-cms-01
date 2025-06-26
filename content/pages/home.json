@@ -184,7 +184,7 @@
     },
     {
       "heading": "Chúng tôi là VINHAPAC",
-      "content": "Với hơn 25 năm kinh nghiệm từ mạng lưới công ty mẹ tại Pháp, Mỹ và Thái Lan, VINHAPAC là đơn vị tiên phong trong lĩnh vực xuất nhập khẩu và phân phối đa ngành. Lợi thế của chúng tôi là sự am hiểu sâu sắc thị trường quốc tế, quy trình vận hành chuyên nghiệp và mạng lưới đối tác sản xuất uy tín tại Việt Nam, cam kết mang lại giá trị bền vững cho khách hàng.\n",
+      "content": "Với hơn **25** năm kinh nghiệm từ mạng lưới công ty mẹ tại Pháp, Mỹ và Thái Lan, VINHAPAC là đơn vị tiên phong trong lĩnh vực xuất nhập khẩu và phân phối đa ngành. Lợi thế của chúng tôi là sự am hiểu sâu sắc thị trường quốc tế, quy trình vận hành chuyên nghiệp và mạng lưới đối tác sản xuất uy tín tại Việt Nam, cam kết mang lại giá trị bền vững cho khách hàng.\n",
       "image": "/uploads/we-vinhapac.png",
       "_template": "introduction"
     },
@@ -242,6 +242,60 @@
         "Hoa Kỳ"
       ],
       "_template": "exportMarkets"
+    },
+    {
+      "heading": "Tin Tức & Sự Kiện",
+      "posts": [
+        {
+          "title": "Xu hướng ngành Logistics năm 2024 và cơ hội cho doanh nghiệp Việt",
+          "category": "Phân Tích Ngành",
+          "date": "2024-05-15T00:00:00.000Z",
+          "image": "/uploads/news.png",
+          "link": "/blog/logistics-trends-2024"
+        },
+        {
+          "title": "VINHAPAC đạt chứng nhận ISO 9001:2015, khẳng định cam kết chất lượng",
+          "category": "Tin Công Ty",
+          "date": "2024-04-28T00:00:00.000Z",
+          "image": "/uploads/news.png",
+          "link": "/blog/vinhapac-iso-9001"
+        },
+        {
+          "title": "Xu hướng ngành Logistics năm 2024 và cơ hội cho doanh nghiệp Việt",
+          "category": "Phân Tích Ngành",
+          "date": "2024-05-15T00:00:00.000Z",
+          "image": "/uploads/news.png",
+          "link": "/blog/logistics-trends-2024"
+        }
+      ],
+      "_template": "newsAndEvents"
+    },
+    {
+      "heading": "Đối Tác Nói Về Chúng Tôi",
+      "items": [
+        {
+          "quote": "Sự chuyên nghiệp và minh bạch của VINHAPAC đã giúp chúng tôi tiết kiệm rất nhiều thời gian và chi phí trong khâu tìm nguồn cung ứng. Đối tác rất đáng tin cậy.",
+          "author": "Michael Chen",
+          "authorRole": "Giám đốc Mua hàng, Global Retail Inc.",
+          "logo": "/uploads/globallogo.png"
+        },
+        {
+          "quote": "Chất lượng hàng may mặc từ VINHAPAC luôn vượt mong đợi. Đội ngũ của họ rất am hiểu kỹ thuật và luôn hỗ trợ chúng tôi nhiệt tình trong quá trình sản xuất.",
+          "author": "Sophie Dubois",
+          "authorRole": "Nhà sáng lập, La Mode Parisienne",
+          "logo": "/uploads/globallogo.png"
+        }
+      ],
+      "_template": "testimonials"
+    },
+    {
+      "heading": "Sẵn Sàng Đưa Sản Phẩm Của Bạn Ra Toàn Cầu?",
+      "subheading": "Hãy để các chuyên gia của chúng tôi tư vấn giải pháp xuất nhập khẩu hiệu quả và tối ưu nhất.",
+      "button": {
+        "label": "Tư vấn ngay",
+        "link": "/contact"
+      },
+      "_template": "cta"
     }
   ]
 }

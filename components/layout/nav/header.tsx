@@ -4,7 +4,6 @@ import React from "react";
 import Link from "next/link";
 import { useLayout } from "../layout-context";
 import { Menu, X } from "lucide-react";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 export const Header = () => {
@@ -39,12 +38,10 @@ export const Header = () => {
               className="flex items-center space-x-3 transition-opacity hover:opacity-90"
             >
               <div className="relative h-8 w-8">
-                <Image
+                <img
                   src={header.logo!.path as string}
-                  fill
-                  className="object-contain"
+                  className="object-contain bg-transparent"
                   alt={header.name || "Logo"}
-                  priority
                 />
               </div>
               <span className="text-lg font-semibold">{header.name}</span>

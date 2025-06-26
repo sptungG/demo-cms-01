@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Template } from "tinacms";
+import { TinaMarkdown, TinaMarkdownContent } from "tinacms/dist/rich-text";
 
 interface IntroductionProps {
   heading: string;
@@ -20,7 +21,11 @@ interface IntroductionProps {
   image: string;
 }
 
-export const Introduction = ({ heading, content, image }: IntroductionProps) => {
+export const Introduction = ({
+  heading,
+  content,
+  image,
+}: IntroductionProps) => {
   return (
     <section className="py-20">
       <div className="container mx-auto px-4">
@@ -47,17 +52,18 @@ export const Introduction = ({ heading, content, image }: IntroductionProps) => 
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h2 className="mb-6 text-3xl font-bold text-foreground md:text-4xl lg:text-5xl">
+            <h2 className="mb-6 text-3xl font-bold text-primary md:text-4xl lg:text-5xl">
               {heading}
             </h2>
             <div className="prose prose-lg max-w-none text-muted-foreground">
-              {content.children.map((paragraph, index) => (
-                <p key={index}>
-                  {paragraph.children.map((text, i) => (
-                    <React.Fragment key={i}>{text.text}</React.Fragment>
-                  ))}
-                </p>
-              ))}
+              {content.children.map((paragraph, index) => {
+                return (
+                  <TinaMarkdown
+                    key={index}
+                    content={paragraph as unknown as TinaMarkdownContent}
+                  />
+                );
+              })}
             </div>
           </motion.div>
         </div>
@@ -92,4 +98,4 @@ export const introductionBlockSchema: Template = {
       required: true,
     },
   ],
-}; 
+};

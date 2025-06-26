@@ -10,7 +10,7 @@ export default async function Home() {
   const data = await client.queries.page({
     relativePath: `home.json`,
   });
-  console.log(data);
+
 
   return (
     <Layout rawPageData={data}>
