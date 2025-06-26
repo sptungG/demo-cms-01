@@ -23,26 +23,26 @@ interface NewsAndEventsProps {
 
 export const NewsAndEvents = ({ heading, posts }: NewsAndEventsProps) => {
   return (
-    <section className="py-20">
+    <section className="py-4 sm:py-12 md:py-16">
       <div className="container mx-auto px-4">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-12 text-center text-3xl font-bold text-vina-primary md:text-4xl lg:text-5xl"
+          className="mb-4 text-xl font-bold text-vina-primary md:text-4xl lg:text-5xl text-center"
         >
           {heading}
         </motion.h2>
 
-        <div className="grid gap-8 md:grid-cols-2">
+        <div className="grid gap-4 sm:gap-6 md:gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
           {posts.map((post, index) => (
             <motion.article
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-10%" }}
               transition={{ delay: index * 0.1 }}
-              className="group overflow-hidden rounded-2xl bg-background shadow-lg transition-all hover:shadow-xl"
+              className="group overflow-hidden rounded-lg sm:rounded-2xl bg-background/80 backdrop-blur-sm shadow hover:shadow-lg transition-all duration-300 border border-border/50"
             >
               <Link href={post.link} className="block">
                 <div className="relative aspect-[16/9] overflow-hidden">
@@ -51,27 +51,28 @@ export const NewsAndEvents = ({ heading, posts }: NewsAndEventsProps) => {
                     alt={post.title}
                     fill
                     className="object-cover transition-transform duration-300 group-hover:scale-105"
-                    sizes="(max-width: 768px) 100vw, 50vw"
+                    sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 25vw"
+                    priority={index < 2}
                   />
                 </div>
-                <div className="p-6">
-                  <div className="mb-4 flex items-center gap-4 text-sm text-muted-foreground">
-                    <span className="rounded-full bg-vina-primary/10 px-3 py-1 font-medium text-vina-primary">
+                <div className="p-3 sm:p-4 md:p-6">
+                  <div className="mb-2 sm:mb-4 flex flex-wrap items-center gap-2 sm:gap-4 text-xs sm:text-sm text-muted-foreground">
+                    <span className="rounded-full bg-vina-primary/10 px-2 sm:px-3 py-0.5 sm:py-1 font-medium text-vina-primary">
                       {post.category}
                     </span>
-                    <time dateTime={post.date}>
+                    <time dateTime={post.date} className="text-xs sm:text-sm">
                       {format(new Date(post.date), "dd MMMM, yyyy", {
                         locale: vi,
                       })}
                     </time>
                   </div>
-                  <h3 className="text-xl font-semibold text-foreground transition-colors group-hover:text-primary">
+                  <h3 className="text-base sm:text-lg md:text-xl font-semibold text-foreground transition-colors group-hover:text-primary line-clamp-2">
                     {post.title}
                   </h3>
-                  <div className="mt-4 flex items-center text-sm font-medium text-primary">
+                  <div className="mt-2 sm:mt-4 flex items-center text-xs sm:text-sm font-medium text-primary">
                     Đọc thêm
                     <svg
-                      className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1"
+                      className="ml-1.5 sm:ml-2 h-3 w-3 sm:h-4 sm:w-4 transition-transform group-hover:translate-x-1"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -151,4 +152,4 @@ export const newsAndEventsBlockSchema: Template = {
       ],
     },
   ],
-}; 
+};

@@ -27,22 +27,23 @@ export const Introduction = ({
   image,
 }: IntroductionProps) => {
   return (
-    <section className="py-20">
-      <div className="container mx-auto px-4">
-        <div className="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
+    <section className="py-4 sm:py-12 md:py-16">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="grid gap-8 md:gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative aspect-square overflow-hidden rounded-2xl"
+            className="relative aspect-[4/3] sm:aspect-square overflow-hidden rounded-xl sm:rounded-2xl shadow-lg"
           >
             <Image
               src={image}
               alt={heading}
               fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover hover:scale-105 transition-transform duration-500"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 40vw"
+              priority
             />
           </motion.div>
 
@@ -51,11 +52,12 @@ export const Introduction = ({
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
+            className="space-y-4 sm:space-y-6"
           >
-            <h2 className="mb-6 text-3xl font-bold text-vina-primary md:text-4xl lg:text-5xl">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-vina-primary">
               {heading}
             </h2>
-            <div className="prose prose-lg max-w-none text-muted-foreground">
+            <div className="prose prose-sm sm:prose-base lg:prose-lg max-w-none text-muted-foreground">
               {content.children.map((paragraph, index) => {
                 return (
                   <TinaMarkdown

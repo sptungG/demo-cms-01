@@ -185,6 +185,12 @@
       "products": [
         {
           "name": "Nông Sản Chất Lượng Cao",
+          "image": "/uploads/news.png",
+          "description": "Nông sản chất lượng cao 2025",
+          "link": "/products/agriculture"
+        },
+        {
+          "name": "Nông Sản Chất Lượng Cao",
           "image": "/uploads/logo.png",
           "description": "Hạt điều, cà phê, hồ tiêu đạt chuẩn GlobalG.A.P, được chế biến và đóng gói theo tiêu chuẩn HACCP.",
           "link": "/products/agriculture"
@@ -224,22 +230,27 @@
       "mapImage": "/uploads/world-map-export-markets.png",
       "countries": [
         {
+          "name": "Nhật bản",
           "country": "Nhật Bản",
           "iso": "JPN"
         },
         {
+          "name": "Ấn Độ",
           "country": "Ấn Độ",
           "iso": "IND"
         },
         {
+          "name": "Indonesia",
           "country": "Indonesia",
           "iso": "IDN"
         },
         {
+          "name": "Mỹ",
           "country": "Mỹ",
           "iso": "USA"
         },
         {
+          "name": "Việt Nam",
           "country": "Việt Nam",
           "iso": "VNM"
         }

@@ -25,18 +25,18 @@ interface WhyChooseUsProps {
 
 export const WhyChooseUs = ({ heading, features }: WhyChooseUsProps) => {
   return (
-    <section className="py-20">
+    <section className="py-4 sm:py-12 md:py-16">
       <div className="container mx-auto px-4">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-16 text-center text-3xl font-bold text-vina-primary md:text-4xl lg:text-5xl"
+          className="mb-10 sm:mb-16 text-center text-xl font-bold text-vina-primary md:text-4xl lg:text-5xl"
         >
           {heading}
         </motion.h2>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-8 grid-cols-2 md:grid-cols-4">
           {features.map((feature, index) => {
             const Icon = icons[feature.icon];
             return (
@@ -51,10 +51,10 @@ export const WhyChooseUs = ({ heading, features }: WhyChooseUsProps) => {
                 <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-vina-primary/10 text-vina-primary transition-colors group-hover:bg-vina-primary group-hover:text-white">
                   <Icon className="h-8 w-8" />
                 </div>
-                <h3 className="mb-4 text-xl font-semibold text-vina-primary">
+                <h3 className="mb-4 text-[12px] sm:text-xl md:text-sm font-semibold text-vina-primary">
                   {feature.title}
                 </h3>
-                <p className="text-muted-foreground">{feature.description}</p>
+                <p className="text-muted-foreground text-[10px] sm:text-sm">{feature.description}</p>
               </motion.div>
             );
           })}
