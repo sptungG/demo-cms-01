@@ -28,7 +28,7 @@ export const ProductCard = ({
       transition={{ delay: index * 0.1 }}
       className={`group overflow-hidden ${
         isMobile ? "rounded-lg" : "rounded-xl sm:rounded-2xl"
-      } bg-background/80 backdrop-blur-sm shadow hover:shadow-lg transition-all duration-300 border border-border/50 h-full`}
+      } bg-background/80 backdrop-blur-sm hover:shadow-lg transition-all duration-300 border border-border/50 h-full`}
     >
       <Link href={product.link} className="h-full flex flex-col">
         <div
@@ -53,7 +53,7 @@ export const ProductCard = ({
           <h3
             className={`${
               isMobile
-                ? "text-sm line-clamp-1"
+                ? "text-[8px] line-clamp-1"
                 : "text-lg sm:text-xl line-clamp-2"
             } font-semibold text-foreground group-hover:text-primary transition-colors`}
           >
@@ -70,7 +70,7 @@ export const ProductCard = ({
           </p>
           <div
             className={`${
-              isMobile ? "pt-1.5 text-xs" : "pt-2 text-sm"
+              isMobile ? "pt-1.5 text-[8px]" : "pt-2 text-sm"
             } flex items-center font-medium text-primary mt-auto`}
           >
             Xem chi tiết
