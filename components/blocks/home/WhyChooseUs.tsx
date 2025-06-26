@@ -31,7 +31,7 @@ export const WhyChooseUs = ({ heading, features }: WhyChooseUsProps) => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-16 text-center text-3xl font-bold text-foreground md:text-4xl lg:text-5xl"
+          className="mb-16 text-center text-3xl font-bold text-vina-primary md:text-4xl lg:text-5xl"
         >
           {heading}
         </motion.h2>
@@ -48,10 +48,10 @@ export const WhyChooseUs = ({ heading, features }: WhyChooseUsProps) => {
                 transition={{ delay: index * 0.1 }}
                 className="group rounded-2xl bg-background p-6 text-center shadow-lg transition-all hover:shadow-xl"
               >
-                <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-white">
+                <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-vina-primary/10 text-vina-primary transition-colors group-hover:bg-vina-primary group-hover:text-white">
                   <Icon className="h-8 w-8" />
                 </div>
-                <h3 className="mb-4 text-xl font-semibold text-foreground">
+                <h3 className="mb-4 text-xl font-semibold text-vina-primary">
                   {feature.title}
                 </h3>
                 <p className="text-muted-foreground">{feature.description}</p>

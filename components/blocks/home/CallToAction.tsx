@@ -32,7 +32,7 @@ export const CallToAction = ({
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-6 text-3xl font-bold text-foreground md:text-4xl lg:text-5xl"
+            className="mb-6 text-3xl font-bold text-vina-primary md:text-4xl lg:text-5xl"
           >
             {heading}
           </motion.h2>
@@ -53,7 +53,7 @@ export const CallToAction = ({
           >
             <Link
               href={button.link}
-              className="inline-flex items-center rounded-full bg-primary px-8 py-4 text-lg font-semibold text-white transition-colors hover:bg-primary/90"
+              className="inline-flex items-center rounded-full bg-vina-primary px-8 py-4 text-lg font-semibold text-white transition-colors hover:bg-vina-primary/90"
             >
               {button.label}
               <svg

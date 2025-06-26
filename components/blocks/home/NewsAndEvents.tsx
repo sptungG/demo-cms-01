@@ -29,7 +29,7 @@ export const NewsAndEvents = ({ heading, posts }: NewsAndEventsProps) => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-12 text-center text-3xl font-bold text-foreground md:text-4xl lg:text-5xl"
+          className="mb-12 text-center text-3xl font-bold text-vina-primary md:text-4xl lg:text-5xl"
         >
           {heading}
         </motion.h2>
@@ -56,7 +56,7 @@ export const NewsAndEvents = ({ heading, posts }: NewsAndEventsProps) => {
                 </div>
                 <div className="p-6">
                   <div className="mb-4 flex items-center gap-4 text-sm text-muted-foreground">
-                    <span className="rounded-full bg-primary/10 px-3 py-1 font-medium text-primary">
+                    <span className="rounded-full bg-vina-primary/10 px-3 py-1 font-medium text-vina-primary">
                       {post.category}
                     </span>
                     <time dateTime={post.date}>

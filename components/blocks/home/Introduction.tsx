@@ -52,7 +52,7 @@ export const Introduction = ({
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h2 className="mb-6 text-3xl font-bold text-primary md:text-4xl lg:text-5xl">
+            <h2 className="mb-6 text-3xl font-bold text-vina-primary md:text-4xl lg:text-5xl">
               {heading}
             </h2>
             <div className="prose prose-lg max-w-none text-muted-foreground">

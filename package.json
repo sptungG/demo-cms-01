@@ -14,6 +14,7 @@
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
     "@svgr/webpack": "^8.1.0",
+    "@tailwindcss/postcss": "^4.1.10",
     "@tinacms/cli": "^1.9.8",
     "@types/js-cookie": "^3.0.6",
     "@types/node": "^22.15.29",
@@ -29,7 +30,6 @@
     "@headlessui/react": "^2.2.4",
     "@radix-ui/react-avatar": "^1.1.10",
     "@radix-ui/react-slot": "^1.2.3",
-    "@tailwindcss/postcss": "^4.1.8",
     "@tailwindcss/typography": "^0.5.16",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",

@@ -26,7 +26,7 @@ export const ExportMarkets = ({
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-4 text-3xl font-bold text-foreground md:text-4xl lg:text-5xl"
+            className="mb-4 text-3xl font-bold text-vina-primary md:text-4xl lg:text-5xl"
           >
             {heading}
           </motion.h2>
@@ -76,7 +76,7 @@ export const ExportMarkets = ({
                   <div className="mr-3 flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-primary">
                     {index + 1}
                   </div>
-                  <span className="font-medium text-foreground">{country}</span>
+                  <span className="font-medium text-vina-primary">{country}</span>
                 </motion.div>
               ))}
             </div>

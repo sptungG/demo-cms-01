@@ -26,7 +26,7 @@ export const Testimonials = ({ heading, items }: TestimonialsProps) => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-16 text-center text-3xl font-bold text-foreground md:text-4xl lg:text-5xl"
+          className="mb-16 text-center text-3xl font-bold text-vina-primary md:text-4xl lg:text-5xl"
         >
           {heading}
         </motion.h2>
@@ -41,7 +41,7 @@ export const Testimonials = ({ heading, items }: TestimonialsProps) => {
               transition={{ delay: index * 0.1 }}
               className="relative rounded-2xl bg-background p-8 shadow-lg"
             >
-              <Quote className="absolute -top-4 left-6 h-8 w-8 text-primary" />
+              <Quote className="absolute -top-4 left-6 h-8 w-8 text-vina-primary" />
               <div className="mb-6">
                 <p className="text-lg text-muted-foreground">
                   "{testimonial.quote}"
@@ -49,7 +49,7 @@ export const Testimonials = ({ heading, items }: TestimonialsProps) => {
               </div>
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="font-semibold text-foreground">
+                  <p className="font-semibold text-vina-primary">
                     {testimonial.author}
                   </p>
                   <p className="text-sm text-muted-foreground">

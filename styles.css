@@ -40,6 +40,25 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+
+  --color-vina-primary: var(--vina-primary);
+  --color-vina-primary-foreground: var(--vina-primary-foreground);
+  --color-vina-secondary: var(--vina-secondary);
+  --color-vina-secondary-foreground: var(--vina-secondary-foreground);
+  --color-vina-accent: var(--vina-accent);
+  --color-vina-accent-foreground: var(--vina-accent-foreground);
+  --color-vina-muted: var(--vina-muted);
+  --color-vina-muted-foreground: var(--vina-muted-foreground);
+  --color-vina-background: var(--vina-background);
+  --color-vina-foreground: var(--vina-foreground);
+  --color-vina-card: var(--vina-card);
+  --color-vina-card-foreground: var(--vina-card-foreground);
+  --color-vina-popover: var(--vina-popover);
+  --color-vina-popover-foreground: var(--vina-popover-foreground);
+  --color-vina-border: var(--vina-border);
+  --color-vina-input: var(--vina-input);
+  --color-vina-ring: var(--vina-ring);
+  --color-vina-destructive: var(--vina-destructive);
 }
 
 :root {
@@ -75,6 +94,25 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  --vina-primary: #FC6B06;
+  --vina-primary-foreground: #FFFFFF;
+  --vina-secondary: #0691FC;
+  --vina-secondary-foreground: #FFFFFF;
+  --vina-accent: #B206FC;
+  --vina-accent-foreground: #FFFFFF;
+  --vina-muted: #F1F5F9;
+  --vina-muted-foreground: #475569;
+  --vina-background: #FFFFFF;
+  --vina-foreground: #111111;
+  --vina-card: #FFFFFF;
+  --vina-card-foreground: #111111;
+  --vina-popover: #FFFFFF;
+  --vina-popover-foreground: #111111;
+  --vina-border: #E2E8F0;
+  --vina-input: #E2E8F0;
+  --vina-ring: #FC6B06;
+  --vina-destructive: #FF4444;
 }
 
 .dark {
@@ -109,13 +147,131 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+
+  --vina-primary: #FC6B06;
+  --vina-primary-foreground: #FFFFFF;
+  --vina-secondary: #0691FC;
+  --vina-secondary-foreground: #FFFFFF;
+  --vina-accent: #B206FC;
+  --vina-accent-foreground: #FFFFFF;
+  --vina-muted: #F1F5F9;
+  --vina-muted-foreground: #475569;
+  --vina-background: #FFFFFF;
+  --vina-foreground: #111111;
+  --vina-card: #FFFFFF;
+  --vina-card-foreground: #111111;
+  --vina-popover: #FFFFFF;
+  --vina-popover-foreground: #111111;
+  --vina-border: #E2E8F0;
+  --vina-input: #E2E8F0;
+  --vina-ring: #FC6B06;
+  --vina-destructive: #FF4444;
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .text-vina-primary {
+    color: var(--vina-primary);
+  }
+
+  .bg-vina-primary {
+    background-color: var(--vina-primary);
+  }
+
+  .text-vina-secondary {
+    color: var(--vina-secondary);
+  }
+
+  .bg-vina-secondary {
+    background-color: var(--vina-secondary);
+  }
+
+  .text-vina-accent {
+    color: var(--vina-accent);
+  }
+
+  .bg-vina-accent {
+    background-color: var(--vina-accent);
+  }
+
+  .text-vina-muted {
+    color: var(--vina-muted);
+  }
+
+  .bg-vina-muted {
+    background-color: var(--vina-muted);
+  }
+
+  .text-vina-background {
+    color: var(--vina-background);
+  }
+
+  .bg-vina-background {
+    background-color: var(--vina-background);
+  }
+
+  .text-vina-foreground {
+    color: var(--vina-foreground);
+  }
+
+  .bg-vina-foreground {
+    background-color: var(--vina-foreground);
+  }
+
+  .text-vina-card {
+    color: var(--vina-card);
+  }
+
+  .bg-vina-card {
+    background-color: var(--vina-card);
+  }
+
+  .text-vina-card-foreground {
+    color: var(--vina-card-foreground);
+  }
+
+  .bg-vina-card-foreground {
+    background-color: var(--vina-card-foreground);
+  }
+
+  .text-vina-popover {
+    color: var(--vina-popover);
+  }
+
+  .bg-vina-popover {
+    background-color: var(--vina-popover);
+  }
+
+  .text-vina-popover-foreground {
+    color: var(--vina-popover-foreground);
+  }
+
+  .bg-vina-popover-foreground {
+    background-color: var(--vina-popover-foreground);
+  }
+
+  .border-vina-border {
+    border-color: var(--vina-border);
+  }
+
+  .outline-vina-ring {
+    outline-color: var(--vina-ring);
+  }
+
+  .text-vina-destructive {
+    color: var(--vina-destructive);
+  }
+
+  .bg-vina-destructive {
+    background-color: var(--vina-destructive);
   }
 }
