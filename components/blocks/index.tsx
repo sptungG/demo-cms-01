@@ -126,11 +126,11 @@ interface Page {
   _values: any;
 }
 
-export const Blocks = (props: Omit<Page, "id" | "_sys" | "_values">) => {
+export const Blocks = (props: Omit<Page, "id" | "_sys" | "_values"> | any) => {
   if (!props.blocks) return null;
   return (
     <>
-      {props.blocks.map((block, i) => {
+      {props.blocks.map((block: any, i: any) => {
         if (!block) return null;
         return (
           <div key={i} data-tina-field={tinaField(block)}>
@@ -172,13 +172,11 @@ export const Block = ({ block }: { block: PageBlock }) => {
           heading={block.heading}
           subheading={block.subheading}
           mapImage={block.mapImage}
-          countries={block.countries as IObj[] || []}
+          countries={(block.countries as IObj[]) || []}
         />
       );
     case "PageBlocksTestimonials":
-      return (
-        <Testimonials heading={block.heading} items={block.items || []} />
-      );
+      return <Testimonials heading={block.heading} items={block.items || []} />;
     case "PageBlocksNewsAndEvents":
       return (
         <NewsAndEvents heading={block.heading} posts={block.posts || []} />

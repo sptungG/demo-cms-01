@@ -1,5 +1,4 @@
 {
-  "title": "Trang Chủ",
   "sections": [
     {
       "_template": "heroSlider",
@@ -149,6 +148,8 @@
       }
     }
   ],
+  "title": "Trang Chủ",
+  "slug": "/",
   "blocks": [
     {
       "slides": [
