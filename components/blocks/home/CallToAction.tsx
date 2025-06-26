@@ -20,7 +20,7 @@ export const CallToAction = ({
   button,
 }: CallToActionProps) => {
   return (
-    <section className="relative overflow-hidden py-20">
+    <section className="relative overflow-hidden py-4 sm:py-8 md:py-12 lg:py-16">
       {/* Background Pattern */}
       <div className="absolute inset-0 -z-10 opacity-10">
         <div className="absolute inset-0 bg-[radial-gradient(#000000_1px,transparent_1px)] [background-size:16px_16px]" />
@@ -32,7 +32,7 @@ export const CallToAction = ({
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-6 text-3xl font-bold text-vina-primary md:text-4xl lg:text-5xl"
+            className="mb-4 text-xl font-bold text-vina-primary md:text-4xl lg:text-5xl text-center"
           >
             {heading}
           </motion.h2>
@@ -41,7 +41,7 @@ export const CallToAction = ({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="mb-8 text-lg text-muted-foreground"
+            className="mb-8 text-sm sm:text-lg text-muted-foreground"
           >
             {subheading}
           </motion.p>
@@ -53,7 +53,7 @@ export const CallToAction = ({
           >
             <Link
               href={button.link}
-              className="inline-flex items-center rounded-full bg-vina-primary px-8 py-4 text-lg font-semibold text-white transition-colors hover:bg-vina-primary/90"
+              className="inline-flex items-center rounded-full bg-vina-primary px-6 py-2 sm:px-8 sm:py-4 text-sm sm:text-lg font-semibold text-white transition-colors hover:bg-vina-primary/90"
             >
               {button.label}
               <svg

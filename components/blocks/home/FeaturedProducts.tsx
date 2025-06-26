@@ -1,10 +1,16 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
-import Link from "next/link";
 import { motion } from "framer-motion";
 import { Template } from "tinacms";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { ProductCard } from "./ProductCard";
 
 interface ProductProps {
   name: string;
@@ -25,14 +31,14 @@ export const FeaturedProducts = ({
   products,
 }: FeaturedProductsProps) => {
   return (
-    <section className="bg-accent/5 py-20">
-      <div className="container mx-auto px-4">
-        <div className="mb-12 text-center">
+    <section className="bg-accent/5 py-4 sm:py-12 md:py-16">
+      <div className="container mx-auto px-3 sm:px-6">
+        <div className="mb-6 sm:mb-10 text-center space-y-2 sm:space-y-4">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-4 text-3xl font-bold text-vina-primary md:text-4xl lg:text-5xl"
+            className="text-xl sm:text-3xl md:text-4xl font-bold text-vina-primary"
           >
             {heading}
           </motion.h2>
@@ -41,56 +47,42 @@ export const FeaturedProducts = ({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="mx-auto max-w-2xl text-lg text-muted-foreground"
+            className="mx-auto max-w-2xl text-sm sm:text-base text-muted-foreground"
           >
             {subheading}
           </motion.p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {products.map((product, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="group overflow-hidden rounded-2xl bg-background shadow-lg transition-all hover:shadow-xl"
-            >
-              <Link href={product.link} className="block">
-                <div className="relative aspect-[4/3] overflow-hidden">
-                  <Image
-                    src={product.image}
-                    alt={product.name}
-                    fill
-                    className="object-cover transition-transform duration-300 group-hover:scale-105"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        {/* Mobile Carousel View */}
+        <div className="block sm:hidden">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+              slidesToScroll: 1,
+            }}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-2">
+              {[...products, ...products].map((product, index) => (
+                <CarouselItem key={index} className="pl-2 basis-[40%]">
+                  <ProductCard
+                    product={product}
+                    index={index}
+                    isMobile={true}
                   />
-                </div>
-                <div className="p-6">
-                  <h3 className="mb-3 text-xl font-semibold text-foreground">
-                    {product.name}
-                  </h3>
-                  <p className="text-muted-foreground">{product.description}</p>
-                  <div className="mt-4 flex items-center text-sm font-medium text-primary">
-                    Xem chi tiết
-                    <svg
-                      className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 5l7 7-7 7"
-                      />
-                    </svg>
-                  </div>
-                </div>
-              </Link>
-            </motion.div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
+        </div>
+
+        {/* Desktop Grid View */}
+        <div className="hidden sm:grid gap-4 sm:gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          {[...products, ...products].map((product, index) => (
+            <ProductCard key={index} product={product} index={index} />
           ))}
         </div>
       </div>
@@ -158,4 +150,4 @@ export const featuredProductsBlockSchema: Template = {
       ],
     },
   ],
-}; 
+};
