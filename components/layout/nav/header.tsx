@@ -4,7 +4,6 @@ import React from "react";
 import Link from "next/link";
 import { useLayout } from "../layout-context";
 import { Menu, X } from "lucide-react";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 export const Header = () => {
@@ -39,15 +38,13 @@ export const Header = () => {
               className="flex items-center space-x-3 transition-opacity hover:opacity-90"
             >
               <div className="relative h-8 w-8">
-                <Image
+                <img
                   src={header.logo!.path as string}
-                  fill
-                  className="object-contain"
+                  className="object-contain bg-transparent"
                   alt={header.name || "Logo"}
-                  priority
                 />
               </div>
-              <span className="text-lg font-semibold">{header.name}</span>
+              <span className="text-lg font-semibold text-vina-primary">{header.name}</span>
             </Link>
 
             <button
@@ -69,8 +66,8 @@ export const Header = () => {
                         href={item!.href!}
                         className={`relative rounded-md px-3 py-2 text-sm transition-colors ${
                           isActive
-                            ? "text-foreground after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:bg-foreground after:content-['']"
-                            : "text-muted-foreground hover:bg-accent/10 hover:text-accent-foreground"
+                            ? "text-vina-primary after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:bg-vina-primary after:content-['']"
+                            : "text-muted-foreground hover:text-vina-primary"
                         }`}
                       >
                         {item!.label}
@@ -97,7 +94,7 @@ export const Header = () => {
                         onClick={() => setMenuState(false)}
                         className={`block rounded-md px-4 py-2 text-base transition-colors ${
                           isActive
-                            ? "bg-accent/10 text-foreground"
+                            ? "bg-accent/10 text-vina-primary"
                             : "text-muted-foreground hover:bg-accent/10 hover:text-accent-foreground"
                         }`}
                       >

@@ -141,7 +141,7 @@ const Global: Collection = {
           label: "Primary Color",
           name: "color",
           ui: {
-            component: ColorPickerInput,
+            component: ColorPickerInput as any,
           },
         },
         {
