@@ -55,15 +55,14 @@ const MapChart = (props: Props) => {
         >
           {({ geographies }) =>
             geographies.map((geo: any, index: number) => {
-              const existedCountry = (props.countries || []).find((country) => {
+              const getGeoCountry = Array.isArray(props.countries)
+                ? props.countries
+                : [];
+              const existedCountry = getGeoCountry.find((country) => {
                 return country.iso === geo.properties["ISO3166-1-Alpha-3"];
               });
               const center = centroid(geo);
               const coordinates = center.geometry.coordinates;
-              // console.log(
-              //   "🚀 ~ geographies.map ~ getGeoCountry:",
-              //   getGeoCountry
-              // );
               return (
                 <motion.g
                   key={geo.rsmKey}

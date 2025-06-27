@@ -4,7 +4,6 @@ import client from "@/tina/__generated__/client";
 import Layout from "@/components/layout/layout";
 import { Section } from "@/components/layout/section";
 import ClientPage from "./client-page";
-import { About } from "@/components/blocks/about/About";
 
 export const revalidate = 300;
 
@@ -28,7 +27,7 @@ export default async function Page({
   return (
     <Layout rawPageData={data}>
       <Section>
-        <About />
+        <ClientPage {...data} />
       </Section>
     </Layout>
   );

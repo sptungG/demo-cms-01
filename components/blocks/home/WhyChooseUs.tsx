@@ -69,15 +69,15 @@ export const WhyChooseUs = ({ heading, features }: WhyChooseUsProps) => {
 export const whyChooseUsBlockSchema: Template = {
   name: "whyChooseUs",
   label: "Why Choose Us",
-  ui: {
-    previewSrc: "/blocks/features.png",
-  },
+  // ui: {
+  //   previewSrc: "/blocks/features.png",
+  // },
   fields: [
     {
       type: "string",
       name: "heading",
       label: "Heading",
-      required: true,
+      // required: true,
     },
     {
       type: "object",
@@ -94,7 +94,7 @@ export const whyChooseUsBlockSchema: Template = {
           type: "string",
           name: "title",
           label: "Title",
-          required: true,
+          // required: true,
         },
         {
           type: "string",
@@ -103,7 +103,7 @@ export const whyChooseUsBlockSchema: Template = {
           ui: {
             component: "textarea",
           },
-          required: true,
+          // required: true,
         },
         {
           type: "string",
@@ -115,7 +115,7 @@ export const whyChooseUsBlockSchema: Template = {
             { label: "Users & Cog", value: "FaUsersCog" },
             { label: "Award", value: "FaAward" },
           ],
-          required: true,
+          // required: true,
         },
       ],
     },
