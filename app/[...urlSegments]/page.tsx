@@ -1,9 +1,10 @@
-import React from 'react';
-import { notFound } from 'next/navigation';
-import client from '@/tina/__generated__/client';
-import Layout from '@/components/layout/layout';
-import { Section } from '@/components/layout/section';
-import ClientPage from './client-page';
+import React from "react";
+import { notFound } from "next/navigation";
+import client from "@/tina/__generated__/client";
+import Layout from "@/components/layout/layout";
+import { Section } from "@/components/layout/section";
+import ClientPage from "./client-page";
+import { About } from "@/components/blocks/about/About";
 
 export const revalidate = 300;
 
@@ -13,7 +14,7 @@ export default async function Page({
   params: Promise<{ urlSegments: string[] }>;
 }) {
   const resolvedParams = await params;
-  const filepath = resolvedParams.urlSegments.join('/');
+  const filepath = resolvedParams.urlSegments.join("/");
 
   let data;
   try {
@@ -27,7 +28,7 @@ export default async function Page({
   return (
     <Layout rawPageData={data}>
       <Section>
-        <ClientPage {...data} />
+        <About />
       </Section>
     </Layout>
   );
@@ -58,7 +59,7 @@ export async function generateStaticParams() {
       urlSegments: edge?.node?._sys.breadcrumbs || [],
     }))
     .filter((x) => x.urlSegments.length >= 1)
-    .filter((x) => !x.urlSegments.every((x) => x === 'home')); // exclude the home page
+    .filter((x) => !x.urlSegments.every((x) => x === "home")); // exclude the home page
 
   return params;
 }
