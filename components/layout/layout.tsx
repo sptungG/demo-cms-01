@@ -6,12 +6,17 @@ import Footer from "./nav/footer";
 
 type LayoutProps = PropsWithChildren & {
   rawPageData?: any;
+  locale?: string;
 };
 
-export default async function Layout({ children, rawPageData }: LayoutProps) {
+export default async function Layout({
+  children,
+  rawPageData,
+  locale,
+}: LayoutProps) {
   const { data: globalData } = await client.queries.global(
     {
-      relativePath: "index.json",
+      relativePath: `${locale ? `${locale}/index.json` : "index.json"}`,
     },
     {
       fetchOptions: {

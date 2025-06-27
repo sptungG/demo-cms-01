@@ -1,64 +1,64 @@
 {
   "header": {
     "name": "VINHAPAC",
-    "color": "primary",
+    "color": "default",
     "logo": {
       "path": "/uploads/logo.png"
     },
     "nav": [
       {
-        "href": "/",
-        "label": "Trang chủ"
+        "href": "/en/home",
+        "label": "Home"
       },
       {
-        "href": "/chung-toi",
-        "label": "Chúng tôi"
+        "href": "/en/about",
+        "label": "About"
       },
       {
-        "href": "/dich-vu",
-        "label": "Dịch vụ"
+        "href": "/en/services",
+        "label": "Services"
       },
       {
-        "href": "/thu-vien-san-xuat",
-        "label": "Thư viện sản xuất"
+        "href": "/en/gallery",
+        "label": "Gallery"
       },
       {
-        "href": "/lien-he",
-        "label": "Liên hệ"
+        "href": "/en/contact",
+        "label": "Contact"
       }
     ]
   },
   "footer": {
-    "description": "VINHAPAC - Đối tác tin cậy của bạn trong lĩnh vực xuất nhập khẩu và phân phối, kết nối thị trường và xây dựng niềm tin.",
+    "description": "VINHAPAC - Your reliable partner in import-export and distribution, connecting markets and building trust.",
     "contactInfo": {
-      "address": "49/3 Lê Văn Duyệt, Phường 3, Quận Bình Thạnh, TP.HCM",
+      "address": "49/3 Le Van Duyet, Ward 3, Binh Thanh District, HCMC",
       "phone": "123-456-7890",
       "email": "contact@vinhapac.com",
-      "title": "Liên hệ"
+      "title": "Contact"
     },
     "linkColumns": [
       {
-        "title": "Về chúng tôi",
+        "title": "About Us",
         "links": [
           {
-            "label": "Giới thiệu",
+            "label": "About",
             "url": "/about"
           }
         ]
       },
       {
-        "title": "Dịch vụ",
+        "title": "Services",
         "links": [
           {
-            "label": "Xuất nhập khẩu",
+            "label": "Import-Export",
             "url": "/services/export-import"
           },
           {
-            "label": "Phân phối",
+            "label": "Distribution",
             "url": "/services/distribution"
           },
           {
-            "label": "Tư vấn",
+            "label": "Consultancy",
             "url": "/services/consultancy"
           }
         ]

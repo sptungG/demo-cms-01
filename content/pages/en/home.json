@@ -1,0 +1,314 @@
+{
+  "sections": [
+    {
+      "_template": "heroSlider",
+      "slides": [
+        {
+          "slogan": "Global Quality - Dedicated Service",
+          "subSlogan": "Comprehensive import-export and distribution solutions, meeting the strictest standards.",
+          "backgroundImage": "/images/hero-factory.jpg",
+          "button": {
+            "label": "View Products",
+            "link": "/products"
+          }
+        },
+        {
+          "slogan": "Connecting Markets - Building Trust",
+          "subSlogan": "A reliable partner accompanying Vietnamese businesses on their journey to the world.",
+          "backgroundImage": "/images/hero-logistics.jpg",
+          "button": {
+            "label": "Contact Experts",
+            "link": "/contact-us"
+          }
+        }
+      ]
+    },
+    {
+      "_template": "introduction",
+      "heading": "We Are VINHAPAC",
+      "content": {
+        "type": "root",
+        "children": [
+          {
+            "type": "p",
+            "children": [
+              {
+                "type": "text",
+                "text": "With over 25 years of experience from our parent company network in France, the USA, and Thailand, VINHAPAC is a pioneer in the multi-industry import-export and distribution sector. Our advantage lies in a deep understanding of international markets, professional operational processes, and a network of reputable manufacturing partners in Vietnam, committed to delivering sustainable value to our customers."
+              }
+            ]
+          }
+        ]
+      },
+      "image": "/images/intro-team-meeting.jpg"
+    },
+    {
+      "_template": "featuredProducts",
+      "heading": "Featured Products",
+      "subheading": "Discover our key product lines trusted by the international market.",
+      "products": [
+        {
+          "name": "High-Quality Agricultural Products",
+          "image": "/images/products/cashew.jpg",
+          "description": "Cashews, coffee, and pepper meeting GlobalG.A.P. standards, processed and packaged according to HACCP standards.",
+          "link": "/products/agriculture"
+        },
+        {
+          "name": "Export Garments",
+          "image": "/images/products/garment.jpg",
+          "description": "Knitwear and fashion apparel from modern factories, capable of handling large-volume orders.",
+          "link": "/products/garment"
+        },
+        {
+          "name": "Wood & Furniture",
+          "image": "/images/products/furniture.jpg",
+          "description": "Exquisitely designed, durable natural wood furniture suitable for various architectural styles.",
+          "link": "/products/furniture"
+        }
+      ]
+    },
+    {
+      "_template": "whyChooseUs",
+      "heading": "Why Choose VINHAPAC?",
+      "features": [
+        {
+          "title": "International Certifications",
+          "description": "Our quality management system is ISO 9001 certified, and our products meet safety standards such as HACCP and GlobalG.A.P.",
+          "icon": "FaCertificate"
+        },
+        {
+          "title": "Production Capacity",
+          "description": "We collaborate with a large network of factories with modern technology, ensuring schedule and quality for every order.",
+          "icon": "FaIndustry"
+        },
+        {
+          "title": "Expert Team",
+          "description": "Experienced experts in logistics, customs procedures, and market analysis, available for 24/7 consultation.",
+          "icon": "FaUsersCog"
+        },
+        {
+          "title": "Extensive Experience",
+          "description": "Inheriting over 25 years of industry experience, we have successfully handled thousands of complex shipments.",
+          "icon": "FaAward"
+        }
+      ]
+    },
+    {
+      "_template": "newsAndEvents",
+      "heading": "News & Events",
+      "posts": [
+        {
+          "title": "Logistics Industry Trends in 2024 and Opportunities for Vietnamese Businesses",
+          "category": "Industry Analysis",
+          "date": "2024-05-15",
+          "image": "/images/news/logistics-trends.jpg",
+          "link": "/blog/logistics-trends-2024"
+        },
+        {
+          "title": "VINHAPAC Achieves ISO 9001:2015 Certification, Affirming Quality Commitment",
+          "category": "Company News",
+          "date": "2024-04-28",
+          "image": "/images/news/iso-certification.jpg",
+          "link": "/blog/vinhapac-iso-9001"
+        }
+      ]
+    },
+    {
+      "_template": "testimonials",
+      "heading": "What Our Partners Say",
+      "items": [
+        {
+          "quote": "VINHAPAC's professionalism and transparency have saved us significant time and cost in sourcing. A very reliable partner.",
+          "author": "Michael Chen",
+          "authorRole": "Purchasing Director, Global Retail Inc.",
+          "logo": "/images/logos/global-retail-logo.png"
+        },
+        {
+          "quote": "The quality of garments from VINHAPAC always exceeds expectations. Their team is very knowledgeable technically and always supports us enthusiastically during production.",
+          "author": "Sophie Dubois",
+          "authorRole": "Founder, La Mode Parisienne",
+          "logo": "/images/logos/la-mode-logo.png"
+        }
+      ]
+    },
+    {
+      "_template": "cta",
+      "heading": "Ready to Take Your Product Global?",
+      "subheading": "Let our experts advise you on the most effective and optimal import-export solutions.",
+      "button": {
+        "label": "Request a Quote Now",
+        "link": "/request-quote"
+      }
+    }
+  ],
+  "title": "Home",
+  "slug": "/",
+  "blocks": [
+    {
+      "slides": [
+        {
+          "slogan": "Connecting Markets - Building Trust",
+          "subSlogan": "A reliable partner accompanying Vietnamese businesses on their journey to the world.",
+          "backgroundImage": "/uploads/banner-home.png",
+          "button": {
+            "label": "Contact Experts",
+            "link": "/contact"
+          }
+        },
+        {
+          "slogan": "Global Quality - Dedicated Service",
+          "subSlogan": "Comprehensive import-export and distribution solutions, meeting the strictest standards.",
+          "backgroundImage": "/uploads/banner-home.png",
+          "button": {
+            "label": "Details",
+            "link": "/"
+          }
+        }
+      ],
+      "_template": "heroSlider"
+    },
+    {
+      "heading": "We Are VINHAPAC",
+      "content": "With over **25** years of experience from our parent company network in France, the USA, and Thailand, VINHAPAC is a pioneer in the multi-industry import-export and distribution sector. Our advantage lies in a deep understanding of international markets, professional operational processes, and a network of reputable manufacturing partners in Vietnam, committed to delivering sustainable value to our customers.\n",
+      "image": "/uploads/we-vinhapac.png",
+      "_template": "introduction"
+    },
+    {
+      "heading": "Featured Products",
+      "subheading": "Discover our key product lines trusted by the international market.",
+      "products": [
+        {
+          "name": "High-Quality Agricultural Products",
+          "image": "/uploads/news.png",
+          "description": "High-Quality Agricultural Products 2025",
+          "link": "/products/agriculture"
+        },
+        {
+          "name": "High-Quality Agricultural Products",
+          "image": "/uploads/logo.png",
+          "description": "Cashews, coffee, and pepper meeting GlobalG.A.P. standards, processed and packaged according to HACCP standards.",
+          "link": "/products/agriculture"
+        }
+      ],
+      "_template": "featuredProducts"
+    },
+    {
+      "heading": "Why Choose VINHAPAC?",
+      "features": [
+        {
+          "title": "International Certifications",
+          "description": "Our quality management system is ISO 9001 certified, and our products meet safety standards such as HACCP and GlobalG.A.P.",
+          "icon": "FaCertificate"
+        },
+        {
+          "title": "Production Capacity",
+          "description": "We collaborate with a large network of factories with modern technology, ensuring schedule and quality for every order.",
+          "icon": "FaIndustry"
+        },
+        {
+          "title": "Expert Team",
+          "description": "Experienced experts in logistics, customs procedures, and market analysis, available for 24/7 consultation.",
+          "icon": "FaUsersCog"
+        },
+        {
+          "title": "Extensive Experience",
+          "description": "Inheriting over 25 years of industry experience, we have successfully handled thousands of complex shipments.",
+          "icon": "FaAward"
+        }
+      ],
+      "_template": "whyChooseUs"
+    },
+    {
+      "heading": "Export Markets",
+      "subheading": "Our products are present in over 20 countries and territories.",
+      "mapImage": "/uploads/world-map-export-markets.png",
+      "countries": [
+        {
+          "name": "UK",
+          "country": "United Kingdom",
+          "iso": "GBR"
+        },
+        {
+          "name": "Japan",
+          "country": "Japan",
+          "iso": "JPN"
+        },
+        {
+          "name": "India",
+          "country": "India",
+          "iso": "IND"
+        },
+        {
+          "name": "Indonesia",
+          "country": "Indonesia",
+          "iso": "IDN"
+        },
+        {
+          "name": "USA",
+          "country": "USA",
+          "iso": "USA"
+        },
+        {
+          "name": "Vietnam",
+          "country": "Vietnam",
+          "iso": "VNM"
+        }
+      ],
+      "_template": "exportMarkets"
+    },
+    {
+      "heading": "News & Events",
+      "posts": [
+        {
+          "title": "Logistics Industry Trends in 2024 and Opportunities for Vietnamese Businesses",
+          "category": "Industry Analysis",
+          "date": "2024-05-15T00:00:00.000Z",
+          "image": "/uploads/news.png",
+          "link": "/blog/logistics-trends-2024"
+        },
+        {
+          "title": "VINHAPAC Achieves ISO 9001:2015 Certification, Affirming Quality Commitment",
+          "category": "Company News",
+          "date": "2024-04-28T00:00:00.000Z",
+          "image": "/uploads/news.png",
+          "link": "/blog/vinhapac-iso-9001"
+        },
+        {
+          "title": "Logistics Industry Trends in 2024 and Opportunities for Vietnamese Businesses",
+          "category": "Industry Analysis",
+          "date": "2024-05-15T00:00:00.000Z",
+          "image": "/uploads/news.png",
+          "link": "/blog/logistics-trends-2024"
+        }
+      ],
+      "_template": "newsAndEvents"
+    },
+    {
+      "heading": "What Our Partners Say",
+      "items": [
+        {
+          "quote": "VINHAPAC's professionalism and transparency have saved us significant time and cost in sourcing. A very reliable partner.",
+          "author": "Michael Chen",
+          "authorRole": "Purchasing Director, Global Retail Inc.",
+          "logo": "/uploads/globallogo.png"
+        },
+        {
+          "quote": "The quality of garments from VINHAPAC always exceeds expectations. Their team is very knowledgeable technically and always supports us enthusiastically during production.",
+          "author": "Sophie Dubois",
+          "authorRole": "Founder, La Mode Parisienne",
+          "logo": "/uploads/globallogo.png"
+        }
+      ],
+      "_template": "testimonials"
+    },
+    {
+      "heading": "Ready to Take Your Product Global?",
+      "subheading": "Let our experts advise you on the most effective and optimal import-export solutions.",
+      "button": {
+        "label": "Consult Now",
+        "link": "/contact"
+      },
+      "_template": "cta"
+    }
+  ]
+}

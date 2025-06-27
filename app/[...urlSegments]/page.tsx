@@ -14,7 +14,7 @@ export default async function Page({
 }) {
   const resolvedParams = await params;
   const filepath = resolvedParams.urlSegments.join("/");
-
+  const getLocale = resolvedParams.urlSegments[0] ?? "";
   let data;
   try {
     data = await client.queries.page({
@@ -25,7 +25,10 @@ export default async function Page({
   }
 
   return (
-    <Layout rawPageData={data}>
+    <Layout
+      rawPageData={data}
+      locale={resolvedParams.urlSegments.length > 1 ? getLocale : ""}
+    >
       <Section>
         <ClientPage {...data} />
       </Section>

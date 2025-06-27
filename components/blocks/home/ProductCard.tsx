@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { ChevronsRight } from "lucide-react";
 
 interface ProductCardProps {
   product: {
@@ -71,24 +72,9 @@ export const ProductCard = ({
           <div
             className={`${
               isMobile ? "pt-1.5 text-[8px]" : "pt-2 text-sm"
-            } flex items-center font-medium text-primary mt-auto`}
+            } flex items-center justify-end gap-1 font-medium text-primary mt-auto group-hover:gap-2 transition-all duration-300`}
           >
-            Xem chi tiết
-            <svg
-              className={`${
-                isMobile ? "ml-1.5 h-3 w-3" : "ml-2 h-4 w-4"
-              } transition-transform duration-300 group-hover:translate-x-1`}
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
+            <ChevronsRight className="transform transition-transform duration-300 group-hover:translate-x-1" />
           </div>
         </div>
       </Link>

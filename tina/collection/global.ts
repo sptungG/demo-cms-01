@@ -77,6 +77,11 @@ const Global: Collection = {
       type: "object",
       name: "footer",
       label: "Footer",
+      ui: {
+        itemProps: (item) => {
+          return { label: item?.name };
+        },
+      },
       fields: [
         {
           type: "string",
@@ -89,6 +94,7 @@ const Global: Collection = {
           name: "contactInfo",
           label: "Thông tin liên hệ",
           fields: [
+            { type: "string", name: "title", label: "Tiêu đề" },
             { type: "string", name: "address", label: "Địa chỉ" },
             { type: "string", name: "phone", label: "Số điện thoại" },
             { type: "string", name: "email", label: "Email" },
@@ -98,6 +104,11 @@ const Global: Collection = {
           type: "object",
           name: "linkColumns",
           label: "Các cột liên kết",
+          ui: {
+            itemProps: (item) => {
+              return { label: item?.title };
+            },
+          },
           list: true,
           fields: [
             { type: "string", name: "title", label: "Tiêu đề cột" },
@@ -105,6 +116,11 @@ const Global: Collection = {
               type: "object",
               name: "links",
               label: "Các liên kết",
+              ui: {
+                itemProps: (item) => {
+                  return { label: item?.label };
+                },
+              },
               list: true,
               fields: [
                 { type: "string", name: "label", label: "Nhãn" },
@@ -118,6 +134,11 @@ const Global: Collection = {
           name: "socialLinks",
           label: "Mạng xã hội",
           list: true,
+          ui: {
+            itemProps: (item) => {
+              return { label: item?.platform };
+            },
+          },
           fields: [
             {
               type: "string",
