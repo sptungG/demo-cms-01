@@ -36,7 +36,7 @@ export const WhyChooseUs = ({ heading, features }: WhyChooseUsProps) => {
           {heading}
         </motion.h2>
 
-        <div className="grid gap-8 grid-cols-2 md:grid-cols-4">
+        <div className="grid gap-2 sm:gap-8 grid-cols-2 md:grid-cols-4">
           {features.map((feature, index) => {
             const Icon = icons[feature.icon];
             return (
@@ -48,13 +48,15 @@ export const WhyChooseUs = ({ heading, features }: WhyChooseUsProps) => {
                 transition={{ delay: index * 0.1 }}
                 className="group rounded-2xl bg-background p-6 text-center shadow-lg transition-all hover:shadow-xl"
               >
-                <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-vina-primary/10 text-vina-primary transition-colors group-hover:bg-vina-primary group-hover:text-white">
-                  <Icon className="h-8 w-8" />
+                <div className="mx-auto mb-6 flex h-8 w-8 sm:h-16 sm:w-16 items-center justify-center rounded-full bg-vina-primary/10 text-vina-primary transition-colors group-hover:bg-vina-primary group-hover:text-white">
+                  <Icon className="h-4 w-4 sm:h-8 sm:w-8" />
                 </div>
                 <h3 className="mb-4 text-[12px] sm:text-xl md:text-sm font-semibold text-vina-primary">
                   {feature.title}
                 </h3>
-                <p className="text-muted-foreground text-[10px] sm:text-sm">{feature.description}</p>
+                <p className="text-muted-foreground text-[10px] sm:text-sm">
+                  {feature.description}
+                </p>
               </motion.div>
             );
           })}
@@ -67,15 +69,15 @@ export const WhyChooseUs = ({ heading, features }: WhyChooseUsProps) => {
 export const whyChooseUsBlockSchema: Template = {
   name: "whyChooseUs",
   label: "Why Choose Us",
-  ui: {
-    previewSrc: "/blocks/features.png",
-  },
+  // ui: {
+  //   previewSrc: "/blocks/features.png",
+  // },
   fields: [
     {
       type: "string",
       name: "heading",
       label: "Heading",
-      required: true,
+      // required: true,
     },
     {
       type: "object",
@@ -92,7 +94,7 @@ export const whyChooseUsBlockSchema: Template = {
           type: "string",
           name: "title",
           label: "Title",
-          required: true,
+          // required: true,
         },
         {
           type: "string",
@@ -101,7 +103,7 @@ export const whyChooseUsBlockSchema: Template = {
           ui: {
             component: "textarea",
           },
-          required: true,
+          // required: true,
         },
         {
           type: "string",
@@ -113,7 +115,7 @@ export const whyChooseUsBlockSchema: Template = {
             { label: "Users & Cog", value: "FaUsersCog" },
             { label: "Award", value: "FaAward" },
           ],
-          required: true,
+          // required: true,
         },
       ],
     },

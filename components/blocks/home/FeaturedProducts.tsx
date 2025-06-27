@@ -93,21 +93,21 @@ export const FeaturedProducts = ({
 export const featuredProductsBlockSchema: Template = {
   name: "featuredProducts",
   label: "Featured Products",
-  ui: {
-    previewSrc: "/blocks/features.png",
-  },
+  // ui: {
+  //   previewSrc: "/blocks/features.png",
+  // },
   fields: [
     {
       type: "string",
       name: "heading",
       label: "Heading",
-      required: true,
+      // required: true,
     },
     {
       type: "string",
       name: "subheading",
       label: "Subheading",
-      required: true,
+      // required: true,
     },
     {
       type: "object",
@@ -124,13 +124,13 @@ export const featuredProductsBlockSchema: Template = {
           type: "string",
           name: "name",
           label: "Name",
-          required: true,
+          // required: true,
         },
         {
           type: "image",
           name: "image",
           label: "Image",
-          required: true,
+          // required: true,
         },
         {
           type: "string",
@@ -139,13 +139,13 @@ export const featuredProductsBlockSchema: Template = {
           ui: {
             component: "textarea",
           },
-          required: true,
+          // required: true,
         },
         {
           type: "string",
           name: "link",
           label: "Link",
-          required: true,
+          // required: true,
         },
       ],
     },

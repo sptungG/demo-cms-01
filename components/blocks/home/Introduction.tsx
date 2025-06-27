@@ -77,27 +77,27 @@ export const Introduction = ({
 export const introductionBlockSchema: Template = {
   name: "introduction",
   label: "Introduction",
-  ui: {
-    previewSrc: "/blocks/content.png",
-  },
+  // ui: {
+  //   previewSrc: "/blocks/content.png",
+  // },
   fields: [
     {
       type: "string",
       name: "heading",
       label: "Heading",
-      required: true,
+      // required: true,
     },
     {
       type: "rich-text",
       name: "content",
       label: "Content",
-      required: true,
+      // required: true,
     },
     {
       type: "image",
       name: "image",
       label: "Image",
-      required: true,
+      // required: true,
     },
   ],
 };

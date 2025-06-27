@@ -138,15 +138,15 @@ export const Testimonials = ({ heading, items }: TestimonialsProps) => {
 export const testimonialsBlockSchema: Template = {
   name: "testimonials",
   label: "Testimonials",
-  ui: {
-    previewSrc: "/blocks/testimonial.png",
-  },
+  // ui: {
+  //   previewSrc: "/blocks/testimonial.png",
+  // },
   fields: [
     {
       type: "string",
       name: "heading",
       label: "Heading",
-      required: true,
+      // required: true,
     },
     {
       type: "object",
@@ -166,25 +166,25 @@ export const testimonialsBlockSchema: Template = {
           ui: {
             component: "textarea",
           },
-          required: true,
+          // required: true,
         },
         {
           type: "string",
           name: "author",
           label: "Author Name",
-          required: true,
+          // required: true,
         },
         {
           type: "string",
           name: "authorRole",
           label: "Author Role",
-          required: true,
+          // required: true,
         },
         {
           type: "image",
           name: "logo",
           label: "Company Logo",
-          required: true,
+          // required: true,
         },
       ],
     },

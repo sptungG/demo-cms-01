@@ -80,21 +80,21 @@ export const CallToAction = ({
 export const callToActionBlockSchema: Template = {
   name: "cta",
   label: "Call to Action",
-  ui: {
-    previewSrc: "/blocks/cta.png",
-  },
+  // ui: {
+  //   previewSrc: "/blocks/cta.png",
+  // },
   fields: [
     {
       type: "string",
       name: "heading",
       label: "Heading",
-      required: true,
+      // required: true,
     },
     {
       type: "string",
       name: "subheading",
       label: "Subheading",
-      required: true,
+      // required: true,
     },
     {
       type: "object",
@@ -105,13 +105,13 @@ export const callToActionBlockSchema: Template = {
           type: "string",
           name: "label",
           label: "Label",
-          required: true,
+          // required: true,
         },
         {
           type: "string",
           name: "link",
           label: "Link",
-          required: true,
+          // required: true,
         },
       ],
     },

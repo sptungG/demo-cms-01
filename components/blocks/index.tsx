@@ -8,6 +8,12 @@ import { NewsAndEvents } from "./home/NewsAndEvents";
 import { CallToAction } from "./home/CallToAction";
 import { tinaField } from "tinacms/dist/react";
 import { IObj } from "@/utils/types";
+import { CapacitySection } from "./about/sections/CapacitySection";
+import { HeroAboutSection } from "./about/sections/HeroAboutSection";
+import { LeadershipSection } from "./about/sections/LeadershipSection";
+import { LegalInfoSection } from "./about/sections/LegalInfoSection";
+import { TimelineSection } from "./about/sections/TimelineSection";
+import { VisionMissionSection } from "./about/sections/VisionMissionSection";
 
 type Maybe<T> = T | null | undefined;
 
@@ -109,6 +115,85 @@ interface CtaBlock extends BaseBlock {
   };
 }
 
+interface CapacitySectionBlock extends BaseBlock {
+  __typename: "PageBlocksCapacitySection";
+  capacityHeading: string;
+  capacityItems: Array<{
+    icon: string;
+    title: string;
+    content: string;
+  }>;
+}
+
+interface HeroAboutSectionBlock extends BaseBlock {
+  __typename: "PageBlocksHeroAboutSection";
+  heading: string;
+  subheading: string;
+  backgroundImage: string;
+  primaryButton: {
+    label: string;
+    link: string;
+  };
+  secondaryButton: {
+    label: string;
+    link: string;
+  };
+}
+
+interface LeadershipSectionBlock extends BaseBlock {
+  __typename: "PageBlocksLeadershipSection";
+  heading: string;
+  subheading: string;
+  members: Array<{
+    name: string;
+    role: string;
+    image: string;
+  }>;
+}
+
+interface LegalInfoSectionBlock extends BaseBlock {
+  __typename: "PageBlocksLegalInfoSection";
+  heading: string;
+  companyProfile: {
+    title: string;
+    description: string;
+    buttonLabel: string;
+    fileUrl: string;
+    image?: string;
+  };
+  legalDetails: Array<{
+    label: string;
+    value: string;
+  }>;
+}
+
+interface TimelineSectionBlock extends BaseBlock {
+  __typename: "PageBlocksTimelineSection";
+  heading: string;
+  timeline: Array<{
+    year: string;
+    event: string;
+  }>;
+}
+
+interface VisionMissionSectionBlock extends BaseBlock {
+  __typename: "PageBlocksVisionMissionSection";
+  vision: {
+    title: string;
+    content: string;
+  };
+  mission: {
+    title: string;
+    content: string;
+  };
+  coreValues: {
+    title: string;
+    values: Array<{
+      name: string;
+      description: string;
+    }>;
+  };
+}
 type PageBlock =
   | HeroSliderBlock
   | IntroductionBlock
@@ -117,7 +202,13 @@ type PageBlock =
   | ExportMarketsBlock
   | TestimonialsBlock
   | NewsAndEventsBlock
-  | CtaBlock;
+  | CtaBlock
+  | CapacitySectionBlock
+  | HeroAboutSectionBlock
+  | LeadershipSectionBlock
+  | LegalInfoSectionBlock
+  | TimelineSectionBlock
+  | VisionMissionSectionBlock;
 
 interface Page {
   blocks?: Maybe<PageBlock>[];
@@ -187,6 +278,72 @@ export const Block = ({ block }: { block: PageBlock }) => {
           heading={block.heading}
           subheading={block.subheading}
           button={block.button || { label: "", link: "" }}
+        />
+      );
+    case "PageBlocksCapacitySection":
+      return (
+        <CapacitySection
+          data={{
+            capacityHeading: block.capacityHeading,
+            capacityItems: block.capacityItems || [],
+          }}
+        />
+      );
+    case "PageBlocksHeroAboutSection":
+      return (
+        <HeroAboutSection
+          data={{
+            backgroundImage: block.backgroundImage,
+            heading: block.heading,
+            subheading: block.subheading,
+            primaryButton: block.primaryButton || { label: "", link: "" },
+            secondaryButton: block.secondaryButton || { label: "", link: "" },
+          }}
+        />
+      );
+    case "PageBlocksLeadershipSection":
+      return (
+        <LeadershipSection
+          data={{
+            heading: block.heading,
+            subheading: block.subheading,
+            members: block.members || [],
+          }}
+        />
+      );
+    case "PageBlocksLegalInfoSection":
+      return (
+        <LegalInfoSection
+          data={{
+            heading: block.heading,
+            companyProfile: block.companyProfile || {
+              title: "",
+              description: "",
+              buttonLabel: "",
+              fileUrl: "",
+              image: "",
+            },
+            legalDetails: block.legalDetails || [],
+          }}
+        />
+      );
+    case "PageBlocksTimelineSection":
+      return (
+        <TimelineSection
+          data={{
+            heading: block.heading,
+            timeline: block.timeline || [],
+          }}
+        />
+      );
+    case "PageBlocksVisionMissionSection":
+      return (
+        <VisionMissionSection
+          data={{
+            vision: block.vision || { title: "", content: "" },
+            mission: block.mission || { title: "", content: "" },
+            coreValues: block.coreValues || { title: "", values: [] },
+          }}
         />
       );
     default:
