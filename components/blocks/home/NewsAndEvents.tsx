@@ -98,15 +98,15 @@ export const NewsAndEvents = ({ heading, posts }: NewsAndEventsProps) => {
 export const newsAndEventsBlockSchema: Template = {
   name: "newsAndEvents",
   label: "News & Events",
-  ui: {
-    previewSrc: "/blocks/content.png",
-  },
+  // ui: {
+  //   previewSrc: "/blocks/content.png",
+  // },
   fields: [
     {
       type: "string",
       name: "heading",
       label: "Heading",
-      required: true,
+      // required: true,
     },
     {
       type: "object",
@@ -123,31 +123,31 @@ export const newsAndEventsBlockSchema: Template = {
           type: "string",
           name: "title",
           label: "Title",
-          required: true,
+          // required: true,
         },
         {
           type: "string",
           name: "category",
           label: "Category",
-          required: true,
+          // required: true,
         },
         {
           type: "datetime",
           name: "date",
           label: "Date",
-          required: true,
+          // required: true,
         },
         {
           type: "image",
           name: "image",
           label: "Image",
-          required: true,
+          // required: true,
         },
         {
           type: "string",
           name: "link",
           label: "Link",
-          required: true,
+          // required: true,
         },
       ],
     },

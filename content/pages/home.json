@@ -94,13 +94,6 @@
       ]
     },
     {
-      "_template": "exportMarkets",
-      "heading": "Thị Trường Xuất Khẩu",
-      "subheading": "Sản phẩm của chúng tôi đã có mặt tại hơn 20 quốc gia và vùng lãnh thổ.",
-      "mapImage": "/images/world-map-vinhapac.png",
-      "countries": []
-    },
-    {
       "_template": "newsAndEvents",
       "heading": "Tin Tức & Sự Kiện",
       "posts": [
@@ -230,6 +223,11 @@
       "subheading": "Sản phẩm của chúng tôi đã có mặt tại hơn 20 quốc gia và vùng lãnh thổ.",
       "mapImage": "/uploads/world-map-export-markets.png",
       "countries": [
+        {
+          "name": "UK",
+          "country": "Anh Quốc",
+          "iso": "GBR"
+        },
         {
           "name": "Nhật bản",
           "country": "Nhật Bản",

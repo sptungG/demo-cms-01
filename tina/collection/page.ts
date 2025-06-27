@@ -1,3 +1,9 @@
+import { capacitySectionBlockSchema } from "@/components/blocks/about/sections/CapacitySection";
+import { heroAboutBlockSchema } from "@/components/blocks/about/sections/HeroAboutSection";
+import { leadershipSectionBlockSchema } from "@/components/blocks/about/sections/LeadershipSection";
+import { legalInfoSectionBlockSchema } from "@/components/blocks/about/sections/LegalInfoSection";
+import { timelineSectionBlockSchema } from "@/components/blocks/about/sections/TimelineSection";
+import { visionMissionSectionBlockSchema } from "@/components/blocks/about/sections/VisionMissionSection";
 import { callToActionBlockSchema } from "@/components/blocks/home/CallToAction";
 import { exportMarketsBlockSchema } from "@/components/blocks/home/ExportMarkets";
 import { featuredProductsBlockSchema } from "@/components/blocks/home/FeaturedProducts";
@@ -50,6 +56,12 @@ const Page: Collection = {
         newsAndEventsBlockSchema,
         testimonialsBlockSchema,
         callToActionBlockSchema,
+        capacitySectionBlockSchema,
+        heroAboutBlockSchema,
+        leadershipSectionBlockSchema,
+        legalInfoSectionBlockSchema,
+        timelineSectionBlockSchema,
+        visionMissionSectionBlockSchema,
       ],
     },
   ],

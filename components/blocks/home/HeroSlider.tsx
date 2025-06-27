@@ -149,9 +149,9 @@ export const HeroSlider = ({ slides }: HeroSliderProps) => {
 export const heroSliderBlockSchema: Template = {
   name: "heroSlider",
   label: "Hero Slider",
-  ui: {
-    previewSrc: "/blocks/hero.png",
-  },
+  // ui: {
+  //   previewSrc: "/blocks/hero.png",
+  // },
   fields: [
     {
       type: "object",
@@ -168,19 +168,19 @@ export const heroSliderBlockSchema: Template = {
           type: "string",
           name: "slogan",
           label: "Slogan",
-          required: true,
+          // required: true,
         },
         {
           type: "string",
           name: "subSlogan",
           label: "Sub Slogan",
-          required: true,
+          // required: true,
         },
         {
           type: "image",
           name: "backgroundImage",
           label: "Background Image",
-          required: true,
+          // required: true,
         },
         {
           type: "object",
@@ -191,13 +191,13 @@ export const heroSliderBlockSchema: Template = {
               type: "string",
               name: "label",
               label: "Label",
-              required: true,
+              // required: true,
             },
             {
               type: "string",
               name: "link",
               label: "Link",
-              required: true,
+              // required: true,
             },
           ],
         },

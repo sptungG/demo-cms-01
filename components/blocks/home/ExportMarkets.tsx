@@ -45,7 +45,7 @@ export const ExportMarkets = ({
         </div>
 
         <div className="relative w-full aspect-[21/9] overflow-hidden rounded-xl bg-background/80 backdrop-blur-sm flex items-center justify-center p-4">
-          <WorldMap countries={countries as any} />
+          <WorldMap countries={(countries as any) ?? []} />
         </div>
       </div>
     </section>
@@ -54,27 +54,27 @@ export const ExportMarkets = ({
 export const exportMarketsBlockSchema: Template = {
   name: "exportMarkets",
   label: "Export Markets",
-  ui: {
-    previewSrc: "/blocks/features.png",
-  },
+  // ui: {
+  //   previewSrc: "/blocks/features.png",
+  // },
   fields: [
     {
       type: "string",
       name: "heading",
       label: "Heading",
-      required: true,
+      // required: true,
     },
     {
       type: "string",
       name: "subheading",
       label: "Subheading",
-      required: true,
+      // required: true,
     },
     {
       type: "image",
       name: "mapImage",
       label: "World Map Image",
-      required: true,
+      // required: true,
     },
     {
       type: "object",
