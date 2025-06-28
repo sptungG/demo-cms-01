@@ -1,0 +1,175 @@
+{
+  "title": "About Us",
+  "slug": "/about-vinhapac",
+  "blocks": [
+    {
+      "heading": "We are VINHAPAC",
+      "subheading": "Delivering trust, partnering with our customers",
+      "backgroundImage": "/uploads/banner.png",
+      "primaryButton": {
+        "label": "Contact Us",
+        "link": "/contact",
+        "icon": "FaPhoneAlt"
+      },
+      "secondaryButton": {
+        "label": "More",
+        "link": "/us/vinhapac-galleries",
+        "icon": "FaInfoCircle"
+      },
+      "_template": "heroAboutSection"
+    },
+    {
+      "heading": "History & Development",
+      "timeline": [
+        {
+          "year": "1998",
+          "event": "Foundation established with the creation of the parent company in France, specializing in agricultural trade."
+        },
+        {
+          "year": "2010",
+          "event": "Expanded network to USA and Thailand, diversifying product portfolio into garments and furniture."
+        },
+        {
+          "year": "2020",
+          "event": "Established VINHAPAC in Vietnam, focusing on leveraging local high-quality production and supply capabilities."
+        },
+        {
+          "year": "2024",
+          "event": "Achieved ISO 9001:2015 certification, successfully exporting to over 20 countries, affirming our position as a trusted global partner."
+        }
+      ],
+      "_template": "timelineSection"
+    },
+    {
+      "capacityHeading": "Production & Operational Capacity",
+      "capacityItems": [
+        {
+          "icon": "FaMicrochip",
+          "title": "Technology",
+          "content": "Implementing Blockchain-based traceability and ERP systems for transparent supply chain management."
+        },
+        {
+          "icon": "FaChartLine",
+          "title": "Capacity",
+          "content": "Capability to handle large orders, with an average capacity of 500 containers/year for agricultural products and 1 million products/year for garments."
+        },
+        {
+          "icon": "FaWarehouse",
+          "title": "Warehouse Space",
+          "content": "Total warehouse area over 20,000 m², equipped with modern Warehouse Management System (WMS), ensuring optimal storage and preservation of goods."
+        },
+        {
+          "icon": "FaIndustry",
+          "title": "Partner Factories",
+          "content": "Network of over 15 strategic manufacturing plants and workshops nationwide, with regular quality audits."
+        }
+      ],
+      "_template": "capacitySection"
+    },
+    {
+      "vision": {
+        "title": "Vision",
+        "content": "To become a pioneer in import-export and distribution, building Vietnamese brands with international reach."
+      },
+      "mission": {
+        "title": "Mission",
+        "content": "Connecting high-quality supply with domestic and international market demands. Creating sustainable value for partners and communities."
+      },
+      "statistics": {
+        "orderQuantity": {
+          "label": "Đơn Hàng",
+          "description": "Completed orders",
+          "value": 500000
+        },
+        "exportQuantity": {
+          "label": "Container",
+          "description": "Exported products per year",
+          "value": 100000
+        },
+        "customerReviews": {
+          "label": "Khách hàng",
+          "description": "Customer satisfaction percentage",
+          "value": 98
+        }
+      },
+      "coreValues": {
+        "title": "Core Values",
+        "values": [
+          {
+            "name": "Credibility",
+            "description": "Commitment to honesty and transparency in all transactions."
+          },
+          {
+            "name": "Quality",
+            "description": "Superior products and services meeting all international standards."
+          },
+          {
+            "name": "Collaboration",
+            "description": "Building partnerships based on trust and long-term benefits."
+          },
+          {
+            "name": "Innovation",
+            "description": "Continuous improvement and adoption of new technologies in management and operations."
+          }
+        ]
+      },
+      "_template": "visionMissionSection"
+    },
+    {
+      "heading": "Leadership Team",
+      "subheading": "Experienced captains leading VINHAPAC to success.",
+      "members": [
+        {
+          "name": "John Smith",
+          "role": "International Market Development Director"
+        },
+        {
+          "name": "Nguyen Thi Mai",
+          "role": "Chief Financial Officer"
+        },
+        {
+          "name": "Tran Van An",
+          "role": "Chief Operating Officer (Vietnam)"
+        },
+        {
+          "name": "Claudine Désir",
+          "role": "Co-founder & CEO"
+        }
+      ],
+      "_template": "leadershipSection"
+    },
+    {
+      "heading": "Legal Information & Company Profile",
+      "companyProfile": {
+        "title": "VINHAPAC Company Profile",
+        "description": "Download our comprehensive document about capabilities, experience, and notable projects.",
+        "buttonLabel": "Download (PDF)",
+        "fileUrl": "/",
+        "image": "/uploads/world-map-export-markets.png"
+      },
+      "legalDetails": [
+        {
+          "label": "Full Company Name",
+          "value": "VINHAPAC Import-Export and Distribution Company Limited"
+        },
+        {
+          "label": "Tax ID",
+          "value": "0312345678"
+        },
+        {
+          "label": "Business License",
+          "value": "No. 0123456789 issued by HCMC Department of Planning and Investment on 01/01/2020"
+        },
+        {
+          "label": "Head Office Address",
+          "value": "123 Nguyen Van Linh, Tan Thuan Tay Ward, District 7, HCMC"
+        },
+        {
+          "label": "Certifications & Licenses",
+          "value": "ISO 9001:2015, HACCP, FDA, Export licenses for agricultural products and garments"
+        }
+      ],
+      "_template": "legalInfoSection"
+    }
+  ]
+}

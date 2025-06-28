@@ -23,6 +23,23 @@ interface VisionMissionSectionProps {
         description: string;
       }>;
     };
+    statistics: {
+      orderQuantity: {
+        name: string;
+        description: string;
+        value: number;
+      };
+      exportQuantity: {
+        name: string;
+        description: string;
+        value: number;
+      };
+      customerReviews: {
+        name: string;
+        description: string;
+        value: number;
+      };
+    };
   };
 }
 
@@ -104,7 +121,7 @@ export const VisionMissionSection = ({ data }: VisionMissionSectionProps) => {
             >
               <CountUp
                 start={0}
-                end={5000}
+                end={data.statistics.orderQuantity.value ?? 5000}
                 duration={2.5}
                 separator=","
                 suffix="+"
@@ -112,8 +129,12 @@ export const VisionMissionSection = ({ data }: VisionMissionSectionProps) => {
                 scrollSpyOnce
               />
             </motion.div>
-            <h4 className="text-lg font-semibold mb-2">Đơn Hàng</h4>
-            <p className="text-gray-600 text-sm">Đã hoàn thành thành công</p>
+            <h4 className="text-lg font-semibold mb-2">
+              {data.statistics.orderQuantity.name ?? "Orders"}
+            </h4>
+            <p className="text-gray-600 text-sm">
+              {data.statistics.orderQuantity.description ?? "Completed orders"}
+            </p>
           </motion.div>
 
           <motion.div
@@ -139,15 +160,20 @@ export const VisionMissionSection = ({ data }: VisionMissionSectionProps) => {
             >
               <CountUp
                 start={0}
-                end={500}
+                end={data.statistics.exportQuantity.value ?? 500}
                 duration={2}
                 suffix="+"
                 enableScrollSpy
                 scrollSpyOnce
               />
             </motion.div>
-            <h4 className="text-lg font-semibold mb-2">Container</h4>
-            <p className="text-gray-600 text-sm">Xuất khẩu mỗi năm</p>
+            <h4 className="text-lg font-semibold mb-2">
+              {data.statistics.exportQuantity.name ?? "Export"}
+            </h4>
+            <p className="text-gray-600 text-sm">
+              {data.statistics.exportQuantity.description ??
+                "Exported products per year"}
+            </p>
           </motion.div>
 
           <motion.div
@@ -173,15 +199,20 @@ export const VisionMissionSection = ({ data }: VisionMissionSectionProps) => {
             >
               <CountUp
                 start={0}
-                end={98}
-                duration={2}
+                end={data.statistics.customerReviews.value ?? 98}
+                duration={3}
                 suffix="%"
                 enableScrollSpy
                 scrollSpyOnce
               />
             </motion.div>
-            <h4 className="text-lg font-semibold mb-2">Khách Hàng</h4>
-            <p className="text-gray-600 text-sm">Hài lòng với dịch vụ</p>
+            <h4 className="text-lg font-semibold mb-2">
+              {data.statistics.customerReviews.name ?? "Customer Reviews"}
+            </h4>
+            <p className="text-gray-600 text-sm">
+              {data.statistics.customerReviews.description ??
+                "Customer satisfaction percentage"}
+            </p>
           </motion.div>
         </motion.div>
 
@@ -295,6 +326,79 @@ export const visionMissionSectionBlockSchema: Template = {
           ui: {
             component: "textarea",
           },
+        },
+      ],
+    },
+    {
+      name: "statistics",
+      label: "Statistics",
+      type: "object",
+      fields: [
+        {
+          name: "orderQuantity",
+          label: "Số lượng đơn hàng",
+          type: "object",
+          fields: [
+            {
+              type: "string",
+              name: "label",
+              label: "Nhãn",
+            },
+            {
+              type: "string",
+              name: "description",
+              label: "Mô tả",
+            },
+            {
+              type: "number",
+              name: "value",
+              label: "Giá trị",
+            },
+          ],
+        },
+        {
+          name: "exportQuantity",
+          label: "Số lượng xuất khẩu",
+          type: "object",
+          fields: [
+            {
+              type: "string",
+              name: "label",
+              label: "Nhãn",
+            },
+            {
+              type: "string",
+              name: "description",
+              label: "Mô tả",
+            },
+            {
+              type: "number",
+              name: "value",
+              label: "Giá trị",
+            },
+          ],
+        },
+        {
+          name: "customerReviews",
+          label: "Đánh giá khách hàng",
+          type: "object",
+          fields: [
+            {
+              type: "string",
+              name: "label",
+              label: "Nhãn",
+            },
+            {
+              type: "string",
+              name: "description",
+              label: "Mô tả",
+            },
+            {
+              type: "number",
+              name: "value",
+              label: "Giá trị",
+            },
+          ],
         },
       ],
     },

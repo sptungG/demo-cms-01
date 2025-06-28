@@ -1,5 +1,8 @@
 import type { Collection } from "tinacms";
 import { ColorPickerInput } from "../fields/color";
+import { countries } from "country-flag-icons";
+import CountryFlagItem from "@/components/CountryFlagItem";
+import SelectCountry from "@/components/SelectCountry";
 
 const Global: Collection = {
   label: "Global",
@@ -77,6 +80,11 @@ const Global: Collection = {
       type: "object",
       name: "footer",
       label: "Footer",
+      ui: {
+        itemProps: (item) => {
+          return { label: item?.name };
+        },
+      },
       fields: [
         {
           type: "string",
@@ -89,6 +97,7 @@ const Global: Collection = {
           name: "contactInfo",
           label: "Thông tin liên hệ",
           fields: [
+            { type: "string", name: "title", label: "Tiêu đề" },
             { type: "string", name: "address", label: "Địa chỉ" },
             { type: "string", name: "phone", label: "Số điện thoại" },
             { type: "string", name: "email", label: "Email" },
@@ -98,6 +107,11 @@ const Global: Collection = {
           type: "object",
           name: "linkColumns",
           label: "Các cột liên kết",
+          ui: {
+            itemProps: (item) => {
+              return { label: item?.title };
+            },
+          },
           list: true,
           fields: [
             { type: "string", name: "title", label: "Tiêu đề cột" },
@@ -105,6 +119,11 @@ const Global: Collection = {
               type: "object",
               name: "links",
               label: "Các liên kết",
+              ui: {
+                itemProps: (item) => {
+                  return { label: item?.label };
+                },
+              },
               list: true,
               fields: [
                 { type: "string", name: "label", label: "Nhãn" },
@@ -118,6 +137,11 @@ const Global: Collection = {
           name: "socialLinks",
           label: "Mạng xã hội",
           list: true,
+          ui: {
+            itemProps: (item) => {
+              return { label: item?.platform };
+            },
+          },
           fields: [
             {
               type: "string",
@@ -132,8 +156,53 @@ const Global: Collection = {
     },
     {
       type: "object",
+      label: "Language",
+      name: "language",
+      list: true,
+      // @ts-ignore
+      ui: {
+        itemProps: (item) => {
+          return { label: item?.countryName };
+        },
+      },
+      fields: [
+        {
+          type: "string",
+          label: "Language code",
+          name: "countryCode",
+        },
+        {
+          type: "string",
+          name: "countryName",
+          label: "Language name",
+        },
+        {
+          type: "string",
+          name: "countryFlag",
+          label: "Country Flag",
+          options: countries.map((country) => {
+            return {
+              label: country,
+              value: country,
+              icon: () => CountryFlagItem({ country }),
+            };
+          }),
+          ui: {
+            label: "Country flag",
+            component: SelectCountry as any,
+          },
+        },
+      ],
+    },
+    {
+      type: "object",
       label: "Theme",
       name: "theme",
+      ui: {
+        component(props) {
+          return null;
+        },
+      },
       // @ts-ignore
       fields: [
         {

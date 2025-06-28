@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { format } from "date-fns";
 import { vi } from "date-fns/locale";
 import { Template } from "tinacms";
+import { ChevronsRight } from "lucide-react";
 
 interface PostProps {
   title: string;
@@ -60,7 +61,10 @@ export const NewsAndEvents = ({ heading, posts }: NewsAndEventsProps) => {
                     <span className="text-[8px] sm:text-sm rounded-full bg-vina-primary/10 px-2 sm:px-3 py-0.5 sm:py-1 font-medium text-vina-primary">
                       {post.category}
                     </span>
-                    <time dateTime={post.date} className="text-[8px] sm:text-sm">
+                    <time
+                      dateTime={post.date}
+                      className="text-[8px] sm:text-sm"
+                    >
                       {format(new Date(post.date), "dd MMMM, yyyy", {
                         locale: vi,
                       })}
@@ -70,20 +74,7 @@ export const NewsAndEvents = ({ heading, posts }: NewsAndEventsProps) => {
                     {post.title}
                   </h3>
                   <div className="mt-2 sm:mt-4 flex items-center text-[10px] sm:text-sm font-medium text-primary">
-                    Đọc thêm
-                    <svg
-                      className="ml-1.5 sm:ml-2 h-3 w-3 sm:h-4 sm:w-4 transition-transform group-hover:translate-x-1"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 5l7 7-7 7"
-                      />
-                    </svg>
+                    <ChevronsRight className="ml-auto transform transition-transform duration-300 group-hover:translate-x-1"/>
                   </div>
                 </div>
               </Link>

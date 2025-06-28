@@ -87,7 +87,7 @@ export const capacitySectionBlockSchema: Template = {
       list: true,
       ui: {
         itemProps: (item) => ({
-          label: item?.name,
+          label: item?.title,
         }),
       },
       fields: [

@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
@@ -95,24 +95,24 @@
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
 
-  --vina-primary: #FC6B06;
-  --vina-primary-foreground: #FFFFFF;
-  --vina-secondary: #0691FC;
-  --vina-secondary-foreground: #FFFFFF;
-  --vina-accent: #B206FC;
-  --vina-accent-foreground: #FFFFFF;
-  --vina-muted: #F1F5F9;
+  --vina-primary: #fc6b06;
+  --vina-primary-foreground: #ffffff;
+  --vina-secondary: #0691fc;
+  --vina-secondary-foreground: #ffffff;
+  --vina-accent: #b206fc;
+  --vina-accent-foreground: #ffffff;
+  --vina-muted: #f1f5f9;
   --vina-muted-foreground: #475569;
-  --vina-background: #FFFFFF;
+  --vina-background: #ffffff;
   --vina-foreground: #111111;
-  --vina-card: #FFFFFF;
+  --vina-card: #ffffff;
   --vina-card-foreground: #111111;
-  --vina-popover: #FFFFFF;
+  --vina-popover: #ffffff;
   --vina-popover-foreground: #111111;
-  --vina-border: #E2E8F0;
-  --vina-input: #E2E8F0;
-  --vina-ring: #FC6B06;
-  --vina-destructive: #FF4444;
+  --vina-border: #e2e8f0;
+  --vina-input: #e2e8f0;
+  --vina-ring: #fc6b06;
+  --vina-destructive: #ff4444;
 }
 
 .dark {
@@ -148,24 +148,24 @@
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
 
-  --vina-primary: #FC6B06;
-  --vina-primary-foreground: #FFFFFF;
-  --vina-secondary: #0691FC;
-  --vina-secondary-foreground: #FFFFFF;
-  --vina-accent: #B206FC;
-  --vina-accent-foreground: #FFFFFF;
-  --vina-muted: #F1F5F9;
+  --vina-primary: #fc6b06;
+  --vina-primary-foreground: #ffffff;
+  --vina-secondary: #0691fc;
+  --vina-secondary-foreground: #ffffff;
+  --vina-accent: #b206fc;
+  --vina-accent-foreground: #ffffff;
+  --vina-muted: #f1f5f9;
   --vina-muted-foreground: #475569;
-  --vina-background: #FFFFFF;
+  --vina-background: #ffffff;
   --vina-foreground: #111111;
-  --vina-card: #FFFFFF;
+  --vina-card: #ffffff;
   --vina-card-foreground: #111111;
-  --vina-popover: #FFFFFF;
+  --vina-popover: #ffffff;
   --vina-popover-foreground: #111111;
-  --vina-border: #E2E8F0;
-  --vina-input: #E2E8F0;
-  --vina-ring: #FC6B06;
-  --vina-destructive: #FF4444;
+  --vina-border: #e2e8f0;
+  --vina-input: #e2e8f0;
+  --vina-ring: #fc6b06;
+  --vina-destructive: #ff4444;
 }
 
 @layer base {

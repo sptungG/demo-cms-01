@@ -193,6 +193,23 @@ interface VisionMissionSectionBlock extends BaseBlock {
       description: string;
     }>;
   };
+  statistics: {
+    orderQuantity: {
+      name: string;
+      description: string;
+      value: number;
+    };
+    exportQuantity: {
+      name: string;
+      description: string;
+      value: number;
+    };
+    customerReviews: {
+      name: string;
+      description: string;
+      value: number;
+    };
+  };
 }
 type PageBlock =
   | HeroSliderBlock
@@ -343,6 +360,23 @@ export const Block = ({ block }: { block: PageBlock }) => {
             vision: block.vision || { title: "", content: "" },
             mission: block.mission || { title: "", content: "" },
             coreValues: block.coreValues || { title: "", values: [] },
+            statistics: block.statistics || {
+              orderQuantity: {
+                name: "",
+                description: "",
+                value: 0,
+              },
+              exportQuantity: {
+                name: "",
+                description: "",
+                value: 0,
+              },
+              customerReviews: {
+                name: "",
+                description: "",
+                value: 0,
+              },
+            },
           }}
         />
       );

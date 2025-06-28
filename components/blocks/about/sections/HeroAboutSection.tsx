@@ -13,11 +13,11 @@ interface HeroSectionProps {
     primaryButton: {
       label: string;
       link: string;
-    },
+    };
     secondaryButton: {
       label: string;
       link: string;
-    },
+    };
   };
 }
 
@@ -67,17 +67,17 @@ export const HeroAboutSection = ({ data }: HeroSectionProps) => {
           >
             <button
               className="px-8 py-3 bg-vina-primary hover:bg-vina-primary/90 text-white rounded-full font-medium transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
-              onClick={() => (window.location.href = "/contact")}
+              onClick={() => (window.location.href = data.primaryButton.link)}
             >
               <FaPhoneAlt className="w-4 h-4" />
-              Liên hệ tư vấn
+              {data.primaryButton.label}
             </button>
             <button
               className="px-8 py-3 bg-vina-primary/80 hover:bg-vina-primary/90 text-white rounded-full font-medium backdrop-blur-sm transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
-              onClick={() => (window.location.href = "/about")}
+              onClick={() => (window.location.href = data.secondaryButton.link)}
             >
               <FaInfoCircle className="w-4 h-4" />
-              Tìm hiểu thêm
+              {data.secondaryButton.label}
             </button>
           </motion.div>
         </div>

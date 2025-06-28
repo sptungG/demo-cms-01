@@ -1,64 +1,64 @@
 {
   "header": {
     "name": "VINHAPAC",
-    "color": "primary",
+    "color": "default",
     "logo": {
       "path": "/uploads/logo.png"
     },
     "nav": [
       {
-        "href": "/",
-        "label": "Trang chủ"
+        "href": "/us",
+        "label": "Home"
       },
       {
-        "href": "/about-vinhapac",
-        "label": "Chúng tôi"
+        "href": "/us/about-vinhapac",
+        "label": "About"
       },
       {
-        "href": "/vinhapac-services",
-        "label": "Dịch vụ"
+        "href": "/us/vinhapac-services",
+        "label": "Services"
       },
       {
-        "href": "/vinhapac-galleries",
-        "label": "Thư viện sản xuất"
+        "href": "/us/vinhapac-galleries",
+        "label": "Galleries"
       },
       {
-        "href": "/contact-to-vinhapac",
-        "label": "Liên hệ"
+        "href": "/us/contact-to-vinhapac",
+        "label": "Contact"
       }
     ]
   },
   "footer": {
-    "description": "VINHAPAC - Đối tác tin cậy của bạn trong lĩnh vực xuất nhập khẩu và phân phối, kết nối thị trường và xây dựng niềm tin.",
+    "description": "VINHAPAC - Your reliable partner in import-export and distribution, connecting markets and building trust.",
     "contactInfo": {
-      "title": "Liên hệ",
-      "address": "49/3 Lê Văn Duyệt, Phường 3, Quận Bình Thạnh, TP.HCM",
+      "title": "Contact",
+      "address": "49/3 Le Van Duyet, Ward 3, Binh Thanh District, HCMC",
       "phone": "123-456-7890",
       "email": "contact@vinhapac.com"
     },
     "linkColumns": [
       {
-        "title": "Về chúng tôi",
+        "title": "About Us",
         "links": [
           {
-            "label": "Giới thiệu",
+            "label": "About",
             "url": "/about"
           }
         ]
       },
       {
-        "title": "Dịch vụ",
+        "title": "Services",
         "links": [
           {
-            "label": "Xuất nhập khẩu",
+            "label": "Import-Export",
             "url": "/services/export-import"
           },
           {
-            "label": "Phân phối",
+            "label": "Distribution",
             "url": "/services/distribution"
           },
           {
-            "label": "Tư vấn",
+            "label": "Consultancy",
             "url": "/services/consultancy"
           }
         ]
@@ -78,14 +78,14 @@
   },
   "language": [
     {
-      "countryCode": "en",
-      "countryName": "Tiếng Anh",
-      "countryFlag": "US"
+      "countryCode": "vn",
+      "countryName": "Vietnamese",
+      "countryFlag": "VN"
     },
     {
-      "countryCode": "vn",
-      "countryName": "Tiếng Việt",
-      "countryFlag": "VN"
+      "countryCode": "en",
+      "countryName": "English",
+      "countryFlag": "US"
     }
   ],
   "theme": {
