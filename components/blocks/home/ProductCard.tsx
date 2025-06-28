@@ -54,7 +54,7 @@ export const ProductCard = ({
           <h3
             className={`${
               isMobile
-                ? "text-[8px] line-clamp-1"
+                ? "text-[12px] line-clamp-1"
                 : "text-lg sm:text-xl line-clamp-2"
             } font-semibold text-foreground group-hover:text-primary transition-colors`}
           >

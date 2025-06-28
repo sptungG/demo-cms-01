@@ -108,7 +108,7 @@ export const Header = ({ locale = "vn" }: Props) => {
 
             {/* Mobile menu */}
             <div
-              className={`hidden sm:block fixed inset-x-0 top-[65px] z-50 h-[calc(100vh-65px)] transform overflow-y-auto bg-background p-6 transition-all duration-300 ${
+              className={`block fixed inset-x-0 top-[65px] z-50 h-[calc(100vh-65px)] transform overflow-y-auto bg-background p-6 transition-all duration-300 ${
                 menuState
                   ? "translate-x-0 opacity-100"
                   : "translate-x-full opacity-0"
