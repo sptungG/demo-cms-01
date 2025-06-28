@@ -70,7 +70,7 @@ export const NewsAndEvents = ({ heading, posts }: NewsAndEventsProps) => {
                       })}
                     </time>
                   </div>
-                  <h3 className="text-[10px] sm:text-lg md:text-xl font-semibold text-foreground transition-colors group-hover:text-primary line-clamp-2">
+                  <h3 className="text-sm sm:text-lg md:text-xl font-semibold text-foreground transition-colors group-hover:text-primary line-clamp-2">
                     {post.title}
                   </h3>
                   <div className="mt-2 sm:mt-4 flex items-center text-[10px] sm:text-sm font-medium text-primary">

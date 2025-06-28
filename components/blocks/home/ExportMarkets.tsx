@@ -38,7 +38,7 @@ export const ExportMarkets = ({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="mx-auto max-w-2xl text-[10px] sm:text-lg text-muted-foreground"
+            className="mx-auto max-w-2xl text-sm sm:text-lg text-muted-foreground"
           >
             {subheading}
           </motion.p>
