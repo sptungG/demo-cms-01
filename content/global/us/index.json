@@ -7,23 +7,23 @@
     },
     "nav": [
       {
-        "href": "/en/home",
+        "href": "/us",
         "label": "Home"
       },
       {
-        "href": "/us/about",
+        "href": "/us/about-vinhapac",
         "label": "About"
       },
       {
-        "href": "/us/services",
+        "href": "/us/vinhapac-services",
         "label": "Services"
       },
       {
-        "href": "/us/gallery",
-        "label": "Gallery"
+        "href": "/us/vinhapac-galleries",
+        "label": "Galleries"
       },
       {
-        "href": "/us/contact",
+        "href": "/us/contact-to-vinhapac",
         "label": "Contact"
       }
     ]

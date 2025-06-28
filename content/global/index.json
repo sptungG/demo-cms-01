@@ -11,19 +11,19 @@
         "label": "Trang chủ"
       },
       {
-        "href": "/chung-toi",
+        "href": "/about-vinhapac",
         "label": "Chúng tôi"
       },
       {
-        "href": "/dich-vu",
+        "href": "/vinhapac-services",
         "label": "Dịch vụ"
       },
       {
-        "href": "/thu-vien-san-xuat",
+        "href": "/vinhapac-galleries",
         "label": "Thư viện sản xuất"
       },
       {
-        "href": "/lien-he",
+        "href": "/contact-to-vinhapac",
         "label": "Liên hệ"
       }
     ]
