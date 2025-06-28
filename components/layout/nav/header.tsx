@@ -41,7 +41,7 @@ export const Header = ({ locale = "vn" }: Props) => {
         <div className="mx-auto max-w-6xl px-6 transition-all duration-300">
           <div className="relative flex h-16 items-center justify-between gap-6 py-3 lg:gap-0 lg:py-0">
             <Link
-              href="/"
+              href={`/${selectedLang.toLowerCase()}`}
               aria-label="home"
               className="flex items-center space-x-3 transition-opacity hover:opacity-90"
             >
