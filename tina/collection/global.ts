@@ -1,5 +1,8 @@
 import type { Collection } from "tinacms";
 import { ColorPickerInput } from "../fields/color";
+import { countries } from "country-flag-icons";
+import CountryFlagItem from "@/components/CountryFlagItem";
+import SelectCountry from "@/components/SelectCountry";
 
 const Global: Collection = {
   label: "Global",
@@ -153,8 +156,53 @@ const Global: Collection = {
     },
     {
       type: "object",
+      label: "Language",
+      name: "language",
+      list: true,
+      // @ts-ignore
+      ui: {
+        itemProps: (item) => {
+          return { label: item?.countryName };
+        },
+      },
+      fields: [
+        {
+          type: "string",
+          label: "Language code",
+          name: "countryCode",
+        },
+        {
+          type: "string",
+          name: "countryName",
+          label: "Language name",
+        },
+        {
+          type: "string",
+          name: "countryFlag",
+          label: "Country Flag",
+          options: countries.map((country) => {
+            return {
+              label: country,
+              value: country,
+              icon: () => CountryFlagItem({ country }),
+            };
+          }),
+          ui: {
+            label: "Country flag",
+            component: SelectCountry as any,
+          },
+        },
+      ],
+    },
+    {
+      type: "object",
       label: "Theme",
       name: "theme",
+      ui: {
+        component(props) {
+          return null;
+        },
+      },
       // @ts-ignore
       fields: [
         {

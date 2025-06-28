@@ -11,19 +11,19 @@
         "label": "Home"
       },
       {
-        "href": "/en/about",
+        "href": "/us/about",
         "label": "About"
       },
       {
-        "href": "/en/services",
+        "href": "/us/services",
         "label": "Services"
       },
       {
-        "href": "/en/gallery",
+        "href": "/us/gallery",
         "label": "Gallery"
       },
       {
-        "href": "/en/contact",
+        "href": "/us/contact",
         "label": "Contact"
       }
     ]
@@ -31,10 +31,10 @@
   "footer": {
     "description": "VINHAPAC - Your reliable partner in import-export and distribution, connecting markets and building trust.",
     "contactInfo": {
+      "title": "Contact",
       "address": "49/3 Le Van Duyet, Ward 3, Binh Thanh District, HCMC",
       "phone": "123-456-7890",
-      "email": "contact@vinhapac.com",
-      "title": "Contact"
+      "email": "contact@vinhapac.com"
     },
     "linkColumns": [
       {
@@ -76,6 +76,18 @@
     ],
     "copyright": "© 2024 VINHAPAC. All Rights Reserved."
   },
+  "language": [
+    {
+      "countryCode": "vn",
+      "countryName": "Vietnamese",
+      "countryFlag": "VN"
+    },
+    {
+      "countryCode": "en",
+      "countryName": "English",
+      "countryFlag": "US"
+    }
+  ],
   "theme": {
     "color": "blue",
     "font": "sans",

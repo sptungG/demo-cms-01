@@ -32,11 +32,13 @@
   "dependencies": {
     "@headlessui/react": "^2.2.4",
     "@radix-ui/react-avatar": "^1.1.10",
+    "@radix-ui/react-select": "^2.2.5",
     "@radix-ui/react-slot": "^1.2.3",
     "@tailwindcss/typography": "^0.5.16",
     "@turf/centroid": "^7.2.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "country-flag-icons": "^1.5.19",
     "d3-fetch": "^3.0.1",
     "d3-geo": "^3.1.1",
     "d3-scale": "^4.0.2",

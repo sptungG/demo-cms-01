@@ -31,10 +31,10 @@
   "footer": {
     "description": "VINHAPAC - Đối tác tin cậy của bạn trong lĩnh vực xuất nhập khẩu và phân phối, kết nối thị trường và xây dựng niềm tin.",
     "contactInfo": {
+      "title": "Liên hệ",
       "address": "49/3 Lê Văn Duyệt, Phường 3, Quận Bình Thạnh, TP.HCM",
       "phone": "123-456-7890",
-      "email": "contact@vinhapac.com",
-      "title": "Liên hệ"
+      "email": "contact@vinhapac.com"
     },
     "linkColumns": [
       {
@@ -76,6 +76,18 @@
     ],
     "copyright": "© 2024 VINHAPAC. All Rights Reserved."
   },
+  "language": [
+    {
+      "countryCode": "en",
+      "countryName": "Tiếng Anh",
+      "countryFlag": "US"
+    },
+    {
+      "countryCode": "vn",
+      "countryName": "Tiếng Việt",
+      "countryFlag": "VN"
+    }
+  ],
   "theme": {
     "color": "blue",
     "font": "sans",
