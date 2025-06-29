@@ -31,15 +31,17 @@ export const Header = ({ locale = "vn" }: Props) => {
   }, []);
 
   return (
-    <header>
+    <header
+      className={`fixed top-0 right-0 w-full px-4 sm:px-0 z-[99999] border-b backdrop-blur-xl transition-all duration-300 ${
+        isScrolled ? "bg-background/80 shadow-sm" : "bg-background/50"
+      }`}
+    >
       <nav
         data-state={menuState ? "active" : "inactive"}
-        className={`fixed z-20 w-screen border-b backdrop-blur-xl transition-all duration-300 ${
-          isScrolled ? "bg-background/80 shadow-sm" : "bg-background/50"
-        }`}
+        className={`container m-auto`}
       >
-        <div className="mx-auto max-w-6xl px-6 transition-all duration-300">
-          <div className="relative flex h-16 items-center justify-between gap-6 py-3 lg:gap-0 lg:py-0">
+        <div className=" mx-auto transition-all duration-300">
+          <div className="relative flex h-16 items-center justify-between py-3 lg:gap-0 lg:py-0">
             <Link
               href={`/${selectedLang.toLowerCase()}`}
               aria-label="home"
@@ -57,7 +59,7 @@ export const Header = ({ locale = "vn" }: Props) => {
               </span>
             </Link>
 
-            <div className="hidden lg:flex lg:items-center lg:gap-6">
+            <div className="hidden lg:flex lg:items-center">
               <ul className="flex items-center gap-1">
                 {header.nav!.map((item, index) => {
                   const isActive = pathname === item!.href;

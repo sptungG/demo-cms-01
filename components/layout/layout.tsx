@@ -31,7 +31,6 @@ export default async function Layout({
     }
   );
 
-
   return (
     <LayoutProvider globalSettings={globalData.global} pageData={rawPageData}>
       <Header locale={isLocale ? (locale as string) : "vn"} />
