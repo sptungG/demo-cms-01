@@ -95,23 +95,23 @@
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
 
-  --vina-primary: #fc6b06;
+  --vina-primary: #fc6b06; /* Màu cam chủ đạo */
   --vina-primary-foreground: #ffffff;
-  --vina-secondary: #0691fc;
+  --vina-secondary: #ff8534; /* Màu cam nhạt hơn */
   --vina-secondary-foreground: #ffffff;
-  --vina-accent: #b206fc;
+  --vina-accent: #d95a05; /* Màu cam đậm hơn */
   --vina-accent-foreground: #ffffff;
-  --vina-muted: #f1f5f9;
-  --vina-muted-foreground: #475569;
+  --vina-muted: #fff0e6; /* Màu cam rất nhạt cho background */
+  --vina-muted-foreground: #663d1a; /* Màu nâu cho text trên nền nhạt */
   --vina-background: #ffffff;
-  --vina-foreground: #111111;
+  --vina-foreground: #1a1a1a;
   --vina-card: #ffffff;
-  --vina-card-foreground: #111111;
+  --vina-card-foreground: #1a1a1a;
   --vina-popover: #ffffff;
-  --vina-popover-foreground: #111111;
-  --vina-border: #e2e8f0;
-  --vina-input: #e2e8f0;
-  --vina-ring: #fc6b06;
+  --vina-popover-foreground: #1a1a1a;
+  --vina-border: #ffe0cc; /* Border màu cam nhạt */
+  --vina-input: #ffe0cc;
+  --vina-ring: #fc6b06; /* Ring focus cùng màu primary */
   --vina-destructive: #ff4444;
 }
 
@@ -150,20 +150,20 @@
 
   --vina-primary: #fc6b06;
   --vina-primary-foreground: #ffffff;
-  --vina-secondary: #0691fc;
+  --vina-secondary: #ff8534;
   --vina-secondary-foreground: #ffffff;
-  --vina-accent: #b206fc;
+  --vina-accent: #d95a05;
   --vina-accent-foreground: #ffffff;
-  --vina-muted: #f1f5f9;
-  --vina-muted-foreground: #475569;
-  --vina-background: #ffffff;
-  --vina-foreground: #111111;
-  --vina-card: #ffffff;
-  --vina-card-foreground: #111111;
-  --vina-popover: #ffffff;
-  --vina-popover-foreground: #111111;
-  --vina-border: #e2e8f0;
-  --vina-input: #e2e8f0;
+  --vina-muted: #2d1810; /* Màu nâu tối cho dark mode */
+  --vina-muted-foreground: #ffd1b3; /* Text màu cam nhạt trên nền tối */
+  --vina-background: #1a1a1a;
+  --vina-foreground: #ffffff;
+  --vina-card: #2d1810;
+  --vina-card-foreground: #ffffff;
+  --vina-popover: #2d1810;
+  --vina-popover-foreground: #ffffff;
+  --vina-border: #663d1a; /* Border màu nâu tối */
+  --vina-input: #663d1a;
   --vina-ring: #fc6b06;
   --vina-destructive: #ff4444;
 }
@@ -179,10 +179,10 @@
 }
 
 @layer utilities {
+  /* Base vina colors */
   .text-vina-primary {
     color: var(--vina-primary);
   }
-
   .bg-vina-primary {
     background-color: var(--vina-primary);
   }
@@ -190,7 +190,6 @@
   .text-vina-secondary {
     color: var(--vina-secondary);
   }
-
   .bg-vina-secondary {
     background-color: var(--vina-secondary);
   }
@@ -198,80 +197,169 @@
   .text-vina-accent {
     color: var(--vina-accent);
   }
-
   .bg-vina-accent {
     background-color: var(--vina-accent);
   }
 
-  .text-vina-muted {
-    color: var(--vina-muted);
+  .text-vina-muted-foreground {
+    color: var(--vina-muted-foreground);
   }
-
   .bg-vina-muted {
     background-color: var(--vina-muted);
-  }
-
-  .text-vina-background {
-    color: var(--vina-background);
-  }
-
-  .bg-vina-background {
-    background-color: var(--vina-background);
   }
 
   .text-vina-foreground {
     color: var(--vina-foreground);
   }
-
-  .bg-vina-foreground {
-    background-color: var(--vina-foreground);
-  }
-
-  .text-vina-card {
-    color: var(--vina-card);
-  }
-
-  .bg-vina-card {
-    background-color: var(--vina-card);
-  }
-
-  .text-vina-card-foreground {
-    color: var(--vina-card-foreground);
-  }
-
-  .bg-vina-card-foreground {
-    background-color: var(--vina-card-foreground);
-  }
-
-  .text-vina-popover {
-    color: var(--vina-popover);
-  }
-
-  .bg-vina-popover {
-    background-color: var(--vina-popover);
-  }
-
-  .text-vina-popover-foreground {
-    color: var(--vina-popover-foreground);
-  }
-
-  .bg-vina-popover-foreground {
-    background-color: var(--vina-popover-foreground);
+  .bg-vina-background {
+    background-color: var(--vina-background);
   }
 
   .border-vina-border {
     border-color: var(--vina-border);
   }
+  .bg-vina-card {
+    background-color: var(--vina-card);
+  }
+  .text-vina-card-foreground {
+    color: var(--vina-card-foreground);
+  }
 
-  .outline-vina-ring {
-    outline-color: var(--vina-ring);
+  .bg-vina-popover {
+    background-color: var(--vina-popover);
+  }
+  .text-vina-popover-foreground {
+    color: var(--vina-popover-foreground);
+  }
+
+  .ring-vina-ring {
+    --tw-ring-color: var(--vina-ring);
   }
 
   .text-vina-destructive {
     color: var(--vina-destructive);
   }
-
   .bg-vina-destructive {
     background-color: var(--vina-destructive);
+  }
+
+  /* Opacity variants using color-mix */
+  .bg-vina-primary-10 {
+    background-color: color-mix(in srgb, var(--vina-primary) 10%, transparent);
+  }
+  .bg-vina-primary-20 {
+    background-color: color-mix(in srgb, var(--vina-primary) 20%, transparent);
+  }
+  .bg-vina-primary-30 {
+    background-color: color-mix(in srgb, var(--vina-primary) 30%, transparent);
+  }
+  .bg-vina-primary-40 {
+    background-color: color-mix(in srgb, var(--vina-primary) 40%, transparent);
+  }
+  .bg-vina-primary-50 {
+    background-color: color-mix(in srgb, var(--vina-primary) 50%, transparent);
+  }
+  .border-vina-primary {
+    border-color: var(--vina-primary);
+  }
+  .bg-vina-secondary-10 {
+    background-color: color-mix(
+      in srgb,
+      var(--vina-secondary) 10%,
+      transparent
+    );
+  }
+  .bg-vina-secondary-20 {
+    background-color: color-mix(
+      in srgb,
+      var(--vina-secondary) 20%,
+      transparent
+    );
+  }
+  .bg-vina-secondary-30 {
+    background-color: color-mix(
+      in srgb,
+      var(--vina-secondary) 30%,
+      transparent
+    );
+  }
+  .bg-vina-secondary-40 {
+    background-color: color-mix(
+      in srgb,
+      var(--vina-secondary) 40%,
+      transparent
+    );
+  }
+  .bg-vina-secondary-50 {
+    background-color: color-mix(
+      in srgb,
+      var(--vina-secondary) 50%,
+      transparent
+    );
+  }
+
+  /* Gradients */
+  .from-vina-primary {
+    --tw-gradient-from: var(--vina-primary) var(--tw-gradient-from-position);
+    --tw-gradient-to: rgb(252 107 6 / 0) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  }
+
+  .to-vina-secondary {
+    --tw-gradient-to: var(--vina-secondary) var(--tw-gradient-to-position);
+  }
+
+  .to-vina-accent {
+    --tw-gradient-to: var(--vina-accent) var(--tw-gradient-to-position);
+  }
+
+  .via-vina-secondary {
+    --tw-gradient-via-position: var(--tw-gradient-via-position);
+    --tw-gradient-to: rgb(6 145 252 / 0) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from),
+      var(--vina-secondary) var(--tw-gradient-via-position),
+      var(--tw-gradient-to);
+  }
+
+  .via-vina-accent {
+    --tw-gradient-via-position: var(--tw-gradient-via-position);
+    --tw-gradient-to: rgb(178 6 252 / 0) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from),
+      var(--vina-accent) var(--tw-gradient-via-position), var(--tw-gradient-to);
+  }
+
+  /* Gradient Text Utilities */
+  .bg-gradient-text-primary {
+    background-image: linear-gradient(to right, var(--vina-primary), var(--vina-secondary), var(--vina-accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .bg-gradient-text-secondary {
+    background-image: linear-gradient(to right, var(--vina-secondary), var(--vina-accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .bg-gradient-text-accent {
+    background-image: linear-gradient(to right, var(--vina-accent), var(--vina-primary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Gradient Text with Opacity */
+  .bg-gradient-text-primary-50 {
+    background-image: linear-gradient(
+      to right,
+      color-mix(in srgb, var(--vina-primary) 50%, transparent),
+      color-mix(in srgb, var(--vina-secondary) 50%, transparent),
+      color-mix(in srgb, var(--vina-accent) 50%, transparent)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
 }
