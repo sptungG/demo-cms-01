@@ -13,8 +13,8 @@ const HeroSectionSecond: React.FC<HeroSectionProps> = ({
   onSupplierClick,
 }) => {
   return (
-    <section className="container mx-auto rounded-xl relative bg-gradient-to-br from-vina-background via-vina-muted to-vina-background overflow-hidden py-4 sm:py-6 md:py-10 lg:py-12">
-      <div className="max-w-[90rem] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+    <section className="mx-auto rounded-xl relative bg-gradient-to-br from-vina-background via-vina-muted to-vina-background overflow-hidden py-4 sm:py-6 md:py-10 lg:py-12">
+      <div className="mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 xl:gap-24 items-center">
           {/* Left Column */}
           <motion.div
@@ -43,9 +43,7 @@ const HeroSectionSecond: React.FC<HeroSectionProps> = ({
               transition={{ delay: 0.2, duration: 0.8 }}
             >
               Connecting Vietnam to the{" "}
-              <span className="text-vina-primary font-bold">
-                World
-              </span>
+              <span className="text-vina-primary font-bold">World</span>
             </motion.h1>
 
             <motion.p
@@ -68,7 +66,7 @@ const HeroSectionSecond: React.FC<HeroSectionProps> = ({
                 onClick={onQuoteClick}
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
-                className="flex items-center gap-2 px-6 py-3 text-sm font-semibold rounded-xl shadow-lg bg-vina-primary text-white hover:opacity-90 transition"
+                className="flex cursor-pointer items-center gap-2 px-6 py-3 text-sm font-semibold rounded-xl shadow-lg bg-vina-primary text-white hover:opacity-90 transition"
               >
                 <Globe className="w-5 h-5" />
                 Request a Quote
@@ -78,7 +76,7 @@ const HeroSectionSecond: React.FC<HeroSectionProps> = ({
                 onClick={onSupplierClick}
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
-                className="flex items-center gap-2 px-2 py-2 text-sm font-semibold rounded-xl shadow-lg bg-white/10 border border-vina-border text-vina-foreground hover:bg-white/20 transition"
+                className="flex cursor-pointer items-center gap-2 px-2 py-2 text-sm font-semibold rounded-xl shadow-lg bg-white/10 border border-vina-border text-vina-foreground hover:bg-white/20 transition"
               >
                 <Users className="w-5 h-5" />
                 Become a Supplier

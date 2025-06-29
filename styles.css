@@ -60,7 +60,10 @@
   --color-vina-ring: var(--vina-ring);
   --color-vina-destructive: var(--vina-destructive);
 }
-
+html {
+  scrollbar-gutter: stable;
+  overflow-x: hidden;
+}
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
@@ -330,21 +333,34 @@
 
   /* Gradient Text Utilities */
   .bg-gradient-text-primary {
-    background-image: linear-gradient(to right, var(--vina-primary), var(--vina-secondary), var(--vina-accent));
+    background-image: linear-gradient(
+      to right,
+      var(--vina-primary),
+      var(--vina-secondary),
+      var(--vina-accent)
+    );
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
 
   .bg-gradient-text-secondary {
-    background-image: linear-gradient(to right, var(--vina-secondary), var(--vina-accent));
+    background-image: linear-gradient(
+      to right,
+      var(--vina-secondary),
+      var(--vina-accent)
+    );
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
 
   .bg-gradient-text-accent {
-    background-image: linear-gradient(to right, var(--vina-accent), var(--vina-primary));
+    background-image: linear-gradient(
+      to right,
+      var(--vina-accent),
+      var(--vina-primary)
+    );
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;

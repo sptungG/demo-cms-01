@@ -1,11 +1,14 @@
 "use client";
+import CallToActionSection from "@/components/blocks/home/CallToActionSectionSecond";
+import CertificationsSection from "@/components/blocks/home/CertificationsSection";
+import DeepExportServices from "@/components/blocks/home/DeepExportServices";
+import HeroSectionSecond from "@/components/blocks/home/HeroSectionSecond";
+import KeyExportProducts from "@/components/blocks/home/KeyExportProducts";
+import PartnersShowcase from "@/components/blocks/home/PartnersShowcase";
+import WhoWeAreSection from "@/components/blocks/home/WhoWeAreSection";
+import QuoteModal from "@/components/blocks/QuoteModal";
+import SupplierModal from "@/components/blocks/SupplierModal";
 import React, { useState } from "react";
-import HeroSectionSecond from "./components/HeroSectionSecond";
-import WhoWeAreSection from "./components/WhoWeAreSection";
-import CallToActionSection from "./components/CallToActionSection";
-import QuoteModal from "./components/QuoteModal";
-import SupplierModal from "./components/SupplierModal";
-import KeyExportProducts from "./components/KeyExportProducts";
 
 const HomePage = () => {
   const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
@@ -20,7 +23,9 @@ const HomePage = () => {
 
       <WhoWeAreSection />
       <KeyExportProducts />
-
+      <DeepExportServices />
+      <PartnersShowcase />
+      <CertificationsSection />
       <CallToActionSection
         onQuoteClick={() => setIsQuoteModalOpen(true)}
         onSupplierClick={() => setIsSupplierModalOpen(true)}
