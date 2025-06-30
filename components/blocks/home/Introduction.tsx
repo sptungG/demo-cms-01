@@ -76,10 +76,10 @@ export const Introduction = ({
 
 export const introductionBlockSchema: Template = {
   name: "introduction",
-  label: "Introduction",
-  // ui: {
-  //   previewSrc: "/blocks/content.png",
-  // },
+  label: "Introduction 1",
+  ui: {
+    previewSrc: "/blocks/sectionscms/introduction1.png",
+  },
   fields: [
     {
       type: "string",
