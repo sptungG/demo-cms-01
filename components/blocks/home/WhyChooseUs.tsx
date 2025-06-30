@@ -68,10 +68,10 @@ export const WhyChooseUs = ({ heading, features }: WhyChooseUsProps) => {
 
 export const whyChooseUsBlockSchema: Template = {
   name: "whyChooseUs",
-  label: "Why Choose Us",
-  // ui: {
-  //   previewSrc: "/blocks/features.png",
-  // },
+  label: "Why Choose Us 1",
+  ui: {
+    previewSrc: "/blocks/sectionscms/whychooseus1.png",
+  },
   fields: [
     {
       type: "string",

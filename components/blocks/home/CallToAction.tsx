@@ -77,12 +77,9 @@ export const CallToAction = ({
   );
 };
 
-export const callToActionBlockSchema: Template = {
+export const callToActionBlockSchema: Template | any = {
   name: "cta",
   label: "Call to Action",
-  // ui: {
-  //   previewSrc: "/blocks/cta.png",
-  // },
   fields: [
     {
       type: "string",
@@ -116,4 +113,4 @@ export const callToActionBlockSchema: Template = {
       ],
     },
   ],
-}; 
+};

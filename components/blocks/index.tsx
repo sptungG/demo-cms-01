@@ -14,6 +14,24 @@ import { LeadershipSection } from "./about/sections/LeadershipSection";
 import { LegalInfoSection } from "./about/sections/LegalInfoSection";
 import { TimelineSection } from "./about/sections/TimelineSection";
 import { VisionMissionSection } from "./about/sections/VisionMissionSection";
+import HeroSectionSecond, {
+  IHeroSectionSecond,
+} from "./home/HeroSectionSecond";
+import WhoWeAreSection, { IWhoWeAreSection } from "./home/WhoWeAreSection";
+import KeyExportProducts, {
+  IKeyExportProducts,
+} from "./home/KeyExportProducts";
+import DeepExportServices, {
+  IDeepExportServices,
+} from "./home/DeepExportServices";
+import PartnersShowcase, { IPartnersShowcase } from "./home/PartnersShowcase";
+import CertificationsSection, {
+  ICertificationsSection,
+} from "./home/CertificationsSection";
+import CallToActionSection, {
+  ICallToActionSectionSecond,
+} from "./home/CallToActionSectionSecond";
+import CallToActionSectionSecond from "./home/CallToActionSectionSecond";
 
 type Maybe<T> = T | null | undefined;
 
@@ -211,6 +229,41 @@ interface VisionMissionSectionBlock extends BaseBlock {
     };
   };
 }
+
+interface IHeroSectionSecondTemplateBLock
+  extends BaseBlock,
+    IHeroSectionSecond {
+  __typename: "PageBlocksHeroSectionSecondTemplate";
+}
+
+interface IWhoWeAreSectionBlock extends BaseBlock, IWhoWeAreSection {
+  __typename: "PageBlocksWhoWeAreSection";
+}
+
+interface IKeyExportProductsBlock extends BaseBlock, IKeyExportProducts {
+  __typename: "PageBlocksKeyExportProducts";
+}
+
+interface IDeepExportServicesBlock extends BaseBlock, IDeepExportServices {
+  __typename: "PageBlocksDeepExportServices";
+}
+
+interface IPartnersShowcaseBlock extends BaseBlock, IPartnersShowcase {
+  __typename: "PageBlocksPartnersShowcase";
+}
+
+interface ICertificationsSectionBlock
+  extends BaseBlock,
+    ICertificationsSection {
+  __typename: "PageBlocksCertificationsSection";
+}
+
+interface ICallToActionSectionSecondBblock
+  extends BaseBlock,
+    ICallToActionSectionSecond {
+  __typename: "PageBlocksCallToActionSectionSecond";
+}
+
 type PageBlock =
   | HeroSliderBlock
   | IntroductionBlock
@@ -225,7 +278,14 @@ type PageBlock =
   | LeadershipSectionBlock
   | LegalInfoSectionBlock
   | TimelineSectionBlock
-  | VisionMissionSectionBlock;
+  | VisionMissionSectionBlock
+  | IWhoWeAreSectionBlock
+  | IKeyExportProductsBlock
+  | IDeepExportServicesBlock
+  | IPartnersShowcaseBlock
+  | ICertificationsSectionBlock
+  | ICallToActionSectionSecondBblock
+  | IHeroSectionSecondTemplateBLock;
 
 interface Page {
   blocks?: Maybe<PageBlock>[];
@@ -376,6 +436,116 @@ export const Block = ({ block }: { block: PageBlock }) => {
                 description: "",
                 value: 0,
               },
+            },
+          }}
+        />
+      );
+    case "PageBlocksHeroSectionSecondTemplate":
+      return (
+        <HeroSectionSecond
+          data={{
+            badge: {
+              text: block.badge?.text ?? "",
+            },
+            heroSectionSecondheading: block.heroSectionSecondheading,
+            description: block.description,
+            buttons: block.buttons || [],
+            heroSectionSecondstatistics: block.heroSectionSecondstatistics,
+          }}
+        />
+      );
+    case "PageBlocksWhoWeAreSection":
+      return (
+        <WhoWeAreSection
+          data={{
+            whoWeAreSectionHeading: block.whoWeAreSectionHeading || {
+              title: "",
+              description: "",
+            },
+            features: block.features || [],
+            mission: block.mission || {
+              title: "",
+              description: "",
+              image: "",
+            },
+            vision: block.vision || {
+              title: "",
+              description: "",
+              image: "",
+            },
+          }}
+        />
+      );
+
+    case "PageBlocksKeyExportProducts":
+      return (
+        <KeyExportProducts
+          data={{
+            keyExportProductsHeading: block.keyExportProductsHeading || {
+              title: "",
+              description: "",
+            },
+            products: block.products || [],
+          }}
+        />
+      );
+    case "PageBlocksDeepExportServices":
+      return (
+        <DeepExportServices
+          data={{
+            deepExportServicesHeading: block.deepExportServicesHeading || {
+              title: "",
+              description: "",
+            },
+            services: block.services || [],
+          }}
+        />
+      );
+    case "PageBlocksPartnersShowcase":
+      return (
+        <PartnersShowcase
+          data={{
+            partnersShowcaseHeading: {
+              title: block.partnersShowcaseHeading?.title ?? "",
+            },
+            partners: block.partners || [],
+          }}
+        />
+      );
+    case "PageBlocksCertificationsSection":
+      return (
+        <CertificationsSection
+          data={{
+            certifications: block.certifications || [],
+            certificationHeading: {
+              title: block.certificationHeading?.title ?? "",
+            },
+          }}
+        />
+      );
+    case "PageBlocksCallToActionSectionSecond":
+      return (
+        <CallToActionSectionSecond
+          data={{
+            buyer: block.buyer || {
+              title: "",
+              description: "",
+              button: {
+                text: "",
+              },
+              features: [],
+            },
+            supplier: block.supplier || {
+              title: "",
+              description: "",
+              button: {
+                text: "",
+              },
+              features: [],
+            },
+            callToActionSecondHeading: block.callToActionSecondHeading || {
+              title: "",
+              description: "",
             },
           }}
         />

@@ -22,7 +22,7 @@ export const ExportMarkets = ({
   countries,
 }: ExportMarketsProps) => {
   return (
-    <section className="bg-accent/5 py-4 sm:py-12 md:py-16">
+    <section className="bg-accent/5">
       <div className="container mx-auto px-4">
         <div className="mb-6 sm:mb-10 text-center">
           <motion.h2
@@ -53,10 +53,10 @@ export const ExportMarkets = ({
 };
 export const exportMarketsBlockSchema: Template = {
   name: "exportMarkets",
-  label: "Export Markets",
-  // ui: {
-  //   previewSrc: "/blocks/features.png",
-  // },
+  label: "Export Markets World Map",
+  ui: {
+    previewSrc: "/blocks/sectionscms/exportmarketworldmap.png",
+  },
   fields: [
     {
       type: "string",

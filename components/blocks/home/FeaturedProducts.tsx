@@ -92,10 +92,10 @@ export const FeaturedProducts = ({
 
 export const featuredProductsBlockSchema: Template = {
   name: "featuredProducts",
-  label: "Featured Products",
-  // ui: {
-  //   previewSrc: "/blocks/features.png",
-  // },
+  label: "Featured Products 1",
+  ui: {
+    previewSrc: "/blocks/sectionscms/featuredproduct1.png",
+  },
   fields: [
     {
       type: "string",

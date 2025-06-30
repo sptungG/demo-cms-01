@@ -34,7 +34,9 @@ export default async function Layout({
   return (
     <LayoutProvider globalSettings={globalData.global} pageData={rawPageData}>
       <Header locale={isLocale ? (locale as string) : "vn"} />
-      <main className="overflow-x-hidden pt-16">{children}</main>
+      <main className="overflow-x-hidden pt-16 container mx-auto relative overflow-hidden">
+        {children}
+      </main>
       <Footer data={globalData.global.footer} />
     </LayoutProvider>
   );
