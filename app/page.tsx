@@ -12,7 +12,7 @@ export default async function Home() {
 
   return (
     <Layout rawPageData={data}>
-      <ClientPage {...data} />
+      <HomePage />
     </Layout>
   );
 }
