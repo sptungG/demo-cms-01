@@ -149,9 +149,9 @@ export const HeroSlider = ({ slides }: HeroSliderProps) => {
 export const heroSliderBlockSchema: Template = {
   name: "heroSlider",
   label: "Hero Slider",
-  // ui: {
-  //   previewSrc: "/blocks/hero.png",
-  // },
+  ui: {
+    previewSrc: "/blocks/sectionscms/herosection1.png",
+  },
   fields: [
     {
       type: "object",

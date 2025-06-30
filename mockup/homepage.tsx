@@ -16,12 +16,12 @@ const HomePage = () => {
 
   return (
     <div className="container mx-auto relative overflow-hidden">
-      <HeroSectionSecond
+      {/* <HeroSectionSecond
         onQuoteClick={() => setIsQuoteModalOpen(true)}
         onSupplierClick={() => setIsSupplierModalOpen(true)}
-      />
+      /> */}
 
-      <WhoWeAreSection />
+      {/* <WhoWeAreSection /> */}
       <KeyExportProducts />
       <DeepExportServices />
       <PartnersShowcase />

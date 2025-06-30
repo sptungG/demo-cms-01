@@ -137,10 +137,10 @@ export const Testimonials = ({ heading, items }: TestimonialsProps) => {
 
 export const testimonialsBlockSchema: Template = {
   name: "testimonials",
-  label: "Testimonials",
-  // ui: {
-  //   previewSrc: "/blocks/testimonial.png",
-  // },
+  label: "Testimonials 1",
+  ui: {
+    previewSrc: "/blocks/sectionscms/testimonial1.png",
+  },
   fields: [
     {
       type: "string",

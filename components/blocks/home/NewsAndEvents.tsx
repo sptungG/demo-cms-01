@@ -89,9 +89,9 @@ export const NewsAndEvents = ({ heading, posts }: NewsAndEventsProps) => {
 export const newsAndEventsBlockSchema: Template = {
   name: "newsAndEvents",
   label: "News & Events",
-  // ui: {
-  //   previewSrc: "/blocks/content.png",
-  // },
+  ui: {
+    previewSrc: "/blocks/sectionscms/newsevent1.png",
+  },
   fields: [
     {
       type: "string",

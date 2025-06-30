@@ -1,16 +1,35 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import {
-  Globe,
-  Building,
-  CheckCircle,
-  Trophy,
-  Target,
-  Book,
-} from "lucide-react";
+import { Trophy, Target, Book } from "lucide-react";
+import { Template } from "tinacms";
+import { uuidv4 } from "@/lib/utils";
 
-const WhoWeAreSection: React.FC = () => {
+export interface IWhoWeAreSection {
+  whoWeAreSectionHeading?: {
+    title?: string;
+    description?: string;
+  };
+  features?: Array<{
+    title?: string;
+    desc?: string;
+    id?: string;
+  }>;
+  mission?: {
+    title?: string;
+    description?: string;
+    image?: string;
+  };
+  vision?: {
+    title?: string;
+    description?: string;
+    image?: string;
+  };
+}
+interface Props {
+  data: IWhoWeAreSection;
+}
+const WhoWeAreSection = (props: Props) => {
   return (
     <section className="container py-6 md:py-10 lg:py-14 bg-vina-background relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 space-y-6 flex flex-col gap-4">
@@ -27,7 +46,7 @@ const WhoWeAreSection: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
           >
-            Who We Are
+            {props.data.whoWeAreSectionHeading?.title || "Who We Are"}
             <motion.div
               className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-24 h-1 rounded-full"
               initial={{ width: 0 }}
@@ -41,58 +60,43 @@ const WhoWeAreSection: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
-            VINHAPAC is Vietnam's leading B2B export service provider,
-            specializing in connecting high-quality Vietnamese products with
-            international markets worldwide.
+            {props.data.whoWeAreSectionHeading?.description ||
+              "VINHAPAC is Vietnam's leading B2B export service provider, specializing in connecting high-quality Vietnamese products with international markets worldwide."}
           </motion.p>
         </motion.div>
 
         {/* Feature Blocks */}
         <div className="grid md:grid-cols-3 gap-10">
-          {[
-            {
-              title: "Global Reach",
-              desc: "Extensive network spanning across Europe, North America, and Asia-Pacific markets.",
-              icon: <Globe className="w-8 h-8 text-vina-primary" />,
-              delay: 0.2,
-              color: "from-vina-primary to-vina-secondary",
-            },
-            {
-              title: "Quality Assurance",
-              desc: "Rigorous quality control processes ensuring international standards and customer satisfaction.",
-              icon: <Building className="w-8 h-8 text-vina-primary" />,
-              delay: 0.4,
-              color: "from-vina-secondary to-vina-accent",
-            },
-            {
-              title: "Trusted Partnership",
-              desc: "Building long-term relationships based on trust, transparency, and mutual success.",
-              icon: <CheckCircle className="w-8 h-8 text-vina-primary" />,
-              delay: 0.6,
-              color: "from-vina-accent to-vina-primary",
-            },
-          ].map((feature) => (
-            <motion.div
-              key={feature.title}
-              className="text-center group"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: feature.delay, duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <div
-                className={`w-16 h-16 ${feature.color} rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg`}
+          {props.data.features?.slice(0, 3)?.map((feature, index) => {
+            const icons = [
+              <Trophy className="w-8 h-8 text-vina-primary" />,
+              <Target className="w-8 h-8 text-vina-primary" />,
+              <Book className="w-8 h-8 text-vina-primary" />,
+            ];
+            const delays = [0.2, 0.4, 0.6];
+            return (
+              <motion.div
+                key={feature.id ?? uuidv4()}
+                className="text-center group"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: delays[index], duration: 0.8 }}
+                viewport={{ once: true }}
               >
-                {feature.icon}
-              </div>
-              <h3 className="text-xl font-semibold text-vina-foreground mb-4">
-                {feature.title}
-              </h3>
-              <p className="text-vina-muted-foreground text-base leading-relaxed">
-                {feature.desc}
-              </p>
-            </motion.div>
-          ))}
+                <div
+                  className={`w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg`}
+                >
+                  {icons[index]}
+                </div>
+                <h3 className="text-xl font-semibold text-vina-foreground mb-4">
+                  {feature.title}
+                </h3>
+                <p className="text-vina-muted-foreground text-base leading-relaxed">
+                  {feature.desc}
+                </p>
+              </motion.div>
+            );
+          })}
         </div>
 
         {/* Mission + Vision */}
@@ -106,7 +110,7 @@ const WhoWeAreSection: React.FC = () => {
           >
             <div className="relative h-48 w-full overflow-hidden">
               <Image
-                src="/uploads/ourmission.png"
+                src={props.data.mission?.image || "/uploads/ourmission.png"}
                 alt="Our Mission"
                 fill
                 className="object-cover transition-transform duration-300 group-hover:scale-105"
@@ -115,12 +119,13 @@ const WhoWeAreSection: React.FC = () => {
             </div>
             <div className="p-6">
               <h4 className="text-2xl font-bold text-vina-foreground mb-3">
-                Our Mission
+                {props.data.mission?.title || "Our Mission"}
               </h4>
               <p className="text-vina-muted-foreground leading-relaxed">
-                Empower Vietnamese businesses to thrive globally by providing
+                {props.data.mission?.description ||
+                  `Empower Vietnamese businesses to thrive globally by providing
                 seamless export solutions and building sustainable international
-                partnerships.
+                partnerships.`}
               </p>
             </div>
           </motion.div>
@@ -134,7 +139,7 @@ const WhoWeAreSection: React.FC = () => {
           >
             <div className="relative h-48 w-full overflow-hidden">
               <Image
-                src="/uploads/ourvision.png"
+                src={props.data.vision?.image || "/uploads/ourvision.png"}
                 alt="Our Vision"
                 fill
                 className="object-cover transition-transform duration-300 group-hover:scale-105"
@@ -143,11 +148,12 @@ const WhoWeAreSection: React.FC = () => {
             </div>
             <div className="p-6">
               <h4 className="text-2xl font-bold text-vina-foreground mb-3">
-                Our Vision
+                {props.data.vision?.title || "Our Vision"}
               </h4>
               <p className="text-vina-muted-foreground leading-relaxed">
-                To be the leading bridge connecting Vietnamese excellence with the
-                global market — trusted, innovative, and impactful.
+                {props.data.vision?.description ||
+                  `To be the leading bridge connecting Vietnamese excellence with
+                the global market — trusted, innovative, and impactful.`}
               </p>
             </div>
           </motion.div>
@@ -156,5 +162,124 @@ const WhoWeAreSection: React.FC = () => {
     </section>
   );
 };
-
+export const whoWeAreSectionTemplate: Template = {
+  name: "whoWeAreSection",
+  label: "Who We Are Section",
+  fields: [
+    {
+      name: "whoWeAreSectionHeading",
+      label: "Section Heading",
+      type: "object",
+      fields: [
+        {
+          name: "title",
+          label: "Title",
+          type: "string",
+        },
+        {
+          name: "description",
+          label: "Description",
+          type: "string",
+          ui: {
+            component: "textarea",
+          },
+        },
+      ],
+    },
+    {
+      name: "features",
+      label: "Features",
+      type: "object",
+      list: true,
+      ui: {
+        itemProps(item) {
+          return {
+            label: item?.title,
+            id: item?.id,
+          };
+        },
+        defaultItem() {
+          return {
+            id: uuidv4(),
+          };
+        },
+      },
+      fields: [
+        {
+          name: "id",
+          label: "Key",
+          type: "string",
+          ui: {
+            component: () => null,
+          },
+          required: true,
+          uid: true,
+        },
+        {
+          name: "title",
+          label: "Title",
+          type: "string",
+        },
+        {
+          name: "desc",
+          label: "Description",
+          type: "string",
+          ui: {
+            component: "textarea",
+          },
+        },
+      ],
+    },
+    {
+      name: "mission",
+      label: "Our Mission",
+      type: "object",
+      fields: [
+        {
+          name: "title",
+          label: "Title",
+          type: "string",
+        },
+        {
+          name: "description",
+          label: "Description",
+          type: "string",
+          ui: {
+            component: "textarea",
+          },
+        },
+        {
+          name: "image",
+          label: "Image",
+          type: "image",
+        },
+      ],
+    },
+    {
+      name: "vision",
+      label: "Our Vision",
+      type: "object",
+      fields: [
+        {
+          name: "title",
+          label: "Title",
+          type: "string",
+        },
+        {
+          name: "description",
+          label: "Description",
+          type: "string",
+          ui: {
+            component: "textarea",
+          },
+        },
+        {
+          name: "image",
+          label: "Image",
+          type: "image",
+        },
+      ],
+    },
+  ],
+};
 export default WhoWeAreSection;
