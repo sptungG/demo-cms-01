@@ -60,7 +60,7 @@ export const HeroSlider = ({ slides }: HeroSliderProps) => {
 
   return (
     <div
-      className="relative h-[60vh] w-full overflow-hidden sm:h-[70vh] md:h-[80vh] lg:h-[90vh]"
+      className="relative h-[60vh] left-1/2 -translate-x-1/2 w-screen overflow-hidden sm:h-[30vh] md:h-[40vh] lg:h-[50vh]"
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
@@ -71,7 +71,7 @@ export const HeroSlider = ({ slides }: HeroSliderProps) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 1 }}
           className="relative h-full w-full"
         >
           <Image
@@ -83,26 +83,32 @@ export const HeroSlider = ({ slides }: HeroSliderProps) => {
             sizes="100vw"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/20" />
-          <div className="absolute inset-0 flex items-center justify-center px-4">
+          <div className="absolute inset-0 flex items-center">
             <div className="container mx-auto">
               <motion.div
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.2 }}
-                className="mx-auto max-w-4xl text-center"
+                initial={{ x: -80, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ delay: 0.7 }}
+                className="mx-auto text-center"
               >
-                <h1 className="mb-4 text-2xl font-bold text-white sm:text-3xl md:mb-6 md:text-4xl lg:text-5xl xl:text-6xl">
-                  {slides[currentSlide].slogan}
-                </h1>
-                <p className="mb-6 text-sm text-gray-200 sm:text-base md:mb-8 md:text-lg lg:text-xl">
-                  {slides[currentSlide].subSlogan}
-                </p>
-                <Link
-                  href={slides[currentSlide].button.link}
-                  className="inline-flex items-center rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-primary/90 sm:px-8 sm:py-4 sm:text-base md:text-lg"
-                >
-                  {slides[currentSlide].button.label}
-                </Link>
+                <div className="rounded-lg w-fit bg-neutral-400/35 p-6 flex items-center mb-4 md:mb-6">
+                  <h1 className="text-2xl text-left font-bold text-white sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
+                    {slides[currentSlide].slogan}
+                  </h1>
+                </div>
+                {slides[currentSlide].subSlogan && (
+                  <p className="mb-6 text-sm text-left text-gray-200 sm:text-base md:mb-8 md:text-lg lg:text-xl">
+                    {slides[currentSlide].subSlogan}
+                  </p>
+                )}
+                <div className="flex justify-start">
+                  <Link
+                    href={slides[currentSlide].button.link}
+                    className="inline-flex items-center rounded-lg bg-vina-primary px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-vina-primary sm:px-8 sm:py-4 sm:text-base md:text-lg"
+                  >
+                    {slides[currentSlide].button.label}
+                  </Link>
+                </div>
               </motion.div>
             </div>
           </div>
@@ -204,4 +210,4 @@ export const heroSliderBlockSchema: Template = {
       ],
     },
   ],
-}; 
+};

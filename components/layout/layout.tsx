@@ -4,6 +4,7 @@ import client from "../../tina/__generated__/client";
 import { Header } from "./nav/header";
 import Footer from "./nav/footer";
 import { checktIsLocale } from "@/lib/utils";
+import HeaderTitle from "./nav/HeaderTitle";
 
 type LayoutProps = PropsWithChildren & {
   rawPageData?: any;
@@ -33,10 +34,9 @@ export default async function Layout({
 
   return (
     <LayoutProvider globalSettings={globalData.global} pageData={rawPageData}>
+      <HeaderTitle />
       <Header locale={isLocale ? (locale as string) : "vn"} />
-      <main className="overflow-x-hidden pt-16 container mx-auto relative overflow-hidden">
-        {children}
-      </main>
+      <main className="container mx-auto relative">{children}</main>
       <Footer data={globalData.global.footer} />
     </LayoutProvider>
   );

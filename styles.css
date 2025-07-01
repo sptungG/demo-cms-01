@@ -61,9 +61,30 @@
   --color-vina-destructive: var(--vina-destructive);
 }
 html {
-  scrollbar-gutter: stable;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
+body {
+  scrollbar-gutter: stable;
+}
+
+body::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #f1f1f1; /* màu nền của track */
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #888; /* màu của "núm kéo" */
+  border-radius: 0px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #555; /* khi hover */
+}
+
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);

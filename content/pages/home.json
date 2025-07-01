@@ -145,6 +145,20 @@
   "slug": "/",
   "blocks": [
     {
+      "slides": [
+        {
+          "slogan": "Chất Lượng Toàn Cầu - Dịch Vụ Tận Tâm",
+          "subSlogan": "Đối tác tin cậy đồng hành cùng doanh nghiệp Việt Nam trên hành trình vươn ra thế giới.",
+          "backgroundImage": "/uploads/banner-home.png",
+          "button": {
+            "label": "Chi tiết",
+            "link": "/"
+          }
+        }
+      ],
+      "_template": "heroSlider"
+    },
+    {
       "badge": {
         "text": "Trusted by 500+ Global Partners"
       },
