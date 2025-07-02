@@ -48,7 +48,7 @@ export default function Footer({ data }: { data: any }) {
     data;
 
   return (
-    <footer className="bg-gray-800 text-gray-300">
+    <footer className="bg-gray-800 text-gray-300 mt-10">
       <div className="container m-auto">
         <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-10 md:py-12">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-8">

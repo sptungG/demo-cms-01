@@ -32,6 +32,7 @@ import CallToActionSection, {
   ICallToActionSectionSecond,
 } from "./home/CallToActionSectionSecond";
 import CallToActionSectionSecond from "./home/CallToActionSectionSecond";
+import IntroCompany, { IIntroCompany } from "./home/IntroCompany";
 
 type Maybe<T> = T | null | undefined;
 
@@ -232,7 +233,7 @@ interface VisionMissionSectionBlock extends BaseBlock {
 
 interface IHeroSectionSecondTemplateBLock
   extends BaseBlock,
-    IHeroSectionSecond {
+  IHeroSectionSecond {
   __typename: "PageBlocksHeroSectionSecondTemplate";
 }
 
@@ -254,14 +255,18 @@ interface IPartnersShowcaseBlock extends BaseBlock, IPartnersShowcase {
 
 interface ICertificationsSectionBlock
   extends BaseBlock,
-    ICertificationsSection {
+  ICertificationsSection {
   __typename: "PageBlocksCertificationsSection";
 }
 
 interface ICallToActionSectionSecondBblock
   extends BaseBlock,
-    ICallToActionSectionSecond {
+  ICallToActionSectionSecond {
   __typename: "PageBlocksCallToActionSectionSecond";
+}
+
+interface IIntroCompanySectionBlock extends BaseBlock, IIntroCompany {
+  __typename: "PageBlocksIntroCompanySection";
 }
 
 type PageBlock =
@@ -285,6 +290,7 @@ type PageBlock =
   | IPartnersShowcaseBlock
   | ICertificationsSectionBlock
   | ICallToActionSectionSecondBblock
+  | IIntroCompanySectionBlock
   | IHeroSectionSecondTemplateBLock;
 
 interface Page {
@@ -547,6 +553,19 @@ export const Block = ({ block }: { block: PageBlock }) => {
               title: "",
               description: "",
             },
+          }}
+        />
+      );
+    case "PageBlocksIntroCompanySection":
+      console.log(block)
+      return (
+        <IntroCompany
+          data={{
+            companyName: block.companyName,
+            slogan: block.slogan,
+            stats: block.stats,
+            features: block.features,
+            image: block.image,
           }}
         />
       );

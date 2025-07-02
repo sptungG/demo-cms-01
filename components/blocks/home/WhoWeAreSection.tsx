@@ -31,7 +31,7 @@ interface Props {
 }
 const WhoWeAreSection = (props: Props) => {
   return (
-    <section className="container py-6 md:py-10 lg:py-14 bg-vina-background relative overflow-hidden">
+    <section className="container bg-vina-background relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 space-y-6 flex flex-col gap-4">
         <motion.div
           className="text-center"
@@ -212,8 +212,6 @@ export const whoWeAreSectionTemplate: Template = {
           ui: {
             component: () => null,
           },
-          required: true,
-          uid: true,
         },
         {
           name: "title",
