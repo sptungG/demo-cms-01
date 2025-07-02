@@ -20,7 +20,7 @@ interface LeadershipSectionProps {
 
 export const LeadershipSection = ({ data }: LeadershipSectionProps) => {
   return (
-    <section className="py-8 md:py-12 bg-white">
+    <section className="bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <motion.h2

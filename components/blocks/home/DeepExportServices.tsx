@@ -63,7 +63,7 @@ const DeepExportServices = ({
   data: { deepExportServicesHeading, services },
 }: Props) => {
   return (
-    <section className="py-6 md:py-10 lg:py-14">
+    <section className="">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <motion.div
           className="text-center mb-10"

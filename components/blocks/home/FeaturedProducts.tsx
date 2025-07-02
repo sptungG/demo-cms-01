@@ -31,7 +31,7 @@ export const FeaturedProducts = ({
   products,
 }: FeaturedProductsProps) => {
   return (
-    <section className="bg-accent/5 py-4 sm:py-12 md:py-16">
+    <section className="bg-accent/5">
       <div className="container mx-auto px-3 sm:px-6">
         <div className="mb-6 sm:mb-10 text-center space-y-2 sm:space-y-4">
           <motion.h2

@@ -39,7 +39,7 @@ export default function RootLayout({
       lang="en"
       className={cn(fontSans.variable, nunito.variable, lato.variable)}
     >
-      <body className="min-h-screen bg-background font-sans antialiased overflow-x-hidden">
+      <body className="min-h-screen bg-background font-sans antialiased overflow-x-hidden relative">
         <VideoDialogProvider>
           {children}
           <VideoDialog />
