@@ -104,8 +104,13 @@ export const certificationsSectionSchema: Template = {
           label: item?.name,
           id: item?.id,
         }),
-        defaultItem: {
-          id: uuidv4(),
+        defaultItem: () => {
+          if (typeof window === "undefined") {
+            return {};
+          }
+          return {
+            id: uuidv4(),
+          }
         },
       },
       fields: [

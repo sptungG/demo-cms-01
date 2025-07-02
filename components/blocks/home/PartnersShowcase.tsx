@@ -94,6 +94,9 @@ export const partnersShowcaseSchemaTemplate: Template = {
           };
         },
         defaultItem() {
+          if (typeof window === "undefined") {
+            return {};
+          }
           return {
             id: uuidv4(),
           };

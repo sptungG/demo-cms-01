@@ -153,6 +153,9 @@ export const callToActionSetionSecondSchema: Template = {
   label: "Call To Action Section Second",
   ui: {
     defaultItem() {
+      if (typeof window === "undefined") {
+        return {};
+      }
       return {
         id: uuidv4(),
       };

@@ -199,6 +199,9 @@ export const whoWeAreSectionTemplate: Template = {
           };
         },
         defaultItem() {
+          if (typeof window === "undefined") {
+            return {};
+          }
           return {
             id: uuidv4(),
           };

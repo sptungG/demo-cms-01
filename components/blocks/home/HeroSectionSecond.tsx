@@ -215,6 +215,9 @@ export const heroSectionSecondTemplate: Template = {
           };
         },
         defaultItem() {
+          if (typeof window === "undefined") {
+            return {};
+          }
           return {
             id: uuidv4(),
           };
@@ -261,6 +264,9 @@ export const heroSectionSecondTemplate: Template = {
           };
         },
         defaultItem() {
+          if (typeof window === "undefined") {
+            return {};
+          }
           return {
             id: uuidv4(),
           };

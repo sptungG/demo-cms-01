@@ -153,6 +153,9 @@ export const deepExportServicesSchemaTemplate: Template = {
           };
         },
         defaultItem() {
+          if (typeof window === "undefined") {
+            return {};
+          }
           return {
             id: uuidv4(),
           };
