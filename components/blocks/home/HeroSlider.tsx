@@ -60,7 +60,7 @@ export const HeroSlider = ({ slides }: HeroSliderProps) => {
 
   return (
     <div
-      className="relative h-[60vh] w-full overflow-hidden sm:h-[70vh] md:h-[80vh] lg:h-[90vh]"
+      className="relative h-[20vh] left-1/2 -translate-x-1/2 w-screen overflow-hidden sm:h-[25vh] md:h-[35vh] lg:h-[40vh] xl:h-[50vh]"
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
@@ -71,7 +71,7 @@ export const HeroSlider = ({ slides }: HeroSliderProps) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 1 }}
           className="relative h-full w-full"
         >
           <Image
@@ -83,49 +83,37 @@ export const HeroSlider = ({ slides }: HeroSliderProps) => {
             sizes="100vw"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/20" />
-          <div className="absolute inset-0 flex items-center justify-center px-4">
+          <div className="absolute inset-0 flex items-center">
             <div className="container mx-auto">
               <motion.div
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.2 }}
-                className="mx-auto max-w-4xl text-center"
+                initial={{ x: -80, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ delay: 0.7 }}
+                className="mx-auto text-center px-4"
               >
-                <h1 className="mb-4 text-2xl font-bold text-white sm:text-3xl md:mb-6 md:text-4xl lg:text-5xl xl:text-6xl">
-                  {slides[currentSlide].slogan}
-                </h1>
-                <p className="mb-6 text-sm text-gray-200 sm:text-base md:mb-8 md:text-lg lg:text-xl">
-                  {slides[currentSlide].subSlogan}
-                </p>
-                <Link
-                  href={slides[currentSlide].button.link}
-                  className="inline-flex items-center rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-primary/90 sm:px-8 sm:py-4 sm:text-base md:text-lg"
-                >
-                  {slides[currentSlide].button.label}
-                </Link>
+                <div className="rounded-lg w-fit bg-neutral-400/35 p-4 sm:p-5 md:p-6 flex items-center mb-3 sm:mb-4 md:mb-5 lg:mb-6">
+                  <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-left font-bold text-white">
+                    {slides[currentSlide].slogan}
+                  </h1>
+                </div>
+                {slides[currentSlide].subSlogan && (
+                  <p className="mb-4 sm:mb-5 md:mb-6 lg:mb-8 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-left text-gray-200">
+                    {slides[currentSlide].subSlogan}
+                  </p>
+                )}
+                <div className="flex justify-start">
+                  <Link
+                    href={slides[currentSlide].button.link}
+                    className="inline-flex items-center rounded-lg bg-vina-primary px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 lg:px-8 lg:py-4 text-xs sm:text-sm md:text-base lg:text-lg font-semibold text-white transition-colors hover:bg-vina-primary"
+                  >
+                    {slides[currentSlide].button.label}
+                  </Link>
+                </div>
               </motion.div>
             </div>
           </div>
         </motion.div>
       </AnimatePresence>
-
-      {/* Navigation Buttons - Hidden on mobile, shown on larger screens */}
-      <div className="hidden md:block">
-        <button
-          onClick={prevSlide}
-          className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-white/20 p-2 text-white backdrop-blur-sm transition-all hover:bg-white/30 sm:p-3 md:left-6 lg:left-8"
-          aria-label="Previous slide"
-        >
-          <ChevronLeft className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6" />
-        </button>
-        <button
-          onClick={nextSlide}
-          className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-white/20 p-2 text-white backdrop-blur-sm transition-all hover:bg-white/30 sm:p-3 md:right-6 lg:right-8"
-          aria-label="Next slide"
-        >
-          <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6" />
-        </button>
-      </div>
 
       {/* Slide Indicators */}
       <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-1.5 sm:bottom-6 sm:gap-2 md:bottom-8 md:gap-3">
@@ -133,11 +121,10 @@ export const HeroSlider = ({ slides }: HeroSliderProps) => {
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
-            className={`h-1.5 rounded-full transition-all sm:h-2 ${
-              index === currentSlide
+            className={`h-1.5 rounded-full transition-all sm:h-2 ${index === currentSlide
                 ? "w-6 bg-white sm:w-8 md:w-10"
                 : "w-1.5 bg-white/50 sm:w-2"
-            }`}
+              }`}
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}
@@ -149,9 +136,9 @@ export const HeroSlider = ({ slides }: HeroSliderProps) => {
 export const heroSliderBlockSchema: Template = {
   name: "heroSlider",
   label: "Hero Slider",
-  // ui: {
-  //   previewSrc: "/blocks/hero.png",
-  // },
+  ui: {
+    previewSrc: "/blocks/sectionscms/herosection1.png",
+  },
   fields: [
     {
       type: "object",
@@ -204,4 +191,4 @@ export const heroSliderBlockSchema: Template = {
       ],
     },
   ],
-}; 
+};

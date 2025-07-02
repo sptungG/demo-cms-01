@@ -2,6 +2,7 @@ import { ILanguage } from "@/components/SelectLang";
 import { clsx, type ClassValue } from "clsx";
 import { countries } from "country-flag-icons";
 import { twMerge } from "tailwind-merge";
+import { v4 } from "uuid";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -24,4 +25,8 @@ export const getPathWithoutLocale = (path: string, languages: ILanguage[]) => {
   return isValidLocale(firstSegment, languages)
     ? segments.slice(1).join("/")
     : segments.join("/");
+};
+
+export const uuidv4 = () => {
+  return v4();
 };

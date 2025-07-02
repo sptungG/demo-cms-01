@@ -27,7 +27,7 @@ export const Introduction = ({
   image,
 }: IntroductionProps) => {
   return (
-    <section className="py-4 sm:py-12 md:py-16">
+    <section className="">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="grid gap-8 md:gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
           <motion.div
@@ -76,10 +76,10 @@ export const Introduction = ({
 
 export const introductionBlockSchema: Template = {
   name: "introduction",
-  label: "Introduction",
-  // ui: {
-  //   previewSrc: "/blocks/content.png",
-  // },
+  label: "Introduction 1",
+  ui: {
+    previewSrc: "/blocks/sectionscms/introduction1.png",
+  },
   fields: [
     {
       type: "string",

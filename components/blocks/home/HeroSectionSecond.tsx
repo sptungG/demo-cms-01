@@ -2,18 +2,43 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Globe, ArrowRight, Users, Star, Package, History } from "lucide-react";
 import CountUp from "react-countup";
+import { Template } from "tinacms";
+import { uuidv4 } from "@/lib/utils";
 
+export interface IHeroSectionSecond {
+  badge?: {
+    text?: string;
+  };
+  heroSectionSecondheading?: {
+    title?: string;
+    highlight?: string;
+  };
+  description?: string;
+  buttons?: Array<{
+    label?: string;
+    actionKey?: string;
+    variant?: string;
+    id?: string;
+  }>;
+  heroSectionSecondstatistics?: Array<{
+    number?: number;
+    text?: string;
+    id?: string;
+  }>;
+}
 interface HeroSectionProps {
-  onQuoteClick: () => void;
-  onSupplierClick: () => void;
+  data: IHeroSectionSecond;
+  onQuoteClick?: () => void;
+  onSupplierClick?: () => void;
 }
 
 const HeroSectionSecond: React.FC<HeroSectionProps> = ({
+  data,
   onQuoteClick,
   onSupplierClick,
 }) => {
   return (
-    <section className="mx-auto rounded-xl relative bg-gradient-to-br from-vina-background via-vina-muted to-vina-background overflow-hidden py-4 sm:py-6 md:py-10 lg:py-12">
+    <section className="mx-auto rounded-xl relative bg-gradient-to-br from-vina-background via-vina-muted to-vina-background overflow-hidden py-2">
       <div className="mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 xl:gap-24 items-center">
           {/* Left Column */}
@@ -32,7 +57,7 @@ const HeroSectionSecond: React.FC<HeroSectionProps> = ({
             >
               <Star className="w-4 h-4 text-vina-primary mr-2" />
               <span className="text-sm font-medium text-vina-primary">
-                Trusted by 500+ Global Partners
+                {data.badge?.text}
               </span>
             </motion.div>
 
@@ -42,8 +67,10 @@ const HeroSectionSecond: React.FC<HeroSectionProps> = ({
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
             >
-              Connecting Vietnam to the{" "}
-              <span className="text-vina-primary font-bold">World</span>
+              {data.heroSectionSecondheading?.title}
+              <span className="text-vina-primary font-bold">
+                {data.heroSectionSecondheading?.highlight}
+              </span>
             </motion.h1>
 
             <motion.p
@@ -52,8 +79,7 @@ const HeroSectionSecond: React.FC<HeroSectionProps> = ({
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
             >
-              Your trusted B2B export partner, bridging Vietnamese excellence
-              with global markets through quality, reliability, and innovation.
+              {data.description}
             </motion.p>
 
             <motion.div
@@ -69,7 +95,7 @@ const HeroSectionSecond: React.FC<HeroSectionProps> = ({
                 className="flex cursor-pointer items-center gap-2 px-6 py-3 text-sm font-semibold rounded-xl shadow-lg bg-vina-primary text-white hover:opacity-90 transition"
               >
                 <Globe className="w-5 h-5" />
-                Request a Quote
+                {data.buttons?.[0]?.label}
                 <ArrowRight className="w-4 h-4 ml-1" />
               </motion.button>
               <motion.button
@@ -79,7 +105,7 @@ const HeroSectionSecond: React.FC<HeroSectionProps> = ({
                 className="flex cursor-pointer items-center gap-2 px-2 py-2 text-sm font-semibold rounded-xl shadow-lg bg-white/10 border border-vina-border text-vina-foreground hover:bg-white/20 transition"
               >
                 <Users className="w-5 h-5" />
-                Become a Supplier
+                {data.buttons?.[1]?.label}
                 <ArrowRight className="w-4 h-4 ml-1" />
               </motion.button>
             </motion.div>
@@ -92,52 +118,177 @@ const HeroSectionSecond: React.FC<HeroSectionProps> = ({
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
-            {[
-              {
-                number: 500,
-                text: "Global Partners",
-                icon: <Users className="w-6 h-6 text-vina-primary mb-1" />,
-                class: "text-vina-primary",
-              },
-              {
-                number: 50,
-                text: "Countries Served",
-                icon: <Globe className="w-6 h-6 text-vina-secondary mb-1" />,
-                class: "text-vina-secondary",
-              },
-              {
-                number: 10,
-                text: "Products Exported",
-                icon: <Package className="w-6 h-6 text-vina-accent mb-1" />,
-                class: "text-vina-accent",
-              },
-              {
-                number: 15,
-                text: "Years Experience",
-                icon: <History className="w-6 h-6 text-vina-primary mb-1" />,
-                class:
+            {data.heroSectionSecondstatistics
+              ?.slice(0, 4)
+              .map((item, index: number) => {
+                const icons = [Users, Globe, Package, History];
+                const Icon = icons[index];
+                const colors = [
+                  "text-vina-primary",
+                  "text-vina-secondary",
+                  "text-vina-accent",
                   "bg-gradient-to-r from-vina-primary to-vina-accent bg-clip-text text-vina-primary",
-              },
-            ].map((item, index) => (
-              <motion.div
-                key={item.text}
-                className="p-4 sm:p-5 rounded-2xl bg-white/5 border border-vina-border/10 backdrop-blur-md shadow hover:shadow-lg hover:border-vina-primary transition"
-                whileHover={{ scale: 1.03 }}
-              >
-                {item.icon}
-                <div className={`text-2xl font-bold ${item.class}`}>
-                  <CountUp end={item.number} duration={2} />+
-                </div>
-                <div className="text-sm text-vina-muted-foreground mt-1">
-                  {item.text}
-                </div>
-              </motion.div>
-            ))}
+                ];
+
+                return (
+                  <motion.div
+                    key={item.id ?? uuidv4()}
+                    className="p-4 sm:p-5 rounded-2xl bg-white/5 border border-vina-border/10 backdrop-blur-md shadow hover:shadow-lg hover:border-vina-primary transition"
+                    whileHover={{ scale: 1.03 }}
+                  >
+                    <Icon className={`w-6 h-6 ${colors[index ?? 1]} mb-1`} />
+                    <div className={colors[index ?? 1]}>
+                      <CountUp
+                        end={(item?.number as number) || 500}
+                        duration={2}
+                        className="text-2xl font-bold"
+                      />
+                      <span className="text-2xl font-bold">+</span>
+                    </div>
+                    <div className="text-sm text-vina-muted-foreground mt-1">
+                      {item.text ?? ""}
+                    </div>
+                  </motion.div>
+                );
+              })}
           </motion.div>
         </div>
       </div>
     </section>
   );
 };
-
+export const heroSectionSecondTemplate: Template = {
+  name: "heroSectionSecondTemplate",
+  label: "Hero Section Second",
+  ui: {
+    previewSrc: "/blocks/sectionscms/herosectionsecond.png",
+  },
+  fields: [
+    {
+      type: "object",
+      name: "badge",
+      label: "Badge",
+      fields: [
+        {
+          type: "string",
+          name: "text",
+          label: "Badge Text",
+        },
+      ],
+    },
+    {
+      type: "object",
+      name: "heroSectionSecondheading",
+      label: "Heading",
+      required: false,
+      fields: [
+        {
+          type: "string",
+          name: "title",
+          label: "Title",
+        },
+        {
+          type: "string",
+          name: "highlight",
+          label: "Highlight Text",
+        },
+      ],
+    },
+    {
+      type: "string",
+      name: "description",
+      label: "Description",
+      ui: {
+        component: "textarea",
+      },
+    },
+    {
+      type: "object",
+      name: "buttons",
+      label: "Buttons",
+      list: true,
+      ui: {
+        itemProps(item) {
+          return {
+            label: item?.label,
+            id: item?.id,
+          };
+        },
+        defaultItem() {
+          return {
+            id: uuidv4(),
+          };
+        },
+      },
+      fields: [
+        {
+          type: "string",
+          name: "label",
+          label: "Button Label",
+        },
+        {
+          type: "string",
+          name: "actionKey",
+          label: "Action Key",
+        },
+        {
+          type: "string",
+          name: "variant",
+          label: "Button Variant",
+          options: [
+            {
+              label: "Default",
+              value: "default",
+            },
+            {
+              label: "Outline",
+              value: "outline",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      type: "object",
+      name: "heroSectionSecondstatistics",
+      label: "Statistics",
+      list: true,
+      ui: {
+        itemProps(item) {
+          return {
+            label: item?.text,
+            id: item?.id,
+          };
+        },
+        defaultItem() {
+          return {
+            id: uuidv4(),
+          };
+        },
+      },
+      fields: [
+        {
+          type: "string",
+          name: "id",
+          label: "Id",
+          ui: {
+            component(props) {
+              return <></>;
+            },
+          },
+        },
+        {
+          type: "number",
+          name: "number",
+          label: "Number Value",
+        },
+        {
+          type: "string",
+          name: "text",
+          label: "Statistic Label",
+        },
+      ],
+    },
+  ],
+};
 export default HeroSectionSecond;

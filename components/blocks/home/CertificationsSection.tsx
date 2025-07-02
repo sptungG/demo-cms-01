@@ -1,5 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Template } from "tinacms";
+import { uuidv4 } from "@/lib/utils";
 
 const certifications = [
   {
@@ -24,17 +26,33 @@ const certifications = [
   },
 ];
 
-const CertificationsSection: React.FC = () => {
+export interface ICertificationsSection {
+  certificationHeading?: {
+    title?: string;
+  };
+  certifications?: Array<{
+    name?: string;
+    image?: string;
+    description?: string;
+    id?: string;
+  }>;
+}
+
+interface Props {
+  data: ICertificationsSection;
+}
+
+const CertificationsSection = (props: Props) => {
   return (
-    <section className="py-6 md:py-10 lg:py-14">
+    <section className="">
       <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
         <h2 className="text-center text-3xl font-bold text-vina-foreground mb-12">
-          International Certifications
+          {props.data.certificationHeading?.title ?? "Certifications"}
         </h2>
         <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-8">
-          {certifications.map((cert, index) => (
+          {props.data.certifications?.map((cert, index) => (
             <motion.div
-              key={cert.name}
+              key={cert.id ?? index}
               className="p-4 rounded-xl border border-vina-border bg-white/10 backdrop-blur-md text-center hover:shadow-xl transition-all duration-300"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -58,6 +76,60 @@ const CertificationsSection: React.FC = () => {
       </div>
     </section>
   );
+};
+
+export const certificationsSectionSchema: Template = {
+  name: "certificationsSection",
+  label: "Certifications Section",
+  fields: [
+    {
+      name: "certificationHeading",
+      label: "Heading",
+      type: "object",
+      fields: [
+        {
+          name: "title",
+          label: "Title",
+          type: "string",
+        },
+      ],
+    },
+    {
+      name: "certifications",
+      label: "Certifications",
+      type: "object",
+      list: true,
+      ui: {
+        itemProps: (item) => ({
+          label: item?.name,
+          id: item?.id,
+        }),
+        defaultItem: {
+          id: uuidv4(),
+        },
+      },
+      fields: [
+        {
+          name: "name",
+          label: "Certification Name",
+          type: "string",
+        },
+        {
+          name: "image",
+          label: "Certification Image",
+          type: "image",
+        },
+        {
+          name: "description",
+          label: "Description",
+          type: "string",
+          ui: {
+            component: "textarea",
+          },
+        },
+      ],
+    },
+  ],
 };
 
 export default CertificationsSection;

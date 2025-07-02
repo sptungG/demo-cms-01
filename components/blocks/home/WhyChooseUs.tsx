@@ -25,7 +25,7 @@ interface WhyChooseUsProps {
 
 export const WhyChooseUs = ({ heading, features }: WhyChooseUsProps) => {
   return (
-    <section className="py-4 sm:py-12 md:py-16">
+    <section className="">
       <div className="container mx-auto px-4">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -68,10 +68,10 @@ export const WhyChooseUs = ({ heading, features }: WhyChooseUsProps) => {
 
 export const whyChooseUsBlockSchema: Template = {
   name: "whyChooseUs",
-  label: "Why Choose Us",
-  // ui: {
-  //   previewSrc: "/blocks/features.png",
-  // },
+  label: "Why Choose Us 1",
+  ui: {
+    previewSrc: "/blocks/sectionscms/whychooseus1.png",
+  },
   fields: [
     {
       type: "string",

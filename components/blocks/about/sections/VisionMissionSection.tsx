@@ -45,7 +45,7 @@ interface VisionMissionSectionProps {
 
 export const VisionMissionSection = ({ data }: VisionMissionSectionProps) => {
   return (
-    <section className="py-8 md:py-12">
+    <section className="">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           {/* Vision */}

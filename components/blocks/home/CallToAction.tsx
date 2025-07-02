@@ -20,7 +20,7 @@ export const CallToAction = ({
   button,
 }: CallToActionProps) => {
   return (
-    <section className="relative overflow-hidden py-4 sm:py-8 md:py-12 lg:py-16">
+    <section className="relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 -z-10 opacity-10">
         <div className="absolute inset-0 bg-[radial-gradient(#000000_1px,transparent_1px)] [background-size:16px_16px]" />
@@ -77,12 +77,9 @@ export const CallToAction = ({
   );
 };
 
-export const callToActionBlockSchema: Template = {
+export const callToActionBlockSchema: Template | any = {
   name: "cta",
   label: "Call to Action",
-  // ui: {
-  //   previewSrc: "/blocks/cta.png",
-  // },
   fields: [
     {
       type: "string",
@@ -116,4 +113,4 @@ export const callToActionBlockSchema: Template = {
       ],
     },
   ],
-}; 
+};

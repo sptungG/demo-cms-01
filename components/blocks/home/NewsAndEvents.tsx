@@ -24,7 +24,7 @@ interface NewsAndEventsProps {
 
 export const NewsAndEvents = ({ heading, posts }: NewsAndEventsProps) => {
   return (
-    <section className="py-4 sm:py-12 md:py-16">
+    <section className="">
       <div className="container mx-auto px-4">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -89,9 +89,9 @@ export const NewsAndEvents = ({ heading, posts }: NewsAndEventsProps) => {
 export const newsAndEventsBlockSchema: Template = {
   name: "newsAndEvents",
   label: "News & Events",
-  // ui: {
-  //   previewSrc: "/blocks/content.png",
-  // },
+  ui: {
+    previewSrc: "/blocks/sectionscms/newsevent1.png",
+  },
   fields: [
     {
       type: "string",
