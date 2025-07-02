@@ -159,77 +159,39 @@
       "_template": "heroSlider"
     },
     {
-      "badge": {
-        "text": "Trusted by 500+ Global Partners"
-      },
-      "heroSectionSecondheading": {
-        "title": "Connecting Vietnam to the ",
-        "highlight": "World"
-      },
-      "description": "Your trusted B2B export partner, bridging Vietnamese excellence with global markets through quality, reliability, and innovation.",
-      "buttons": [
-        {
-          "label": "Request a Quote",
-          "actionKey": "onQuoteClick",
-          "variant": "default"
-        },
-        {
-          "label": "Become a Supplier",
-          "actionKey": "onSupplierClick",
-          "variant": "outline"
-        }
-      ],
-      "heroSectionSecondstatistics": [
-        {
-          "number": 500,
-          "text": "Global Partners"
-        },
-        {
-          "number": 50,
-          "text": "Countries Served"
-        },
-        {
-          "number": 10,
-          "text": "Products Exported"
-        },
-        {
-          "number": 15,
-          "text": "Years Experience"
-        }
-      ],
-      "_template": "heroSectionSecondTemplate"
-    },
-    {
-      "whoWeAreSectionHeading": {
-        "title": "Who We Are",
-        "description": "VINHAPAC is Vietnam's leading B2B export service provider, specializing in connecting high-quality Vietnamese products with international markets worldwide."
+      "companyName": "Vinhapac",
+      "slogan": "ĐƠN VỊ XUẤT NHẬP KHẨU ĐÁNG TIN CẬY",
+      "stats": {
+        "years": 20,
+        "yearsLabel": "Năm thành lập",
+        "yearsDescription": "Kinh nghiệm và uy tín trong lĩnh vực xuất nhập khẩu",
+        "revenue": 30,
+        "revenueLabel": "TRIỆU USD",
+        "revenueDescription": "Doanh thu nhập khẩu hàng năm của công ty"
       },
       "features": [
         {
-          "id": "cad98992-efba-47e4-b9ac-8c139d6041ed",
-          "title": "Global Reach",
-          "desc": "Extensive network spanning across Europe, North America, and Asia-Pacific markets."
+          "title": "HIỆN DIỆN QUỐC TẾ",
+          "description": "Chúng tôi tự hào đưa các sản phẩm Vật liệu xây dựng cùng các hàng hóa Việt Nam hiện diện và khẳng định vị trí ở các thị trường quốc tế quan trọng.",
+          "id": "aa0f1940-d8e4-48b1-a21f-40944da9f3b2"
         },
         {
-          "id": "8a81ed93-9f8b-4c0c-81a7-ac3974028d91",
-          "title": "Quality Assurance",
-          "desc": "Rigorous quality control processes ensuring international standards and customer satisfaction."
+          "title": "KẾT NỐI PHÁT TRIỂN",
+          "description": "Là cầu nối vững chắc kết nối các nhà sản xuất Việt Nam với các đối tác nước ngoài. Cam kết thúc đẩy hợp tác quốc tế và phát triển các hoạt động thương mại toàn cầu.",
+          "id": "778c8898-7702-4966-b96a-2c597cac0b6b"
         },
         {
-          "id": "c93994ac-1525-46de-8c6a-5f909b2b8719",
-          "title": "Trusted Partnership",
-          "desc": "Building long-term relationships based on trust, transparency, and mutual success."
+          "title": "HỢP TÁC CHIẾN LƯỢC",
+          "description": "Hợp tác với các thương hiệu lớn trong và ngoài nước, phân phối đa dạng các loại hàng hóa dịch vụ, đáp ứng toàn diện nhu cầu thị trường trong nước.",
+          "id": "f798dcfb-573d-4ba8-97cb-03e3f5568530"
+        },
+        {
+          "title": "CHUYÊN NGHIỆP SÁNG TẠO",
+          "description": "Chiến lược kinh doanh linh hoạt với đội ngũ nhân sự chuyên nghiệp, năng động, sáng tạo và giàu kinh nghiệm trong thương mại quốc tế.",
+          "id": "4cb1b817-2416-4310-916e-39f8ac175c8a"
         }
       ],
-      "mission": {
-        "title": "Our Mission",
-        "description": "Empower Vietnamese businesses to thrive globally by providing seamless export solutions and building sustainable international partnerships."
-      },
-      "vision": {
-        "title": "Our Vision",
-        "description": "To be the leading bridge connecting Vietnamese excellence with the global market — trusted, innovative, and impactful."
-      },
-      "_template": "whoWeAreSection"
+      "_template": "introCompanySection"
     },
     {
       "products": [

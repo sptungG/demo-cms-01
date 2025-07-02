@@ -12,6 +12,7 @@ import { exportMarketsBlockSchema } from "@/components/blocks/home/ExportMarkets
 import { featuredProductsBlockSchema } from "@/components/blocks/home/FeaturedProducts";
 import { heroSectionSecondTemplate } from "@/components/blocks/home/HeroSectionSecond";
 import { heroSliderBlockSchema } from "@/components/blocks/home/HeroSlider";
+import { introCompanyBlockSchema } from "@/components/blocks/home/IntroCompany";
 import { introductionBlockSchema } from "@/components/blocks/home/Introduction";
 import { KeyExportProductsTemplate } from "@/components/blocks/home/KeyExportProducts";
 import { newsAndEventsBlockSchema } from "@/components/blocks/home/NewsAndEvents";
@@ -58,6 +59,7 @@ const Page: Collection = {
         heroSliderBlockSchema,
         heroSectionSecondTemplate,
         introductionBlockSchema,
+        introCompanyBlockSchema,
         featuredProductsBlockSchema,
         whyChooseUsBlockSchema,
         whoWeAreSectionTemplate,

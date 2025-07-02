@@ -41,7 +41,7 @@ interface Props {
 
 const CallToActionSectionSecond: React.FC<Props> = ({ data }) => {
   return (
-    <section className="container mx-auto rounded-xl relative overflow-hidden py-6 md:py-10 lg:py-14">
+    <section className="container mx-auto rounded-xl relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <motion.div
           className="text-center mb-10"
