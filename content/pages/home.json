@@ -145,6 +145,49 @@
   "slug": "/",
   "blocks": [
     {
+      "button": {
+        "label": "Liên hệ",
+        "position": {
+          "right": 2,
+          "bottom": 6
+        }
+      },
+      "_template": "fixedFormButton"
+    },
+    {
+      "button": {
+        "label": "Trở thành NCC"
+      },
+      "form": {
+        "title": "Trở thành NCC cùng Vinhapac",
+        "description": "Trở thành NCC, cùng chia sẻ sứ mệnh Vinhapac",
+        "fields": [
+          {
+            "label": "Tên doanh nghiệp",
+            "id": "95441e16-45d0-44a1-9515-2268864a4cce",
+            "type": "text",
+            "placeholder": "Vui lòng cung cấp tên Doanh nghiệp",
+            "required": true
+          },
+          {
+            "label": "Email",
+            "id": "d3bb36a5-5263-4fc0-97cd-ea94dc630614",
+            "type": "email",
+            "placeholder": "Email liên hệ",
+            "required": true
+          },
+          {
+            "label": "Phone",
+            "id": "06c3c1f0-3ef6-4f50-bf8d-a314be5668f5",
+            "type": "text",
+            "placeholder": "Điện thoại liên hệ",
+            "required": true
+          }
+        ]
+      },
+      "_template": "fixedFormButton"
+    },
+    {
       "slides": [
         {
           "slogan": "Chất Lượng Toàn Cầu - Dịch Vụ Tận Tâm",
