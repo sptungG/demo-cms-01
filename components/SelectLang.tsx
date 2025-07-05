@@ -1,9 +1,8 @@
 "use client";
 
-import { Fragment } from "react";
 import getCountryFlag from "country-flag-icons/unicode";
-import { Listbox, Transition } from "@headlessui/react";
-import { Check, ChevronDown } from "lucide-react";
+import { Select } from "@headlessui/react";
+import { ChevronDown } from "lucide-react";
 import { usePathname, useRouter } from "next/navigation";
 
 export interface ILanguage {
@@ -46,66 +45,31 @@ const SelectLang = ({
     router.push(newPathname);
   };
   return (
-    <div className="relative w-full">
-      <Listbox value={value} onChange={handleChange}>
-        <div className="relative">
-          <Listbox.Button className="relative focus:outline-none w-full min-w-[35px] h-9 rounded-md border border-input bg-background px-3 py-2 text-sm flex items-center justify-between gap-2 hover:bg-accent hover:text-accent-foreground">
-            <span className="flex items-center gap-2 truncate">
-              {value && (
-                <span className="text-lg">{getCountryFlag(value)}</span>
-              )}
-              <span className="truncate">{value.toLocaleUpperCase()}</span>
-            </span>
-            <ChevronDown className="w-4 h-4 opacity-50 shrink-0 transition-transform duration-200 ui-open:rotate-180" />
-          </Listbox.Button>
-
-          <Transition
-            as={Fragment}
-            leave="transition ease-in duration-100"
-            leaveFrom="opacity-100"
-            leaveTo="opacity-0"
-          >
-            <Listbox.Options className="absolute focus:outline-none  z-50 mt-1 max-h-60 w-full overflow-auto rounded-md border bg-popover text-popover-foreground shadow-lg text-sm">
-              {languages.map((lang) => (
-                <Listbox.Option
-                  disabled={
-                    lang.countryFlag?.toLowerCase() === value.toLowerCase()
-                  }
-                  key={lang.countryCode}
-                  className={({ active }) =>
-                    `relative cursor-pointer select-none py-2 pl-2 pr-4 ${
-                      active ? "bg-accent text-accent-foreground" : ""
-                    } ui-selected:bg-accent/50`
-                  }
-                  value={lang.countryFlag}
-                >
-                  {({ selected }) => (
-                    <>
-                      <span className="flex items-center gap-2 truncate">
-                        <span className="text-lg shrink-0">
-                          {getCountryFlag(lang.countryFlag as string)}
-                        </span>
-                        <span
-                          className={`truncate ${
-                            selected ? "font-medium" : "font-normal"
-                          }`}
-                        >
-                          {lang.countryFlag}
-                        </span>
-                      </span>
-                      {selected && (
-                        <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-primary">
-                          <Check className="w-4 h-4" />
-                        </span>
-                      )}
-                    </>
-                  )}
-                </Listbox.Option>
-              ))}
-            </Listbox.Options>
-          </Transition>
-        </div>
-      </Listbox>
+    <div className="relative w-full group">
+      <div className="relative">
+        <Select
+          name="lang"
+          value={value.toLowerCase()}
+          onChange={(e) => {
+            if (value.toLowerCase() !== String(e.target.value).toLowerCase()) {
+              handleChange(e.target.value)
+            }
+          }}
+          className="w-full rounded-lg border border-gray-200 bg-white px-2 py-1 text-sm text-gray-800 transition-all duration-200 hover:border-gray-300 focus:border-vina-primary focus:outline-none focus:ring-2 focus:ring-vina-primary/20 appearance-none pr-10"
+        >
+          <option disabled value="">
+            {placeholder}
+          </option>
+          {languages.map((lang) => {
+            return (
+              <option key={lang.countryFlag} value={lang.countryFlag?.toLowerCase()} className="py-2">
+                {getCountryFlag(lang.countryFlag as string)} {lang.countryFlag}
+              </option>
+            )
+          })}
+        </Select>
+        <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-500 transition-transform duration-200 group-hover:text-gray-700" />
+      </div>
     </div>
   );
 };

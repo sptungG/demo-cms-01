@@ -38,9 +38,7 @@ export default async function Page({
 
   return (
     <Layout rawPageData={data} locale={getLocale}>
-      <Section>
-        <ClientPage {...data} />
-      </Section>
+      <ClientPage {...data} />
     </Layout>
   );
 }

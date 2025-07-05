@@ -25,17 +25,17 @@ interface VisionMissionSectionProps {
     };
     statistics: {
       orderQuantity: {
-        name: string;
+        label: string;
         description: string;
         value: number;
       };
       exportQuantity: {
-        name: string;
+        label: string;
         description: string;
         value: number;
       };
       customerReviews: {
-        name: string;
+        label: string;
         description: string;
         value: number;
       };
@@ -121,7 +121,7 @@ export const VisionMissionSection = ({ data }: VisionMissionSectionProps) => {
             >
               <CountUp
                 start={0}
-                end={data.statistics.orderQuantity.value ?? 5000}
+                end={data.statistics?.orderQuantity?.value ?? 5000}
                 duration={2.5}
                 separator=","
                 suffix="+"
@@ -130,10 +130,10 @@ export const VisionMissionSection = ({ data }: VisionMissionSectionProps) => {
               />
             </motion.div>
             <h4 className="text-lg font-semibold mb-2">
-              {data.statistics.orderQuantity.name ?? "Orders"}
+              {data.statistics?.orderQuantity?.label ?? "Orders"}
             </h4>
             <p className="text-gray-600 text-sm">
-              {data.statistics.orderQuantity.description ?? "Completed orders"}
+              {data.statistics?.orderQuantity?.description ?? "Completed orders"}
             </p>
           </motion.div>
 
@@ -160,7 +160,7 @@ export const VisionMissionSection = ({ data }: VisionMissionSectionProps) => {
             >
               <CountUp
                 start={0}
-                end={data.statistics.exportQuantity.value ?? 500}
+                end={data.statistics?.exportQuantity?.value ?? 500}
                 duration={2}
                 suffix="+"
                 enableScrollSpy
@@ -168,10 +168,10 @@ export const VisionMissionSection = ({ data }: VisionMissionSectionProps) => {
               />
             </motion.div>
             <h4 className="text-lg font-semibold mb-2">
-              {data.statistics.exportQuantity.name ?? "Export"}
+              {data.statistics?.exportQuantity?.label ?? "Export"}
             </h4>
             <p className="text-gray-600 text-sm">
-              {data.statistics.exportQuantity.description ??
+              {data.statistics?.exportQuantity?.description ??
                 "Exported products per year"}
             </p>
           </motion.div>
@@ -199,7 +199,7 @@ export const VisionMissionSection = ({ data }: VisionMissionSectionProps) => {
             >
               <CountUp
                 start={0}
-                end={data.statistics.customerReviews.value ?? 98}
+                end={data.statistics?.customerReviews?.value ?? 98}
                 duration={3}
                 suffix="%"
                 enableScrollSpy
@@ -207,10 +207,10 @@ export const VisionMissionSection = ({ data }: VisionMissionSectionProps) => {
               />
             </motion.div>
             <h4 className="text-lg font-semibold mb-2">
-              {data.statistics.customerReviews.name ?? "Customer Reviews"}
+              {data.statistics?.customerReviews?.label ?? "Customer Reviews"}
             </h4>
             <p className="text-gray-600 text-sm">
-              {data.statistics.customerReviews.description ??
+              {data.statistics?.customerReviews?.description ??
                 "Customer satisfaction percentage"}
             </p>
           </motion.div>
@@ -228,7 +228,7 @@ export const VisionMissionSection = ({ data }: VisionMissionSectionProps) => {
           </motion.h3>
         </div>
         <div className="max-w-7xl mx-auto !overflow-hidden">
-          {!data.coreValues?.values || data.coreValues.values.length === 0 ? (
+          {!data.coreValues?.values || data.coreValues?.values?.length === 0 ? (
             <div className="text-center py-12">
               <div className="w-16 h-16 mx-auto mb-4">
                 <svg
