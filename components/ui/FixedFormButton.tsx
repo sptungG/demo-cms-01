@@ -76,7 +76,7 @@ const FixedFormButton = ({ data }: Props) => {
                 <motion.div
                     initial={{ opacity: 0, x: 100 }}
                     animate={{ opacity: 1, x: 0 }}
-                    className="fixed z-50"
+                    className="fixed z-50 parentAbsolute"
                     style={getPositionStyle(data.button?.position)}
                 >
                     <motion.div

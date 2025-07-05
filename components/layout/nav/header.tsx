@@ -66,7 +66,7 @@ export const Header = ({ locale = "vn" }: Props) => {
                           alt={header.name || "Logo"}
                         />
                       </div>
-                      <span className="text-base sm:text-lg font-semibold text-vina-primary">
+                      <span className="hidden lg:block text-base sm:text-lg font-semibold text-vina-primary">
                         {header.name}
                       </span>
                     </Link>

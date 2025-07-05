@@ -33,7 +33,7 @@ interface Props {
 }
 
 const FormSection = ({ data }: Props) => {
-    console.log(data)
+
     return (
         <section className="py-12 bg-white">
             <div className="container mx-auto px-4 max-w-4xl">
