@@ -216,17 +216,17 @@ interface VisionMissionSectionBlock extends BaseBlock {
   };
   statistics: {
     orderQuantity: {
-      name: string;
+      label: string;
       description: string;
       value: number;
     };
     exportQuantity: {
-      name: string;
+      label: string;
       description: string;
       value: number;
     };
     customerReviews: {
-      name: string;
+      label: string;
       description: string;
       value: number;
     };
@@ -440,17 +440,17 @@ export const Block = ({ block }: { block: PageBlock }) => {
             coreValues: block.coreValues || { title: "", values: [] },
             statistics: block.statistics || {
               orderQuantity: {
-                name: "",
+                label: "",
                 description: "",
                 value: 0,
               },
               exportQuantity: {
-                name: "",
+                label: "",
                 description: "",
                 value: 0,
               },
               customerReviews: {
-                name: "",
+                label: "",
                 description: "",
                 value: 0,
               },
