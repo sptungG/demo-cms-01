@@ -33,7 +33,7 @@ export const Header = ({ locale = "vn" }: Props) => {
 
   return (
     <motion.header
-      className="bg-white sticky top-0 right-0 w-full z-[99999] border-b backdrop-blur-xl"
+      className="bg-white sticky top-0 right-0 w-full z-[50] border-b backdrop-blur-xl"
     >
       <nav
         data-state={menuState ? "active" : "inactive"}

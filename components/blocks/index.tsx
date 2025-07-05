@@ -586,6 +586,7 @@ export const Block = ({ block }: { block: PageBlock }) => {
       return <FixedFormButton data={{
         form: block.form,
         button: block.button,
+        name: block.name
       }} />
     default:
       return null;
