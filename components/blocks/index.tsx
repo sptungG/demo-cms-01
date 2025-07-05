@@ -33,6 +33,8 @@ import CallToActionSection, {
 } from "./home/CallToActionSectionSecond";
 import CallToActionSectionSecond from "./home/CallToActionSectionSecond";
 import IntroCompany, { IIntroCompany } from "./home/IntroCompany";
+import FormSection, { IFormSection } from "./form/FormSection";
+import FixedFormButton, { IFixedFormButton } from "../ui/FixedFormButton";
 
 type Maybe<T> = T | null | undefined;
 
@@ -269,6 +271,14 @@ interface IIntroCompanySectionBlock extends BaseBlock, IIntroCompany {
   __typename: "PageBlocksIntroCompanySection";
 }
 
+interface IFormSectionBlock extends BaseBlock, IFormSection {
+  __typename: "PageBlocksFormSection";
+}
+
+interface IFixedFormButtonBlock extends BaseBlock, IFixedFormButton {
+  __typename: "PageBlocksFixedFormButton";
+}
+
 type PageBlock =
   | HeroSliderBlock
   | IntroductionBlock
@@ -291,6 +301,8 @@ type PageBlock =
   | ICertificationsSectionBlock
   | ICallToActionSectionSecondBblock
   | IIntroCompanySectionBlock
+  | IFormSectionBlock
+  | IFixedFormButtonBlock
   | IHeroSectionSecondTemplateBLock;
 
 interface Page {
@@ -557,7 +569,6 @@ export const Block = ({ block }: { block: PageBlock }) => {
         />
       );
     case "PageBlocksIntroCompanySection":
-      console.log(block)
       return (
         <IntroCompany
           data={{
@@ -569,6 +580,13 @@ export const Block = ({ block }: { block: PageBlock }) => {
           }}
         />
       );
+    case "PageBlocksFormSection":
+      return <FormSection data={block} />;
+    case "PageBlocksFixedFormButton":
+      return <FixedFormButton data={{
+        form: block.form,
+        button: block.button,
+      }} />
     default:
       return null;
   }

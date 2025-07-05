@@ -60,9 +60,11 @@
   --color-vina-ring: var(--vina-ring);
   --color-vina-destructive: var(--vina-destructive);
 }
+
 html {
   /* overflow-x: hidden; */
 }
+
 body {
   scrollbar-gutter: stable;
 }
@@ -73,16 +75,19 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background: #f1f1f1; /* màu nền của track */
+  background: #f1f1f1;
+  /* màu nền của track */
 }
 
 body::-webkit-scrollbar-thumb {
-  background: #888; /* màu của "núm kéo" */
+  background: #888;
+  /* màu của "núm kéo" */
   border-radius: 0px;
 }
 
 body::-webkit-scrollbar-thumb:hover {
-  background: #555; /* khi hover */
+  background: #555;
+  /* khi hover */
 }
 
 :root {
@@ -119,23 +124,30 @@ body::-webkit-scrollbar-thumb:hover {
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
 
-  --vina-primary: #fc6b06; /* Màu cam chủ đạo */
+  --vina-primary: #fc6b06;
+  /* Màu cam chủ đạo */
   --vina-primary-foreground: #ffffff;
-  --vina-secondary: #ff8534; /* Màu cam nhạt hơn */
+  --vina-secondary: #ff8534;
+  /* Màu cam nhạt hơn */
   --vina-secondary-foreground: #ffffff;
-  --vina-accent: #d95a05; /* Màu cam đậm hơn */
+  --vina-accent: #d95a05;
+  /* Màu cam đậm hơn */
   --vina-accent-foreground: #ffffff;
-  --vina-muted: #fff0e6; /* Màu cam rất nhạt cho background */
-  --vina-muted-foreground: #663d1a; /* Màu nâu cho text trên nền nhạt */
+  --vina-muted: #fff0e6;
+  /* Màu cam rất nhạt cho background */
+  --vina-muted-foreground: #663d1a;
+  /* Màu nâu cho text trên nền nhạt */
   --vina-background: #ffffff;
   --vina-foreground: #1a1a1a;
   --vina-card: #ffffff;
   --vina-card-foreground: #1a1a1a;
   --vina-popover: #ffffff;
   --vina-popover-foreground: #1a1a1a;
-  --vina-border: #ffe0cc; /* Border màu cam nhạt */
+  --vina-border: #ffe0cc;
+  /* Border màu cam nhạt */
   --vina-input: #ffe0cc;
-  --vina-ring: #fc6b06; /* Ring focus cùng màu primary */
+  --vina-ring: #fc6b06;
+  /* Ring focus cùng màu primary */
   --vina-destructive: #ff4444;
 }
 
@@ -178,15 +190,18 @@ body::-webkit-scrollbar-thumb:hover {
   --vina-secondary-foreground: #ffffff;
   --vina-accent: #d95a05;
   --vina-accent-foreground: #ffffff;
-  --vina-muted: #2d1810; /* Màu nâu tối cho dark mode */
-  --vina-muted-foreground: #ffd1b3; /* Text màu cam nhạt trên nền tối */
+  --vina-muted: #2d1810;
+  /* Màu nâu tối cho dark mode */
+  --vina-muted-foreground: #ffd1b3;
+  /* Text màu cam nhạt trên nền tối */
   --vina-background: #1a1a1a;
   --vina-foreground: #ffffff;
   --vina-card: #2d1810;
   --vina-card-foreground: #ffffff;
   --vina-popover: #2d1810;
   --vina-popover-foreground: #ffffff;
-  --vina-border: #663d1a; /* Border màu nâu tối */
+  --vina-border: #663d1a;
+  /* Border màu nâu tối */
   --vina-input: #663d1a;
   --vina-ring: #fc6b06;
   --vina-destructive: #ff4444;
@@ -203,10 +218,12 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 @layer utilities {
+
   /* Base vina colors */
   .text-vina-primary {
     color: var(--vina-primary);
   }
+
   .bg-vina-primary {
     background-color: var(--vina-primary);
   }
@@ -214,6 +231,7 @@ body::-webkit-scrollbar-thumb:hover {
   .text-vina-secondary {
     color: var(--vina-secondary);
   }
+
   .bg-vina-secondary {
     background-color: var(--vina-secondary);
   }
@@ -221,6 +239,7 @@ body::-webkit-scrollbar-thumb:hover {
   .text-vina-accent {
     color: var(--vina-accent);
   }
+
   .bg-vina-accent {
     background-color: var(--vina-accent);
   }
@@ -228,6 +247,7 @@ body::-webkit-scrollbar-thumb:hover {
   .text-vina-muted-foreground {
     color: var(--vina-muted-foreground);
   }
+
   .bg-vina-muted {
     background-color: var(--vina-muted);
   }
@@ -235,6 +255,7 @@ body::-webkit-scrollbar-thumb:hover {
   .text-vina-foreground {
     color: var(--vina-foreground);
   }
+
   .bg-vina-background {
     background-color: var(--vina-background);
   }
@@ -242,9 +263,11 @@ body::-webkit-scrollbar-thumb:hover {
   .border-vina-border {
     border-color: var(--vina-border);
   }
+
   .bg-vina-card {
     background-color: var(--vina-card);
   }
+
   .text-vina-card-foreground {
     color: var(--vina-card-foreground);
   }
@@ -252,6 +275,7 @@ body::-webkit-scrollbar-thumb:hover {
   .bg-vina-popover {
     background-color: var(--vina-popover);
   }
+
   .text-vina-popover-foreground {
     color: var(--vina-popover-foreground);
   }
@@ -263,6 +287,7 @@ body::-webkit-scrollbar-thumb:hover {
   .text-vina-destructive {
     color: var(--vina-destructive);
   }
+
   .bg-vina-destructive {
     background-color: var(--vina-destructive);
   }
@@ -271,55 +296,55 @@ body::-webkit-scrollbar-thumb:hover {
   .bg-vina-primary-10 {
     background-color: color-mix(in srgb, var(--vina-primary) 10%, transparent);
   }
+
   .bg-vina-primary-20 {
     background-color: color-mix(in srgb, var(--vina-primary) 20%, transparent);
   }
+
   .bg-vina-primary-30 {
     background-color: color-mix(in srgb, var(--vina-primary) 30%, transparent);
   }
+
   .bg-vina-primary-40 {
     background-color: color-mix(in srgb, var(--vina-primary) 40%, transparent);
   }
+
   .bg-vina-primary-50 {
     background-color: color-mix(in srgb, var(--vina-primary) 50%, transparent);
   }
+
   .border-vina-primary {
     border-color: var(--vina-primary);
   }
+
   .bg-vina-secondary-10 {
-    background-color: color-mix(
-      in srgb,
-      var(--vina-secondary) 10%,
-      transparent
-    );
+    background-color: color-mix(in srgb,
+        var(--vina-secondary) 10%,
+        transparent);
   }
+
   .bg-vina-secondary-20 {
-    background-color: color-mix(
-      in srgb,
-      var(--vina-secondary) 20%,
-      transparent
-    );
+    background-color: color-mix(in srgb,
+        var(--vina-secondary) 20%,
+        transparent);
   }
+
   .bg-vina-secondary-30 {
-    background-color: color-mix(
-      in srgb,
-      var(--vina-secondary) 30%,
-      transparent
-    );
+    background-color: color-mix(in srgb,
+        var(--vina-secondary) 30%,
+        transparent);
   }
+
   .bg-vina-secondary-40 {
-    background-color: color-mix(
-      in srgb,
-      var(--vina-secondary) 40%,
-      transparent
-    );
+    background-color: color-mix(in srgb,
+        var(--vina-secondary) 40%,
+        transparent);
   }
+
   .bg-vina-secondary-50 {
-    background-color: color-mix(
-      in srgb,
-      var(--vina-secondary) 50%,
-      transparent
-    );
+    background-color: color-mix(in srgb,
+        var(--vina-secondary) 50%,
+        transparent);
   }
 
   /* Gradients */
@@ -354,34 +379,28 @@ body::-webkit-scrollbar-thumb:hover {
 
   /* Gradient Text Utilities */
   .bg-gradient-text-primary {
-    background-image: linear-gradient(
-      to right,
-      var(--vina-primary),
-      var(--vina-secondary),
-      var(--vina-accent)
-    );
+    background-image: linear-gradient(to right,
+        var(--vina-primary),
+        var(--vina-secondary),
+        var(--vina-accent));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
 
   .bg-gradient-text-secondary {
-    background-image: linear-gradient(
-      to right,
-      var(--vina-secondary),
-      var(--vina-accent)
-    );
+    background-image: linear-gradient(to right,
+        var(--vina-secondary),
+        var(--vina-accent));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
 
   .bg-gradient-text-accent {
-    background-image: linear-gradient(
-      to right,
-      var(--vina-accent),
-      var(--vina-primary)
-    );
+    background-image: linear-gradient(to right,
+        var(--vina-accent),
+        var(--vina-primary));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -389,14 +408,16 @@ body::-webkit-scrollbar-thumb:hover {
 
   /* Gradient Text with Opacity */
   .bg-gradient-text-primary-50 {
-    background-image: linear-gradient(
-      to right,
-      color-mix(in srgb, var(--vina-primary) 50%, transparent),
-      color-mix(in srgb, var(--vina-secondary) 50%, transparent),
-      color-mix(in srgb, var(--vina-accent) 50%, transparent)
-    );
+    background-image: linear-gradient(to right,
+        color-mix(in srgb, var(--vina-primary) 50%, transparent),
+        color-mix(in srgb, var(--vina-secondary) 50%, transparent),
+        color-mix(in srgb, var(--vina-accent) 50%, transparent));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
+}
+
+main>div:has(.parentAbsolute) {
+  position: absolute;
 }

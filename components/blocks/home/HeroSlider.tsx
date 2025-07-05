@@ -115,24 +115,6 @@ export const HeroSlider = ({ slides }: HeroSliderProps) => {
         </motion.div>
       </AnimatePresence>
 
-      {/* Navigation Buttons - Hidden on mobile, shown on larger screens */}
-      <div className="hidden md:block">
-        <button
-          onClick={prevSlide}
-          className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-white/20 p-2 text-white backdrop-blur-sm transition-all hover:bg-white/30 sm:p-3 md:left-6 lg:left-8"
-          aria-label="Previous slide"
-        >
-          <ChevronLeft className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6" />
-        </button>
-        <button
-          onClick={nextSlide}
-          className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-white/20 p-2 text-white backdrop-blur-sm transition-all hover:bg-white/30 sm:p-3 md:right-6 lg:right-8"
-          aria-label="Next slide"
-        >
-          <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6" />
-        </button>
-      </div>
-
       {/* Slide Indicators */}
       <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-1.5 sm:bottom-6 sm:gap-2 md:bottom-8 md:gap-3">
         {slides.map((_, index) => (

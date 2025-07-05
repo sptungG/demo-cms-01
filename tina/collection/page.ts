@@ -4,6 +4,7 @@ import { leadershipSectionBlockSchema } from "@/components/blocks/about/sections
 import { legalInfoSectionBlockSchema } from "@/components/blocks/about/sections/LegalInfoSection";
 import { timelineSectionBlockSchema } from "@/components/blocks/about/sections/TimelineSection";
 import { visionMissionSectionBlockSchema } from "@/components/blocks/about/sections/VisionMissionSection";
+import { fixedButtonBlockSchema } from "@/components/blocks/button/FixedButtonSchema";
 import { callToActionBlockSchema } from "@/components/blocks/home/CallToAction";
 import { callToActionSetionSecondSchema } from "@/components/blocks/home/CallToActionSectionSecond";
 import { certificationsSectionSchema } from "@/components/blocks/home/CertificationsSection";
@@ -72,6 +73,7 @@ const Page: Collection = {
         testimonialsBlockSchema,
         callToActionBlockSchema,
         callToActionSetionSecondSchema,
+        fixedButtonBlockSchema,
 
         capacitySectionBlockSchema,
         heroAboutBlockSchema,
