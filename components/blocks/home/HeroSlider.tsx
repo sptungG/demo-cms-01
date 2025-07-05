@@ -80,31 +80,32 @@ export const HeroSlider = ({ slides }: HeroSliderProps) => {
             fill
             className="object-cover"
             priority
-            sizes="100vw"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 85vw"
+            quality={90}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/20" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />
           <div className="absolute inset-0 flex items-center">
-            <div className="container mx-auto">
+            <div className="container mx-auto px-4 md:px-6 lg:px-8">
               <motion.div
                 initial={{ x: -80, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ delay: 0.7 }}
-                className="mx-auto text-center"
+                className="max-w-4xl"
               >
-                <div className="rounded-lg w-fit bg-neutral-400/35 p-6 flex items-center mb-4 md:mb-6">
-                  <h1 className="text-2xl text-left font-bold text-white sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
+                <div className="rounded-lg bg-black/30 backdrop-blur-sm p-3 sm:p-4 md:p-6 lg:p-8 mb-3 sm:mb-4 md:mb-6 w-fit">
+                  <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-tight tracking-tight">
                     {slides[currentSlide].slogan}
                   </h1>
                 </div>
                 {slides[currentSlide].subSlogan && (
-                  <p className="mb-6 text-sm text-left text-gray-200 sm:text-base md:mb-8 md:text-lg lg:text-xl">
+                  <p className="text-sm sm:text-base md:text-lg text-white/90 mb-4 sm:mb-6 md:mb-8 max-w-2xl leading-relaxed">
                     {slides[currentSlide].subSlogan}
                   </p>
                 )}
-                <div className="flex justify-start">
+                <div className="flex items-center gap-3 sm:gap-4">
                   <Link
                     href={slides[currentSlide].button.link}
-                    className="inline-flex items-center rounded-lg bg-vina-primary px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-vina-primary sm:px-8 sm:py-4 sm:text-base md:text-lg"
+                    className="inline-flex items-center rounded-full bg-vina-primary px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 text-sm sm:text-base md:text-md font-semibold text-white transition-all duration-300 hover:bg-vina-primary/90 hover:scale-105 hover:shadow-lg hover:shadow-vina-primary/20 transform"
                   >
                     {slides[currentSlide].button.label}
                   </Link>
@@ -116,16 +117,15 @@ export const HeroSlider = ({ slides }: HeroSliderProps) => {
       </AnimatePresence>
 
       {/* Slide Indicators */}
-      <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-1.5 sm:bottom-6 sm:gap-2 md:bottom-8 md:gap-3">
+      <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-1/2 flex -translate-x-1/2 gap-1.5 sm:gap-2 md:gap-3">
         {slides.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
-            className={`h-1.5 rounded-full transition-all sm:h-2 ${
-              index === currentSlide
-                ? "w-6 bg-white sm:w-8 md:w-10"
-                : "w-1.5 bg-white/50 sm:w-2"
-            }`}
+            className={`h-1.5 sm:h-2 md:h-2.5 rounded-full transition-all duration-300 ${index === currentSlide
+              ? "w-6 sm:w-8 md:w-10 bg-white"
+              : "w-1.5 sm:w-2 md:w-2.5 bg-white/50 hover:bg-white/70"
+              }`}
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}
