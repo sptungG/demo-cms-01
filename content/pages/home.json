@@ -145,45 +145,57 @@
   "slug": "/",
   "blocks": [
     {
+      "name": "Button contact",
       "button": {
-        "label": "Liên hệ",
+        "label": "Contact",
         "position": {
           "right": 2,
-          "bottom": 6
+          "bottom": 2
         }
       },
-      "_template": "fixedFormButton"
-    },
-    {
-      "button": {
-        "label": "Trở thành NCC"
-      },
       "form": {
-        "title": "Trở thành NCC cùng Vinhapac",
-        "description": "Trở thành NCC, cùng chia sẻ sứ mệnh Vinhapac",
+        "title": "Liên hệ ngay với Vinhapac",
+        "description": "Hãy để chúng tôi hỗ trợ giải đáp và tư vấn trực tiếp với bạn",
         "fields": [
           {
-            "label": "Tên doanh nghiệp",
-            "id": "95441e16-45d0-44a1-9515-2268864a4cce",
+            "label": "Name",
+            "id": "004c5b49-2807-4410-a88b-8ef561e7b0b7",
             "type": "text",
-            "placeholder": "Vui lòng cung cấp tên Doanh nghiệp",
+            "placeholder": "Nhập họ tên của bạn",
             "required": true
           },
           {
             "label": "Email",
-            "id": "d3bb36a5-5263-4fc0-97cd-ea94dc630614",
+            "id": "9bc13b26-b955-40f3-b9c3-930e1c2d1efc",
             "type": "email",
-            "placeholder": "Email liên hệ",
+            "placeholder": "Nhập email của bạn",
             "required": true
           },
           {
             "label": "Phone",
-            "id": "06c3c1f0-3ef6-4f50-bf8d-a314be5668f5",
-            "type": "text",
-            "placeholder": "Điện thoại liên hệ",
+            "id": "27e0e0c9-58c7-4b38-8db6-1ef9f5752955",
+            "type": "tel",
+            "placeholder": "Nhập số điện thoại của bạn",
             "required": true
+          },
+          {
+            "label": "Câu hỏi",
+            "id": "b41ff257-93ea-46b5-868b-fc3e03b0592f",
+            "type": "textarea",
+            "placeholder": "Hãy cho chúng tôi biết trước câu hỏi của bạn"
           }
         ]
+      },
+      "_template": "fixedFormButton"
+    },
+    {
+      "name": "Button Be Supplier",
+      "button": {
+        "label": "Trở thành NCC",
+        "position": {
+          "right": 2,
+          "bottom": 6
+        }
       },
       "_template": "fixedFormButton"
     },
@@ -194,8 +206,8 @@
           "subSlogan": "Đối tác tin cậy đồng hành cùng doanh nghiệp Việt Nam trên hành trình vươn ra thế giới.",
           "backgroundImage": "/uploads/banner-home.png",
           "button": {
-            "label": "Chi tiết",
-            "link": "/"
+            "label": "Liên hệ",
+            "link": "?modal=Button contact"
           }
         }
       ],

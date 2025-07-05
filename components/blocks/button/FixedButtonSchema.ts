@@ -4,7 +4,19 @@ import { uuidv4 } from "@/lib/utils";
 export const fixedButtonBlockSchema: Template = {
     name: "fixedFormButton",
     label: "Fixed Button",
+    ui: {
+        itemProps(item) {
+            return {
+                label: item?.name,
+            }
+        },
+    },
     fields: [
+        {
+            name: "name",
+            label: "Name",
+            type: "string",
+        },
         {
             type: "object",
             name: "button",
