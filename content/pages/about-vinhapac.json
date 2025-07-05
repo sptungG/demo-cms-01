@@ -3,15 +3,77 @@
   "slug": "/about-vinhapac",
   "blocks": [
     {
-      "heading": "Chúng tôi là VINHAPC",
-      "subheading": "Trao trọn niềm tin, đồng hành cùng khách hàng",
-      "backgroundImage": "/uploads/banner.png",
-      "primaryButton": {
-        "label": "Liên hệ ngay",
-        "link": "/contact",
-        "icon": "FaPhoneAlt"
+      "badge": {
+        "text": "Hơn 500+ đối tác toàn cầu"
       },
-      "_template": "heroAboutSection"
+      "heroSectionSecondheading": {
+        "title": "Kết nối Việt Nam tới ",
+        "highlight": "Thế giới"
+      },
+      "description": "Sự lựa chọn tin cậy cho bạn, là một cầu nối Việt Nam tài năng tới thị trường toàn cầu, bởi: Chất lượng, Trách Nhiệm, Đổi mới",
+      "buttons": [
+        {
+          "label": "Báo giá ngay"
+        },
+        {
+          "label": "Trở thành NCC"
+        }
+      ],
+      "heroSectionSecondstatistics": [
+        {
+          "id": "a0a94ef3-1c50-4261-a3e3-9017c5d554f9",
+          "number": 500,
+          "text": "Đối tác toàn cầu"
+        },
+        {
+          "id": "62c2da30-b89e-4f9a-b7bd-f3e720fc5abb",
+          "number": 50,
+          "text": "Quốc gia đã phục vụ"
+        },
+        {
+          "id": "d4aa7254-de10-4a2b-b241-c895edc79ac8",
+          "number": 15,
+          "text": "Mặt hàng xuất/nhâp khẩu"
+        },
+        {
+          "id": "80e8645f-81ef-436d-abce-868b1e8d7156",
+          "number": 15,
+          "text": "Kinh nghiệm"
+        }
+      ],
+      "_template": "heroSectionSecondTemplate"
+    },
+    {
+      "heading": "Thị trường xuất khẩu",
+      "subheading": "Mạng lưới quốc tế Vinhapac đã, đang làm việc",
+      "countries": [
+        {
+          "name": "Thai",
+          "country": "Thai",
+          "iso": "THA"
+        },
+        {
+          "name": "AU",
+          "country": "AU",
+          "iso": "AUT"
+        },
+        {
+          "name": "JA",
+          "country": "JA",
+          "iso": "JPN"
+        },
+        {
+          "name": "VN",
+          "country": "VN",
+          "iso": "VNM"
+        },
+        {
+          "name": "US",
+          "country": "US",
+          "iso": "USA"
+        }
+      ],
+      "_template": "exportMarkets"
     },
     {
       "heading": "Lịch Sử Hình Thành & Phát Triển",
@@ -69,6 +131,23 @@
       "mission": {
         "title": "Sứ Mệnh",
         "content": "Kết nối nguồn cung chất lượng cao với nhu cầu của thị trường trong và ngoài nước. Tạo giá trị bền vững cho đối tác và cộng đồng."
+      },
+      "statistics": {
+        "orderQuantity": {
+          "label": "Đơn hàng",
+          "description": "Đơn hàng hoàn thành",
+          "value": 500000
+        },
+        "exportQuantity": {
+          "label": "Xuất khẩu",
+          "description": "Mặt hàng xuất khẩu",
+          "value": 1000
+        },
+        "customerReviews": {
+          "label": "Phải hồi",
+          "description": "Khách hàng hài lòng",
+          "value": 99
+        }
       },
       "coreValues": {
         "title": "Giá Trị Cốt Lõi",

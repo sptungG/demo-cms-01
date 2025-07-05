@@ -1,5 +1,6 @@
 "use client";
 
+import { uuidv4 } from "@/lib/utils";
 import { motion } from "framer-motion";
 import {
   FaIndustry,
@@ -11,11 +12,12 @@ import { Template } from "tinacms";
 
 interface CapacitySectionProps {
   data: {
-    capacityHeading: string;
-    capacityItems: Array<{
-      icon: string;
-      title: string;
-      content: string;
+    capacityHeading?: string;
+    capacityItems?: Array<{
+      icon?: string;
+      title?: string;
+      content?: string;
+      id?: string
     }>;
   };
 }
@@ -45,7 +47,7 @@ export const CapacitySection = ({ data }: CapacitySectionProps) => {
               iconComponents[item.icon as keyof typeof iconComponents];
             return (
               <motion.div
-                key={item.title}
+                key={item.id ?? uuidv4()}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -88,9 +90,24 @@ export const capacitySectionBlockSchema: Template = {
       ui: {
         itemProps: (item) => ({
           label: item?.title,
+          id: item?.id,
         }),
+        defaultItem() {
+          if (typeof window === "undefined") return {}
+          return {
+            id: uuidv4(),
+          }
+        },
       },
       fields: [
+        {
+          name: "id",
+          label: "id",
+          type: "string",
+          ui: {
+            component: () => <></>
+          }
+        },
         {
           label: "Icon",
           name: "icon",
