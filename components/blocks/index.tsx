@@ -12,7 +12,7 @@ import { CapacitySection } from "./about/sections/CapacitySection";
 import { HeroAboutSection } from "./about/sections/HeroAboutSection";
 import { LeadershipSection } from "./about/sections/LeadershipSection";
 import { LegalInfoSection } from "./about/sections/LegalInfoSection";
-import { TimelineSection } from "./about/sections/TimelineSection";
+import { ITimeline, TimelineSection } from "./about/sections/TimelineSection";
 import { VisionMissionSection } from "./about/sections/VisionMissionSection";
 import HeroSectionSecond, {
   IHeroSectionSecond,
@@ -217,13 +217,8 @@ interface LegalInfoSectionBlock extends BaseBlock {
   }>;
 }
 
-interface TimelineSectionBlock extends BaseBlock {
+interface TimelineSectionBlock extends BaseBlock, ITimeline {
   __typename: "PageBlocksTimelineSection";
-  heading: string;
-  timeline: Array<{
-    year: string;
-    event: string;
-  }>;
 }
 
 interface VisionMissionSectionBlock extends BaseBlock {
@@ -524,6 +519,7 @@ export const Block = ({ block }: { block: PageBlock }) => {
           data={{
             heading: block.heading,
             timeline: block.timeline || [],
+            backgroundImage: block.backgroundImage ?? "",
           }}
         />
       );
