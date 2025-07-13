@@ -1,6 +1,7 @@
 "use client";
 
 import { uuidv4 } from "@/lib/utils";
+import { Link } from "@radix-ui/react-navigation-menu";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { FaHistory } from "react-icons/fa";
@@ -82,61 +83,65 @@ export const TimelineSection = ({ data }: TimelineSectionProps) => {
                 }}
                 icon={<FaHistory />}
               >
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.2, duration: 0.6 }}
-                  className="group"
-                >
-                  {/* Cover Image */}
-                  {item.image && (
-                    <div className="relative h-48 w-full overflow-hidden">
-                      <Image
-                        src={item.image}
-                        alt={`${item.year} - ${item.event}`}
-                        fill
-                        className="object-cover transition-transform duration-500 group-hover:scale-110"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                <Link href={item.href ?? "#"}>
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.2, duration: 0.6 }}
+                    className="group"
+                  >
+                    {/* Cover Image */}
+                    {item.image && (
+                      <div className="relative h-48 w-full overflow-hidden">
+                        <Image
+                          src={item.image}
+                          alt={`${item.year} - ${item.event}`}
+                          fill
+                          className="object-cover transition-transform duration-500 group-hover:scale-110"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
 
-                      <div className="absolute bottom-4 left-4">
-                        <span className="inline-block px-3 py-1 bg-vina-primary text-white text-sm font-bold rounded-full shadow-lg">
-                          {item.year}
-                        </span>
+                        <div className="absolute bottom-4 left-4">
+                          <span className="inline-block px-3 py-1 bg-vina-primary text-white text-sm font-bold rounded-full shadow-lg">
+                            {item.year}
+                          </span>
+                        </div>
                       </div>
-                    </div>
-                  )}
-
-                  {/* Content */}
-                  <div className="p-6">
-                    {/* Year title (only show if no image) */}
-                    {!item.image && (
-                      <h3 className="vertical-timeline-element-title text-xl font-bold text-vina-primary mb-3">
-                        {item.year}
-                      </h3>
                     )}
 
-                    {/* Event description */}
-                    <div className="space-y-2">
-                      <div className="text-gray-700 leading-relaxed prose max-w-none">
-                        <TinaMarkdown
-                          content={item.event as unknown as TinaMarkdownContent}
-                        />
-                      </div>
-                    </div>
+                    {/* Content */}
+                    <div className="p-6">
+                      {/* Year title (only show if no image) */}
+                      {!item.image && (
+                        <h3 className="vertical-timeline-element-title text-xl font-bold text-vina-primary mb-3">
+                          {item.year}
+                        </h3>
+                      )}
 
-                    {/* Decorative element */}
-                    <div className="mt-4 pt-4 border-t border-gray-100">
-                      <div className="flex items-center justify-between">
-                        <div className="w-12 h-0.5 bg-gradient-to-r from-vina-primary to-transparent"></div>
-                        <span className="text-xs text-gray-400 font-medium tracking-wider uppercase">
-                          Milestone
-                        </span>
+                      {/* Event description */}
+                      <div className="space-y-2">
+                        <div className="text-gray-700 leading-relaxed prose max-w-none">
+                          <TinaMarkdown
+                            content={
+                              item.event as unknown as TinaMarkdownContent
+                            }
+                          />
+                        </div>
+                      </div>
+
+                      {/* Decorative element */}
+                      <div className="mt-4 pt-4 border-t border-gray-100">
+                        <div className="flex items-center justify-between">
+                          <div className="w-12 h-0.5 bg-gradient-to-r from-vina-primary to-transparent"></div>
+                          <span className="text-xs text-gray-400 font-medium tracking-wider uppercase">
+                            Milestone
+                          </span>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </motion.div>
+                  </motion.div>
+                </Link>
               </VerticalTimelineElement>
             ))}
           </VerticalTimeline>
