@@ -362,6 +362,7 @@ export const overViewListNewsTemplate: Template = {
         },
         itemProps: (item) => ({
           label: item?.title,
+          id: item?.id,
         }),
       },
       fields: [
