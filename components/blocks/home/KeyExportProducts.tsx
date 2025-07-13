@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { Template } from "tinacms";
 import { uuidv4 } from "@/lib/utils";
+import Link from "next/link";
 
 const container = {
   hidden: { opacity: 0 },
@@ -28,6 +29,7 @@ export interface IKeyExportProducts {
     description?: string;
     image?: string;
     id?: string;
+    url?: string;
   }>;
   backgroundImage?: string;
 }
@@ -40,7 +42,7 @@ const KeyExportProducts = ({
   return (
     <section className="relative -translate-x-1/2 left-1/2 overflow-hidden w-screen bg-gradient-to-br from-vina-background via-vina-muted to-vina-background py-4">
       {/* {backgroundImage && ( */}
-        {/* <div className="absolute inset-0 z-0">
+      {/* <div className="absolute inset-0 z-0">
           <Image
             src={"/uploads/container.png"}
             alt="Background"
@@ -107,9 +109,14 @@ const KeyExportProducts = ({
                     <h3 className="text-xl uppercase font-bold text-white text-center mb-3">
                       {category.title}
                     </h3>
-                    <motion.button className="cursor-pointer opacity-0 group-hover:opacity-100 transition-opacity duration-200 px-4 py-2 bg-vina-primary text-white rounded-lg">
-                      View More
-                    </motion.button>
+                    <p className="text-white text-center mb-3">
+                      {category.description}
+                    </p>
+                    <Link href={category.url ?? "#"}>
+                      <motion.button className="cursor-pointer opacity-0 group-hover:opacity-100 transition-opacity duration-200 px-4 py-2 bg-vina-primary text-white rounded-lg">
+                        View More
+                      </motion.button>
+                    </Link>
                   </div>
                 </div>
               </motion.div>
@@ -186,6 +193,11 @@ export const KeyExportProductsTemplate: Template = {
           ui: {
             component: "textarea",
           },
+        },
+        {
+          name: "url",
+          label: "Url",
+          type: "string",
         },
         {
           name: "image",
