@@ -3,6 +3,8 @@
   "slug": "/tin-tuc-vinhapac",
   "blocks": [
     {
+      "heading": "Tin tức & Bài viết",
+      "description": "Chúng tôi liên tục cập nhật các thông tin mới nhất tại Vinhapac",
       "articles": [
         {
           "id": "1",

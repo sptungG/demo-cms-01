@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Template } from "tinacms";
 import { uuidv4 } from "@/lib/utils";
@@ -39,11 +39,13 @@ const OverViewListNews = ({ data }: OverViewListNewsProps) => {
   const [currentPage, setCurrentPage] = useState(1);
   const articlesPerPage = 5;
 
-  // Use fake data if no articles provided
-  const allArticles = articles && articles.length > 0 ? articles : [];
+  // Use provided articles or empty array
+  const allArticles = articles || [];
 
   // Filter articles based on search and filters
   const filteredArticles = useMemo(() => {
+    if (allArticles.length === 0) return [];
+
     return allArticles.filter((article) => {
       const matchesSearch =
         !searchTerm ||
@@ -59,8 +61,16 @@ const OverViewListNews = ({ data }: OverViewListNewsProps) => {
     });
   }, [allArticles, searchTerm, selectedCategory, selectedAuthor]);
 
-  // Pagination
+  // Calculate pagination
   const totalPages = Math.ceil(filteredArticles.length / articlesPerPage);
+
+  // Reset to page 1 if current page exceeds total pages after filtering
+  useEffect(() => {
+    if (currentPage > totalPages && totalPages > 0) {
+      setCurrentPage(1);
+    }
+  }, [currentPage, totalPages]);
+
   const startIndex = (currentPage - 1) * articlesPerPage;
   const displayArticles = filteredArticles.slice(
     startIndex,
@@ -68,21 +78,19 @@ const OverViewListNews = ({ data }: OverViewListNewsProps) => {
   );
 
   // Get unique categories and authors for filters
-  const categories = [
-    ...new Set(allArticles.map((article) => article.category).filter(Boolean)),
-  ];
-  const authors = [
-    ...new Set(allArticles.map((article) => article.author).filter(Boolean)),
-  ];
+  const categories = useMemo(() => {
+    return [
+      ...new Set(
+        allArticles.map((article) => article.category).filter(Boolean)
+      ),
+    ];
+  }, [allArticles]);
 
-  const formatDate = (dateString?: string) => {
-    if (!dateString) return "";
-    return new Date(dateString).toLocaleDateString("vi-VN", {
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-    });
-  };
+  const authors = useMemo(() => {
+    return [
+      ...new Set(allArticles.map((article) => article.author).filter(Boolean)),
+    ];
+  }, [allArticles]);
 
   const resetFilters = () => {
     setSearchTerm("");
@@ -171,8 +179,8 @@ const OverViewListNews = ({ data }: OverViewListNewsProps) => {
                       selectedAuthor={selectedAuthor}
                       categories={categories as any}
                       authors={authors as any}
-                      filteredCount={displayArticles.length}
-                      totalCount={filteredArticles.length}
+                      filteredCount={filteredArticles.length}
+                      totalCount={allArticles.length}
                       onSearchChange={handleSearchChange}
                       onCategoryChange={handleCategoryChange}
                       onAuthorChange={handleAuthorChange}
@@ -219,7 +227,10 @@ const OverViewListNews = ({ data }: OverViewListNewsProps) => {
                 <SimplePagination
                   currentPage={currentPage}
                   totalPages={totalPages}
-                  onPageChange={setCurrentPage}
+                  onPageChange={(page) => {
+                    setCurrentPage(page);
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
                   maxVisiblePages={5}
                   showFirstLast={true}
                   className="justify-center"
@@ -228,7 +239,34 @@ const OverViewListNews = ({ data }: OverViewListNewsProps) => {
             )}
 
             {/* Empty State */}
-            {displayArticles.length === 0 && (
+            {allArticles.length === 0 ? (
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                className="text-center py-16"
+              >
+                <div className="text-gray-400 mb-4">
+                  <svg
+                    className="w-16 h-16 mx-auto"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm2 6a2 2 0 104 0 2 2 0 00-4 0zm6 0a2 2 0 104 0 2 2 0 00-4 0z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-medium text-gray-900 mb-2">
+                  Chưa có bài viết nào
+                </h3>
+                <p className="text-gray-500">
+                  Hiện tại chưa có bài viết nào được thêm vào.
+                </p>
+              </motion.div>
+            ) : displayArticles.length === 0 ? (
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
@@ -261,7 +299,7 @@ const OverViewListNews = ({ data }: OverViewListNewsProps) => {
                   Xóa bộ lọc
                 </button>
               </motion.div>
-            )}
+            ) : null}
           </div>
 
           {/* Desktop Filter Sidebar - Hidden on mobile */}
@@ -278,8 +316,8 @@ const OverViewListNews = ({ data }: OverViewListNewsProps) => {
                 selectedAuthor={selectedAuthor}
                 categories={categories as any}
                 authors={authors as any}
-                filteredCount={displayArticles.length}
-                totalCount={filteredArticles.length}
+                filteredCount={filteredArticles.length}
+                totalCount={allArticles.length}
                 onSearchChange={handleSearchChange}
                 onCategoryChange={handleCategoryChange}
                 onAuthorChange={handleAuthorChange}
@@ -297,6 +335,19 @@ export const overViewListNewsTemplate: Template = {
   name: "overViewListNews",
   label: "Danh Sách Tin Tức",
   fields: [
+    {
+      label: "Tiêu đề",
+      name: "heading",
+      type: "string",
+    },
+    {
+      label: "Mô tả",
+      name: "description",
+      type: "string",
+      ui: {
+        component: "textarea",
+      },
+    },
     {
       label: "Danh sách bài viết",
       name: "articles",

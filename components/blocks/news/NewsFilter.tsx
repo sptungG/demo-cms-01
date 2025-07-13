@@ -102,7 +102,7 @@ const NewsFilter = ({
       {/* Reset Filters */}
       <button
         onClick={onResetFilters}
-        className="w-full px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors duration-200 font-medium"
+        className="cursor-pointer w-full px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors duration-200 font-medium"
       >
         Xóa bộ lọc
       </button>
