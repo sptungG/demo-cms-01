@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { Template } from "tinacms";
 import { uuidv4 } from "@/lib/utils";
+import Link from "next/link";
 
 const services = [
   {
@@ -53,6 +54,7 @@ export interface IDeepExportServices {
     description?: string;
     image?: string;
     id?: string;
+    url?: string;
   }>;
 }
 
@@ -108,9 +110,14 @@ const DeepExportServices = ({
                   <h3 className="text-xl uppercase font-bold text-white text-center mb-3">
                     {service.title}
                   </h3>
-                  <motion.button className="cursor-pointer opacity-0 group-hover:opacity-100 transition-opacity duration-200 px-4 py-2 bg-vina-primary text-white rounded-lg">
-                    View More
-                  </motion.button>
+                  <p className="text-white text-center mb-3">
+                    {service.description}
+                  </p>
+                  <Link href={service.url ?? ""}>
+                    <motion.button className="cursor-pointer opacity-0 group-hover:opacity-100 transition-opacity duration-200 px-4 py-2 bg-vina-primary text-white rounded-lg">
+                      View More
+                    </motion.button>
+                  </Link>
                 </div>
               </div>
             </motion.div>
@@ -186,6 +193,11 @@ export const deepExportServicesSchemaTemplate: Template = {
           ui: {
             component: "textarea",
           },
+        },
+        {
+          name: "url",
+          label: "Url",
+          type: "string",
         },
         {
           name: "image",

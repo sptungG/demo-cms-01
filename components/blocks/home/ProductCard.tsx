@@ -61,11 +61,7 @@ export const ProductCard = ({
             {product.name}
           </h3>
           <p
-            className={`${
-              isMobile
-                ? "hidden text-xs line-clamp-2"
-                : "text-sm sm:text-base line-clamp-3"
-            } text-muted-foreground`}
+            className={`text-sm sm:text-base line-clamp-3 text-muted-foreground`}
           >
             {product.description}
           </p>
