@@ -14,6 +14,7 @@ export type TOverViewListNews = Partial<{
   heading?: string;
   description?: string;
   articles?: NewsArticle[];
+  style?: string;
 }>;
 interface OverViewListNewsProps {
   data: TOverViewListNews;
@@ -30,7 +31,7 @@ const container = {
 };
 
 const OverViewListNews = ({ data }: OverViewListNewsProps) => {
-  const { heading, description, articles } = data;
+  const { heading, description, articles, style } = data;
 
   // State for filtering and pagination
   const [searchTerm, setSearchTerm] = useState("");
@@ -118,7 +119,7 @@ const OverViewListNews = ({ data }: OverViewListNewsProps) => {
   const hasActiveFilters = searchTerm || selectedCategory || selectedAuthor;
 
   return (
-    <section className="py-16">
+    <section className={style}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -410,6 +411,11 @@ export const overViewListNewsTemplate: Template = {
           type: "string",
         },
       ],
+    },
+    {
+      name: "style",
+      label: "Style class section",
+      type: "string",
     },
   ],
 };
