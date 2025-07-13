@@ -1,8 +1,10 @@
 "use client";
 
 import { uuidv4 } from "@/lib/utils";
+import { Link } from "@radix-ui/react-navigation-menu";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { FaHistory } from "react-icons/fa";
 import {
   VerticalTimeline,
@@ -28,6 +30,7 @@ interface TimelineSectionProps {
 }
 
 export const TimelineSection = ({ data }: TimelineSectionProps) => {
+  const router = useRouter();
   return (
     <section className="relative w-screen left-1/2 -translate-x-1/2">
       <div className="container mx-auto">
@@ -53,7 +56,7 @@ export const TimelineSection = ({ data }: TimelineSectionProps) => {
             {data.timeline?.map((item, index) => (
               <VerticalTimelineElement
                 key={item?.id}
-                className="vertical-timeline-element--work cursor-pointer"
+                className="vertical-timeline-element--work"
                 contentStyle={{
                   background: data.backgroundImage
                     ? "rgba(255, 255, 255, 0.95)"
@@ -81,13 +84,16 @@ export const TimelineSection = ({ data }: TimelineSectionProps) => {
                   border: data.backgroundImage ? "3px solid white" : "none",
                 }}
                 icon={<FaHistory />}
+                onTimelineElementClick={() => {
+                  router.push((item.href as string) ?? "#");
+                }}
               >
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.2, duration: 0.6 }}
-                  className="group"
+                  className="group cursor-pointer"
                 >
                   {/* Cover Image */}
                   {item.image && (
