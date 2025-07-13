@@ -1,4 +1,191 @@
 {
   "title": "Tin tức",
-  "slug": "/tin-tuc-vinhapac"
+  "slug": "/tin-tuc-vinhapac",
+  "blocks": [
+    {
+      "articles": [
+        {
+          "id": "1",
+          "title": "Vinhapac mở rộng thị trường xuất khẩu sang châu Âu",
+          "slug": "/tin-tuc-vinhapac/vinhapac-mo-rong-thi-truong-xuat-khau-sang-chau-au",
+          "description": "Công ty Vinhapac đã ký kết thành công hợp đồng xuất khẩu sản phẩm bao bì thân thiện môi trường sang các nước châu Âu, đánh dấu bước tiến quan trọng trong chiến lược phát triển quốc tế.",
+          "createdAt": "2025-07-07T17:00:00.000Z",
+          "coverImage": "/uploads/ourmission.png",
+          "category": "Tin tức"
+        },
+        {
+          "id": "2",
+          "title": "Công nghệ sản xuất bao bì sinh học tiên tiến",
+          "slug": "/tin-tuc-vinhapac/cong-nghe-san-xuat-bao-bi-sinh-hoc",
+          "description": "Vinhapac đầu tư vào công nghệ sản xuất bao bì sinh học mới nhất, giúp giảm thiểu tác động môi trường và nâng cao chất lượng sản phẩm",
+          "createdAt": "2025-07-13T17:00:00.000Z",
+          "coverImage": "/uploads/news.png",
+          "category": "Bài viết"
+        },
+        {
+          "id": "3",
+          "title": "Chứng nhận ISO 14001 về quản lý môi trường",
+          "slug": "/tin-tuc-vinhapac/chung-nhan-iso-14001-quan-ly-moi-truong",
+          "description": "Vinhapac vinh dự nhận chứng nhận ISO 14001:2015 về hệ thống quản lý môi trường, khẳng định cam kết bảo vệ môi trường trong hoạt động sản xuất.",
+          "createdAt": "2025-07-14T17:00:00.000Z",
+          "coverImage": "/uploads/world.png",
+          "category": "Tin tức"
+        },
+        {
+          "id": "4",
+          "title": "Hội thảo quốc tế về bao bì bền vững",
+          "slug": "/tin-tuc-vinhapac/hoi-thao-quoc-te-bao-bi-ben-vung",
+          "description": "Vinhapac tham gia hội thảo quốc tế về xu hướng bao bì bền vững, chia sẻ kinh nghiệm và học hỏi các công nghệ tiên tiến từ các đối tác quốc tế.",
+          "createdAt": "2025-07-12T17:00:00.000Z",
+          "coverImage": "/uploads/services/market-consulting.png",
+          "category": "Sự kiện"
+        },
+        {
+          "id": "5",
+          "title": "Khởi động chiến dịch xanh cùng đối tác Hàn Quốc",
+          "slug": "/tin-tuc-vinhapac/khoi-dong-chien-dich-xanh-han-quoc",
+          "description": "Vinhapac hợp tác với các doanh nghiệp Hàn Quốc để phát triển chuỗi cung ứng xanh và bền vững.",
+          "createdAt": "2025-07-11T17:00:00.000Z",
+          "coverImage": "/uploads/green.png",
+          "category": "Hợp tác"
+        },
+        {
+          "id": "6",
+          "title": "Vinhapac đạt doanh thu xuất khẩu kỷ lục quý 2",
+          "slug": "/tin-tuc-vinhapac/doanh-thu-xuat-khau-ky-luc-q2",
+          "description": "Doanh thu xuất khẩu quý 2/2025 đạt 12 triệu USD, tăng trưởng 38% so với cùng kỳ năm trước.",
+          "createdAt": "2025-07-10T17:00:00.000Z",
+          "coverImage": "/uploads/statistics.png",
+          "category": "Báo cáo"
+        },
+        {
+          "id": "7",
+          "title": "Ứng dụng AI trong kiểm định chất lượng bao bì",
+          "slug": "/tin-tuc-vinhapac/ai-trong-kiem-dinh-chat-luong",
+          "description": "Vinhapac triển khai công nghệ AI để nâng cao độ chính xác trong kiểm định chất lượng bao bì sinh học.",
+          "createdAt": "2025-07-09T17:00:00.000Z",
+          "coverImage": "/uploads/ai.png",
+          "category": "Công nghệ"
+        },
+        {
+          "id": "8",
+          "title": "Tăng cường hợp tác chuỗi logistics nội địa",
+          "slug": "/tin-tuc-vinhapac/tang-cuong-hop-tac-logistics-noi-dia",
+          "description": "Vinhapac ký kết MOU với các đối tác logistics tại TP.HCM và miền Bắc nhằm nâng cao hiệu quả vận chuyển.",
+          "createdAt": "2025-07-08T17:00:00.000Z",
+          "coverImage": "/uploads/logistics.png",
+          "category": "Hợp tác"
+        },
+        {
+          "id": "9",
+          "title": "Vinhapac tại hội chợ quốc tế Bangkok 2025",
+          "slug": "/tin-tuc-vinhapac/hoi-cho-bangkok-2025",
+          "description": "Gian hàng Vinhapac thu hút đông đảo khách tham quan tại hội chợ quốc tế chuyên ngành bao bì ở Thái Lan.",
+          "createdAt": "2025-07-06T17:00:00.000Z",
+          "coverImage": "/uploads/events.png",
+          "category": "Sự kiện"
+        },
+        {
+          "id": "10",
+          "title": "Khánh thành trung tâm phân phối mới tại Hà Nội",
+          "slug": "/tin-tuc-vinhapac/khanh-thanh-phan-phoi-ha-noi",
+          "description": "Trung tâm logistics mới của Vinhapac tại Hà Nội giúp rút ngắn thời gian giao hàng và tối ưu vận chuyển.",
+          "createdAt": "2025-07-05T17:00:00.000Z",
+          "coverImage": "/uploads/distribution.png",
+          "category": "Tin tức"
+        },
+        {
+          "id": "11",
+          "title": "Ra mắt nền tảng quản lý đơn hàng số",
+          "slug": "/tin-tuc-vinhapac/ra-mat-nen-tang-quan-ly-don-hang",
+          "description": "Hệ thống theo dõi đơn hàng theo thời gian thực giúp khách hàng quốc tế minh bạch quy trình giao nhận.",
+          "createdAt": "2025-07-04T17:00:00.000Z",
+          "coverImage": "/uploads/platform.png",
+          "category": "Công nghệ"
+        },
+        {
+          "id": "12",
+          "title": "Báo điện tử Kinh tế nói về Vinhapac",
+          "slug": "/tin-tuc-vinhapac/bao-kinh-te-noi-ve-vinhapac",
+          "description": "Báo Kinh tế Việt Nam đã có bài viết về mô hình phân phối bền vững và tiêu chuẩn quốc tế của Vinhapac.",
+          "createdAt": "2025-07-03T17:00:00.000Z",
+          "coverImage": "/uploads/press.png",
+          "category": "Truyền thông"
+        },
+        {
+          "id": "13",
+          "title": "Phát triển vùng nguyên liệu bao bì thân thiện",
+          "slug": "/tin-tuc-vinhapac/phat-trien-vung-nguyen-lieu",
+          "description": "Vinhapac đầu tư phát triển vùng trồng bột giấy và nguồn nguyên liệu phục vụ sản xuất bao bì sinh học.",
+          "createdAt": "2025-07-02T17:00:00.000Z",
+          "coverImage": "/uploads/material.png",
+          "category": "Phát triển"
+        },
+        {
+          "id": "14",
+          "title": "Tập huấn nghiệp vụ xuất khẩu cho nhân viên",
+          "slug": "/tin-tuc-vinhapac/tap-huan-xuat-khau",
+          "description": "Tổ chức đào tạo nội bộ nâng cao nghiệp vụ xuất khẩu, vận chuyển và xử lý chứng từ quốc tế.",
+          "createdAt": "2025-07-01T17:00:00.000Z",
+          "coverImage": "/uploads/training.png",
+          "category": "Nội bộ"
+        },
+        {
+          "id": "15",
+          "title": "Hợp tác phát triển eCommerce quốc tế",
+          "slug": "/tin-tuc-vinhapac/hop-tac-ecommerce",
+          "description": "Ký kết hợp tác thương mại điện tử xuyên biên giới với các sàn quốc tế như Amazon, Alibaba.",
+          "createdAt": "2025-06-30T17:00:00.000Z",
+          "coverImage": "/uploads/ecommerce.png",
+          "category": "Hợp tác"
+        },
+        {
+          "id": "16",
+          "title": "Triển khai hệ thống báo cáo ESG",
+          "slug": "/tin-tuc-vinhapac/esg-bao-cao-moi-truong",
+          "description": "Vinhapac áp dụng quy chuẩn ESG trong báo cáo hoạt động môi trường, xã hội và quản trị công ty.",
+          "createdAt": "2025-06-29T17:00:00.000Z",
+          "coverImage": "/uploads/esg.png",
+          "category": "Chiến lược"
+        },
+        {
+          "id": "17",
+          "title": "Gặp gỡ đại diện thương mại Hoa Kỳ",
+          "slug": "/tin-tuc-vinhapac/dai-dien-thuong-mai-hoa-ky",
+          "description": "Đại diện thương mại Hoa Kỳ đánh giá cao tiềm năng hợp tác xuất khẩu bền vững của Vinhapac.",
+          "createdAt": "2025-06-28T17:00:00.000Z",
+          "coverImage": "/uploads/us-delegate.png",
+          "category": "Ngoại giao"
+        },
+        {
+          "id": "18",
+          "title": "Hỗ trợ khởi nghiệp xanh cùng thanh niên",
+          "slug": "/tin-tuc-vinhapac/khoi-nghiep-xanh-thanh-nien",
+          "description": "Tham gia tài trợ và cố vấn cho chương trình khởi nghiệp xanh của thanh niên địa phương.",
+          "createdAt": "2025-06-27T17:00:00.000Z",
+          "coverImage": "/uploads/youth.png",
+          "category": "Cộng đồng"
+        },
+        {
+          "id": "19",
+          "title": "Chuyến khảo sát logistics tại UAE",
+          "slug": "/tin-tuc-vinhapac/khao-sat-uae",
+          "description": "Vinhapac tổ chức đoàn khảo sát tìm kiếm cơ hội đầu tư tại các trung tâm logistics tại Dubai và Abu Dhabi.",
+          "createdAt": "2025-06-26T17:00:00.000Z",
+          "coverImage": "/uploads/uae.png",
+          "category": "Thị trường"
+        },
+        {
+          "id": "20",
+          "title": "VINHAPAC nhận giải thưởng doanh nghiệp bền vững 2025",
+          "slug": "/tin-tuc-vinhapac/giai-thuong-doanh-nghiep-ben-vung",
+          "description": "VINHAPAC được vinh danh tại lễ trao giải Doanh nghiệp Bền vững Việt Nam 2025 bởi Bộ Công Thương.",
+          "createdAt": "2025-06-25T17:00:00.000Z",
+          "coverImage": "/uploads/award.png",
+          "category": "Giải thưởng"
+        }
+      ],
+      "_template": "overViewListNews"
+    }
+  ]
 }

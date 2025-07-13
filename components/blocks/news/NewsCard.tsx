@@ -6,19 +6,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { Calendar, User, ArrowRight } from "lucide-react";
 
-interface NewsArticle {
+export interface NewsArticle {
   id?: string;
   title?: string;
   description?: string;
   coverImage?: string;
-  author?: {
-    name?: string;
-    avatar?: string;
-  };
+  author?: string;
   updatedAt?: string;
   slug?: string;
   category?: string;
-  tags?: string[];
 }
 
 interface NewsCardProps {
@@ -33,7 +29,12 @@ const item = {
   show: { opacity: 1, y: 0 },
 };
 
-const NewsCard = ({ article, index = 0, variant = "list", className = "" }: NewsCardProps) => {
+const NewsCard = ({
+  article,
+  index = 0,
+  variant = "list",
+  className = "",
+}: NewsCardProps) => {
   const formatDate = (dateString?: string) => {
     if (!dateString) return "";
     return new Date(dateString).toLocaleDateString("vi-VN", {
@@ -111,21 +112,11 @@ const NewsCard = ({ article, index = 0, variant = "list", className = "" }: News
           {/* Author & Read More */}
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              {article.author?.avatar ? (
-                <Image
-                  src={article.author.avatar}
-                  alt={article.author.name || "Author"}
-                  width={24}
-                  height={24}
-                  className="rounded-full object-cover"
-                />
-              ) : (
-                <div className="w-6 h-6 bg-vina-primary/10 rounded-full flex items-center justify-center">
-                  <User className="w-3 h-3 text-vina-primary" />
-                </div>
-              )}
+              <div className="w-6 h-6 bg-vina-primary/10 rounded-full flex items-center justify-center">
+                <User className="w-3 h-3 text-vina-primary" />
+              </div>
               <span className="text-xs font-medium text-gray-700">
-                {article.author?.name || "Tác giả"}
+                {article.author || "Tác giả"}
               </span>
             </div>
 
@@ -211,21 +202,11 @@ const NewsCard = ({ article, index = 0, variant = "list", className = "" }: News
           {/* Author & Read More */}
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              {article.author?.avatar ? (
-                <Image
-                  src={article.author.avatar}
-                  alt={article.author.name || "Author"}
-                  width={24}
-                  height={24}
-                  className="rounded-full object-cover"
-                />
-              ) : (
-                <div className="w-6 h-6 bg-vina-primary/10 rounded-full flex items-center justify-center">
-                  <User className="w-3 h-3 text-vina-primary" />
-                </div>
-              )}
+              <div className="w-6 h-6 bg-vina-primary/10 rounded-full flex items-center justify-center">
+                <User className="w-3 h-3 text-vina-primary" />
+              </div>
               <span className="text-xs font-medium text-gray-700">
-                {article.author?.name || "Tác giả"}
+                {article.author || "Tác giả"}
               </span>
             </div>
 

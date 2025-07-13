@@ -8,29 +8,15 @@ import { Disclosure } from "@headlessui/react";
 import { ChevronDownIcon, FilterIcon } from "lucide-react";
 import SimplePagination from "@/components/ui/simple-pagination";
 import NewsFilter from "./NewsFilter";
-import NewsCard from "./NewsCard";
+import NewsCard, { NewsArticle } from "./NewsCard";
 
-interface NewsArticle {
-  id?: string;
-  title?: string;
+export type TOverViewListNews = Partial<{
+  heading?: string;
   description?: string;
-  coverImage?: string;
-  author?: {
-    name?: string;
-    avatar?: string;
-  };
-  updatedAt?: string;
-  slug?: string;
-  category?: string;
-  tags?: string[];
-}
-
+  articles?: NewsArticle[];
+}>;
 interface OverViewListNewsProps {
-  data: {
-    heading?: string;
-    description?: string;
-    articles?: NewsArticle[];
-  };
+  data: TOverViewListNews;
 }
 
 const container = {
@@ -53,132 +39,8 @@ const OverViewListNews = ({ data }: OverViewListNewsProps) => {
   const [currentPage, setCurrentPage] = useState(1);
   const articlesPerPage = 5;
 
-  // Fake data for development
-  const fakeArticles: NewsArticle[] = [
-    {
-      id: "1",
-      title: "Vinhapac mở rộng thị trường xuất khẩu sang châu Âu",
-      description:
-        "Công ty Vinhapac đã ký kết thành công hợp đồng xuất khẩu sản phẩm bao bì thân thiện môi trường sang các nước châu Âu, đánh dấu bước tiến quan trọng trong chiến lược phát triển quốc tế.",
-      coverImage: "/uploads/news.png",
-      author: {
-        name: "Nguyễn Văn An",
-        avatar: "/uploads/authors/author1.jpg",
-      },
-      updatedAt: "2024-01-15T10:30:00Z",
-      slug: "vinhapac-mo-rong-thi-truong-xuat-khau-chau-au",
-      category: "Kinh doanh",
-      tags: ["xuất khẩu", "châu Âu", "mở rộng"],
-    },
-    {
-      id: "2",
-      title: "Công nghệ sản xuất bao bì sinh học tiên tiến",
-      description:
-        "Vinhapac đầu tư vào công nghệ sản xuất bao bì sinh học mới nhất, giúp giảm thiểu tác động môi trường và nâng cao chất lượng sản phẩm.",
-      coverImage: "/uploads/container.png",
-      author: {
-        name: "Trần Thị Bình",
-        avatar: "/uploads/authors/author2.jpg",
-      },
-      updatedAt: "2024-01-12T14:20:00Z",
-      slug: "cong-nghe-san-xuat-bao-bi-sinh-hoc",
-      category: "Công nghệ",
-      tags: ["công nghệ", "sinh học", "môi trường"],
-    },
-    {
-      id: "3",
-      title: "Chứng nhận ISO 14001 về quản lý môi trường",
-      description:
-        "Vinhapac vinh dự nhận chứng nhận ISO 14001:2015 về hệ thống quản lý môi trường, khẳng định cam kết bảo vệ môi trường trong hoạt động sản xuất.",
-      coverImage: "/uploads/pp.png",
-      author: {
-        name: "Lê Minh Cường",
-        avatar: "/uploads/authors/author3.jpg",
-      },
-      updatedAt: "2024-01-10T09:15:00Z",
-      slug: "chung-nhan-iso-14001-quan-ly-moi-truong",
-      category: "Chứng nhận",
-      tags: ["ISO", "môi trường", "chứng nhận"],
-    },
-    {
-      id: "4",
-      title: "Hội thảo quốc tế về bao bì bền vững",
-      description:
-        "Vinhapac tham gia hội thảo quốc tế về xu hướng bao bì bền vững, chia sẻ kinh nghiệm và học hỏi các công nghệ tiên tiến từ các đối tác quốc tế.",
-      coverImage: "/uploads/world.png",
-      author: {
-        name: "Phạm Thu Hà",
-        avatar: "/uploads/authors/author4.jpg",
-      },
-      updatedAt: "2024-01-08T16:45:00Z",
-      slug: "hoi-thao-quoc-te-bao-bi-ben-vung",
-      category: "Sự kiện",
-      tags: ["hội thảo", "quốc tế", "bền vững"],
-    },
-    {
-      id: "5",
-      title: "Đầu tư máy móc sản xuất thế hệ mới",
-      description:
-        "Công ty đầu tư 50 tỷ đồng mua sắm dây chuyền máy móc sản xuất thế hệ mới từ Đức, nâng cao năng suất và chất lượng sản phẩm.",
-      coverImage: "/uploads/banner.png",
-      author: {
-        name: "Hoàng Văn Đức",
-        avatar: "/uploads/authors/author5.jpg",
-      },
-      updatedAt: "2024-01-05T11:30:00Z",
-      slug: "dau-tu-may-moc-san-xuat-the-he-moi",
-      category: "Đầu tư",
-      tags: ["đầu tư", "máy móc", "công nghệ"],
-    },
-    {
-      id: "6",
-      title: "Khai trương nhà máy sản xuất tại Bình Dương",
-      description:
-        "Vinhapac chính thức khai trương nhà máy sản xuất bao bì mới tại Bình Dương với quy mô 10 hecta, tạo việc làm cho hơn 500 lao động địa phương.",
-      coverImage: "/uploads/we-vinhapac.png",
-      author: {
-        name: "Ngô Thị Lan",
-        avatar: "/uploads/authors/author6.jpg",
-      },
-      updatedAt: "2024-01-03T08:00:00Z",
-      slug: "khai-truong-nha-may-binh-duong",
-      category: "Sự kiện",
-      tags: ["khai trương", "nhà máy", "Bình Dương"],
-    },
-    {
-      id: "7",
-      title: "Hợp tác chiến lược với đối tác Nhật Bản",
-      description:
-        "Vinhapac ký kết hợp tác chiến lược với tập đoàn bao bì hàng đầu Nhật Bản, mở ra cơ hội học hỏi công nghệ và mở rộng thị trường.",
-      coverImage: "/uploads/globallogo.png",
-      author: {
-        name: "Nguyễn Văn An",
-        avatar: "/uploads/authors/author1.jpg",
-      },
-      updatedAt: "2024-01-01T09:00:00Z",
-      slug: "hop-tac-chien-luoc-nhat-ban",
-      category: "Hợp tác",
-      tags: ["hợp tác", "Nhật Bản", "chiến lược"],
-    },
-    {
-      id: "8",
-      title: "Giải thưởng doanh nghiệp xuất sắc 2023",
-      description:
-        "Vinhapac vinh dự nhận giải thưởng doanh nghiệp xuất sắc năm 2023 do Hiệp hội Bao bì Việt Nam trao tặng, ghi nhận những đóng góp tích cực cho ngành.",
-      coverImage: "/uploads/trans.png",
-      author: {
-        name: "Trần Thị Bình",
-        avatar: "/uploads/authors/author2.jpg",
-      },
-      updatedAt: "2023-12-28T15:30:00Z",
-      slug: "giai-thuong-doanh-nghiep-xuat-sac-2023",
-      category: "Giải thưởng",
-      tags: ["giải thưởng", "xuất sắc", "2023"],
-    },
-  ];
-
   // Use fake data if no articles provided
-  const allArticles = articles && articles.length > 0 ? articles : fakeArticles;
+  const allArticles = articles && articles.length > 0 ? articles : [];
 
   // Filter articles based on search and filters
   const filteredArticles = useMemo(() => {
@@ -191,7 +53,7 @@ const OverViewListNews = ({ data }: OverViewListNewsProps) => {
       const matchesCategory =
         !selectedCategory || article.category === selectedCategory;
       const matchesAuthor =
-        !selectedAuthor || article.author?.name === selectedAuthor;
+        !selectedAuthor || article.author === selectedAuthor;
 
       return matchesSearch && matchesCategory && matchesAuthor;
     });
@@ -210,9 +72,7 @@ const OverViewListNews = ({ data }: OverViewListNewsProps) => {
     ...new Set(allArticles.map((article) => article.category).filter(Boolean)),
   ];
   const authors = [
-    ...new Set(
-      allArticles.map((article) => article.author?.name).filter(Boolean)
-    ),
+    ...new Set(allArticles.map((article) => article.author).filter(Boolean)),
   ];
 
   const formatDate = (dateString?: string) => {
@@ -438,36 +298,20 @@ export const overViewListNewsTemplate: Template = {
   label: "Danh Sách Tin Tức",
   fields: [
     {
-      name: "heading",
-      label: "Tiêu đề",
-      type: "string",
-    },
-    {
-      name: "description",
-      label: "Mô tả",
-      type: "string",
-      ui: {
-        component: "textarea",
-      },
-    },
-    {
+      label: "Danh sách bài viết",
       name: "articles",
-      label: "Bài viết",
       type: "object",
       list: true,
       ui: {
-        itemProps: (item: any) => {
-          return {
-            label: item?.title || "Bài viết mới",
-            id: item?.id,
-          };
-        },
         defaultItem() {
           if (typeof window === "undefined") return {};
           return {
             id: uuidv4(),
           };
         },
+        itemProps: (item) => ({
+          label: item?.title,
+        }),
       },
       fields: [
         {
@@ -480,49 +324,38 @@ export const overViewListNewsTemplate: Template = {
         },
         {
           name: "title",
-          label: "Tiêu đề",
+          label: "Tiêu đề bài viết/Title",
+          type: "string",
+        },
+        {
+          name: "slug",
+          label: "URL/Đường dẫn bài viết",
           type: "string",
         },
         {
           name: "description",
-          label: "Mô tả ngắn",
+          label: "Description/Mô tả",
           type: "string",
-          ui: {
-            component: "textarea",
-          },
+        },
+        {
+          name: "createdAt",
+          label: "Created At/Ngày tạo",
+          type: "datetime",
         },
         {
           name: "coverImage",
-          label: "Ảnh bìa",
+          label: "Cover Image/Ảnh bìa",
           type: "image",
         },
         {
           name: "author",
-          label: "Tác giả",
-          type: "object",
-          fields: [
-            {
-              name: "name",
-              label: "Tên tác giả",
-              type: "string",
-            },
-            {
-              name: "avatar",
-              label: "Ảnh đại diện",
-              type: "image",
-            },
-          ],
-        },
-        {
-          name: "updatedAt",
-          label: "Ngày cập nhật",
-          type: "datetime",
-        },
-        {
-          name: "slug",
-          label: "Đường dẫn",
+          label: "Author/Tác giả",
           type: "string",
-          description: "URL slug cho bài viết (vd: bai-viet-moi)",
+        },
+        {
+          name: "category",
+          label: "Category/Thể loại",
+          type: "string",
         },
       ],
     },
