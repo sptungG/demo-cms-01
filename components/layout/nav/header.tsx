@@ -114,7 +114,7 @@ export const Header = ({ locale = "vn" }: Props) => {
       return (
         <Disclosure>
           {({ open }) => (
-            <>
+            <div key={item.href}>
               <Disclosure.Button
                 className={`flex w-full items-center justify-between rounded-md px-2.5 sm:px-3 py-1.5 sm:py-2 text-xs sm:text-sm transition-colors ${
                   isActive
@@ -148,7 +148,7 @@ export const Header = ({ locale = "vn" }: Props) => {
                   );
                 })}
               </Disclosure.Panel>
-            </>
+            </div>
           )}
         </Disclosure>
       );

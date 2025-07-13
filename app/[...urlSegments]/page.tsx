@@ -3,7 +3,6 @@ import { notFound, redirect } from "next/navigation";
 import { countries } from "country-flag-icons";
 import client from "@/tina/__generated__/client";
 import Layout from "@/components/layout/layout";
-import { Section } from "@/components/layout/section";
 import ClientPage from "./client-page";
 
 export const revalidate = 0;
