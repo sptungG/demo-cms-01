@@ -37,7 +37,7 @@ interface Props {
 
 const Contact = (props: Props) => {
   return (
-    <section className="py-12 sm:py-16 lg:py-2">
+    <section className="py-12 sm:py-16 lg:py-8">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-6 sm:mb-10">
