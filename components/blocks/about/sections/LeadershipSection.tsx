@@ -27,9 +27,10 @@ export const LeadershipSection = ({ data }: LeadershipSectionProps) => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl underline uppercase text-vina-primary mb-4"
+            className="text-3xl font-bold relative uppercase text-vina-primary mb-4"
           >
             {data.heading}
+            <div className="absolute top-full bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-vina-primary"></div>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

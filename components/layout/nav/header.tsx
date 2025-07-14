@@ -20,7 +20,7 @@ interface NavItem {
   children?: NavItem[];
 }
 
-export const Header = ({ locale = "vn" }: Props) => {
+export const Header = ({ locale = "" }: Props) => {
   const { globalSettings } = useLayout();
   const header = globalSettings!.header!;
   const langs = globalSettings!.language;

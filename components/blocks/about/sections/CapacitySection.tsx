@@ -37,9 +37,10 @@ export const CapacitySection = ({ data }: CapacitySectionProps) => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-3xl underline uppercase text-center text-vina-primary mb-12"
+          className="text-3xl font-bold text-center text-vina-primary mb-12 relative"
         >
           {data.capacityHeading}
+          <div className="absolute top-full bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-vina-primary"></div>
         </motion.h2>
         <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-2">
           {data.capacityItems?.map((item, index) => {
