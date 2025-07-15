@@ -31,10 +31,10 @@ export const LegalInfoSection = ({ data }: LegalInfoSectionProps) => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-3xl uppercase relative font-bold text-center text-vina-primary mb-10"
+          className="text-3xl relative font-bold text-center text-vina-primary mb-10"
         >
           {data.heading}
-          <div className="absolute top-full bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-vina-primary"></div>
+          {/* <div className="absolute top-full bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-vina-primary"></div> */}
         </motion.h2>
         <div className="grid md:grid-cols-2 gap-2 max-w-4xl mx-auto">
           {/* Company Profile */}

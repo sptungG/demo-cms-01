@@ -74,9 +74,9 @@ const DeepExportServices = ({
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl uppercase text-vina-primary mb-4 relative  font-bold">
+          <h2 className="text-3xl text-vina-primary mb-4 relative  font-bold">
             {deepExportServicesHeading?.title || "Deep Export Services"}
-            <div className="absolute top-full bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-vina-primary"></div>
+            {/* <div className="absolute top-full bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-vina-primary"></div> */}
           </h2>
           {deepExportServicesHeading?.description && (
             <p className="text-lg text-vina-muted-foreground max-w-2xl mx-auto">

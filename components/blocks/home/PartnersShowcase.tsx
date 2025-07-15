@@ -29,10 +29,10 @@ const PartnersShowcase = ({
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center text-3xl mb-4 uppercase text-vina-primary relative  font-bold"
+            className="text-center text-3xl mb-4 text-vina-primary relative  font-bold"
           >
             {partnersShowcaseHeading?.title ?? "Trusted by Global Retailers"}
-            <div className="absolute top-full bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-vina-primary"></div>
+            {/* <div className="absolute top-full bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-vina-primary"></div> */}
           </motion.h2>
           {partnersShowcaseHeading?.subTitle && (
             <p className="text-lg text-vina-muted-foreground max-w-2xl mx-auto text-center">

@@ -223,10 +223,10 @@ export const VisionMissionSection = ({ data }: VisionMissionSectionProps) => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl uppercase font-bold relative text-vina-primary mb-10"
+            className="text-3xl font-bold relative text-vina-primary mb-4"
           >
             {data.coreValues?.title}
-            <div className="absolute top-full bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-vina-primary"></div>
+            {/* <div className="absolute top-full bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-vina-primary"></div> */}
           </motion.h3>
         </div>
         <div className="max-w-7xl mx-auto !overflow-hidden">

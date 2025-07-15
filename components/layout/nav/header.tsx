@@ -96,7 +96,7 @@ export const Header = ({ locale = "" }: Props) => {
             href={item.href || "#"}
             className={`rounded-md px-3 py-2 text-sm transition-colors ${
               isActive
-                ? "text-vina-primary underline"
+                ? "text-vina-primary"
                 : "text-muted-foreground hover:text-vina-primary"
             }`}
           >
@@ -170,7 +170,7 @@ export const Header = ({ locale = "" }: Props) => {
   };
 
   return (
-    <motion.header className="bg-white sticky top-0 right-0 w-full z-[50] border-b backdrop-blur-xl">
+    <motion.header className="bg-white sticky top-0 right-0 w-full z-[50] border-b backdrop-blur-xl menuHeader">
       <nav data-state={menuState ? "active" : "inactive"} className="m-auto">
         <hr className="bg-vina-primary" />
         <div className={`${isScrolled ? "bg-white shadow-sm" : "bg-white"}`}>

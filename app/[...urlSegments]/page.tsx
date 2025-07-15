@@ -4,6 +4,7 @@ import { countries } from "country-flag-icons";
 import client from "@/tina/__generated__/client";
 import Layout from "@/components/layout/layout";
 import ClientPage from "./client-page";
+import { Timeline } from "@/components/ui/time-line";
 
 export const revalidate = 0;
 

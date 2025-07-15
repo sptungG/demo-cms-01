@@ -447,3 +447,35 @@ main > div:has(.parentMargin0) {
 main > div:has(.parentAbsolute) {
   position: absolute !important;
 }
+
+.menuHeader a {
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.menuHeader a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: var(--vina-primary);
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+.menuHeader a:hover::after {
+  width: 100%;
+  animation: heartbeat116 1.5s ease-in-out 0.3s infinite;
+}
+
+@keyframes heartbeat116 {
+  0%,
+  100% {
+    width: 100%;
+  }
+  50% {
+    width: 60%;
+  }
+}

@@ -124,10 +124,17 @@ const FixedFormButton = ({ data }: Props) => {
                             hover:shadow-vina-primary/20 hover:shadow-xl"
             >
               <motion.span
-                animate={{
-                  scale: isHovered ? 1.05 : 1,
-                  transition: { duration: 0.2 },
-                }}
+                animate={
+                  isHovered
+                    ? {
+                        x: [0, -3, 3, -2, 2, -1, 1, 0],
+                        transition: {
+                          duration: 0.4,
+                          ease: "easeInOut",
+                        },
+                      }
+                    : { x: 0 }
+                }
               >
                 {data.button?.label}
               </motion.span>

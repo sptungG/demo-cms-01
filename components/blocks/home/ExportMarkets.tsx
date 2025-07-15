@@ -29,10 +29,10 @@ export const ExportMarkets = ({
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-4 text-vina-primary text-3xl uppercase relative font-bold"
+            className="mb-4 text-vina-primary text-3xl relative font-bold"
           >
             {heading}
-            <p className="absolute top-full bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-vina-primary"></p>
+            {/* <p className="absolute top-full bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-vina-primary"></p> */}
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

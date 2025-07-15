@@ -53,9 +53,9 @@ const CallToActionSectionSecond: React.FC<Props> = ({ data }) => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <motion.h2 className="text-3xl uppercase relative text-vina-primary mb-6 font-bold leading-normal">
+          <motion.h2 className="text-3xl relative text-vina-primary mb-6 font-bold leading-normal">
             {data.callToActionSecondHeading?.title || ""}
-            <p className="absolute top-full bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-vina-primary"></p>
+            {/* <p className="absolute top-full bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-vina-primary"></p> */}
           </motion.h2>
           {data.callToActionSecondHeading?.description && (
             <motion.p

@@ -66,6 +66,7 @@ import ArticleSection, {
 import Contact, { TContactSection } from "./contact/Contact";
 import OverViewListNews, { TOverViewListNews } from "./news/OverViewListNews";
 import NewsDetail, { INewsDetailPage } from "./news/NewsDetail";
+import TimeLineSection2 from "./about/sections/TimeLineSection2";
 
 type Maybe<T> = T | null | undefined;
 
@@ -532,7 +533,7 @@ export const Block = ({ block }: { block: PageBlock }) => {
       );
     case "PageBlocksTimelineSection":
       return (
-        <TimelineSection
+        <TimeLineSection2
           data={{
             heading: block.heading,
             timeline: block.timeline || [],
