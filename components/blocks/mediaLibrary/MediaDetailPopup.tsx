@@ -217,65 +217,67 @@ export const MediaDetailPopup: React.FC<MediaDetailPopupProps> = ({
                     const isSelected = item.id === currentItem.id;
 
                     return (
-                      <motion.div
-                        key={item.id}
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        className={`cursor-pointer rounded-lg overflow-hidden h-full`}
-                        onClick={() => handleItemSelect(item, index)}
-                      >
-                        <Card
-                          className={`w-48 transition-all duration-200 pt-0 gap-0 ${
-                            isSelected
-                              ? "border border-vina-primary"
-                              : "shadow-sm hover:shadow-md"
-                          }`}
+                      <div>
+                        <motion.div
+                          key={item.id}
+                          whileHover={{ scale: 1.05 }}
+                          whileTap={{ scale: 0.95 }}
+                          className={`cursor-pointer rounded-lg overflow-hidden h-full`}
+                          onClick={() => handleItemSelect(item, index)}
                         >
-                          <div className="relative aspect-video overflow-hidden">
-                            {itemMediaUrl && (
-                              <img
-                                src={itemMediaUrl}
-                                alt={item.title}
-                                className="w-full h-full rounded-t-xl object-cover"
-                              />
-                            )}
+                          <Card
+                            className={`w-48 h-full transition-all duration-200 pt-0 gap-0 ${
+                              isSelected
+                                ? "border border-vina-primary"
+                                : "shadow-sm hover:shadow-md"
+                            }`}
+                          >
+                            <div className="relative aspect-video overflow-hidden">
+                              {itemMediaUrl && (
+                                <img
+                                  src={itemMediaUrl}
+                                  alt={item.title}
+                                  className="w-full h-full rounded-t-xl object-cover"
+                                />
+                              )}
 
-                            {/* Video Overlay */}
-                            {itemIsVideo && (
-                              <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
-                                <div className="bg-white/90 rounded-full p-2">
-                                  <Play
-                                    className="w-4 h-4 text-vina-primary"
-                                    fill="currentColor"
-                                  />
+                              {/* Video Overlay */}
+                              {itemIsVideo && (
+                                <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
+                                  <div className="bg-white/90 rounded-full p-2">
+                                    <Play
+                                      className="w-4 h-4 text-vina-primary"
+                                      fill="currentColor"
+                                    />
+                                  </div>
                                 </div>
+                              )}
+
+                              {/* Media Type Badge */}
+                              <div className="absolute top-2 left-2">
+                                <span
+                                  className={`px-2 py-0.5 text-xs font-medium rounded-full ${
+                                    itemIsVideo
+                                      ? "bg-red-500/90 text-white"
+                                      : "bg-blue-500/90 text-white"
+                                  }`}
+                                >
+                                  {itemIsVideo ? "Video" : "Ảnh"}
+                                </span>
                               </div>
-                            )}
-
-                            {/* Media Type Badge */}
-                            <div className="absolute top-2 left-2">
-                              <span
-                                className={`px-2 py-0.5 text-xs font-medium rounded-full ${
-                                  itemIsVideo
-                                    ? "bg-red-500/90 text-white"
-                                    : "bg-blue-500/90 text-white"
-                                }`}
-                              >
-                                {itemIsVideo ? "Video" : "Ảnh"}
-                              </span>
                             </div>
-                          </div>
 
-                          <CardContent className="p-3">
-                            <h5 className="font-medium text-sm line-clamp-2 mb-1">
-                              {item.title}
-                            </h5>
-                            <p className="text-xs text-neutral-600 dark:text-neutral-400 line-clamp-2">
-                              {item.description}
-                            </p>
-                          </CardContent>
-                        </Card>
-                      </motion.div>
+                            <CardContent className="p-3">
+                              <h5 className="font-medium text-sm line-clamp-2 mb-1">
+                                {item.title}
+                              </h5>
+                              <p className="text-xs text-neutral-600 dark:text-neutral-400 line-clamp-2">
+                                {item.description}
+                              </p>
+                            </CardContent>
+                          </Card>
+                        </motion.div>
+                      </div>
                     );
                   })}
                 </div>
