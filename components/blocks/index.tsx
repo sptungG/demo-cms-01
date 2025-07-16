@@ -67,6 +67,7 @@ import Contact, { TContactSection } from "./contact/Contact";
 import OverViewListNews, { TOverViewListNews } from "./news/OverViewListNews";
 import NewsDetail, { INewsDetailPage } from "./news/NewsDetail";
 import TimeLineSection2 from "./about/sections/TimeLineSection2";
+import { MediaLibrary, TMediaLibrary } from "./mediaLibrary/MediaLibrary";
 
 type Maybe<T> = T | null | undefined;
 
@@ -365,6 +366,9 @@ interface IOverViewListNewsSectionBlock extends BaseBlock, TOverViewListNews {
   __typename: "PageBlocksOverViewListNews";
 }
 
+interface IMediaLibrarySectionBlock extends BaseBlock, TMediaLibrary {
+  __typename: "PageBlocksMediaLibrary";
+}
 interface INewsDetailSectionBlock
   extends BaseBlock,
     INewsDetailPage,
@@ -412,6 +416,7 @@ type PageBlock =
   | IContactSectionBlock
   | IOverViewListNewsSectionBlock
   | INewsDetailSectionBlock
+  | IMediaLibrarySectionBlock
   | IHeroSectionSecondTemplateBLock;
 
 interface Page {
@@ -757,6 +762,8 @@ export const Block = ({ block }: { block: PageBlock }) => {
       return <OverViewListNews data={block} />;
     case "PageBlocksNewsDetailSection":
       return <NewsDetail {...block} />;
+    case "PageBlocksMediaLibrary":
+      return <MediaLibrary data={block} />;
     default:
       return null;
   }

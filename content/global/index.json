@@ -39,6 +39,10 @@
         "label": "Tin tức"
       },
       {
+        "href": "/thu-vien-anh",
+        "label": "Thư viện ảnh"
+      },
+      {
         "href": "/lien-he-vinhapac",
         "label": "Liên hệ"
       }

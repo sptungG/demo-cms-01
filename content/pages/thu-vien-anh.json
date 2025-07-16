@@ -1,0 +1,873 @@
+{
+  "title": "Thư viện ảnh",
+  "slug": "/thu-vien-anh",
+  "blocks": [
+    {
+      "title": "Đến với thư viện Media của <span class=\"text-vina-primary\">Vinhapac</span>",
+      "subTitle": "Cùng tìm hiểu Vinhapac qua hình ảnh & video",
+      "backgroundImage": "/uploads/news.png",
+      "button": {
+        "label": "Đăng ký nhận tin"
+      },
+      "_template": "profileServiceSection"
+    },
+    {
+      "heading": "Thư Viện Hoạt Động Vinhapac",
+      "description": "Khám phá những khoảnh khắc đáng nhớ & hoạt động nội bật của Vinhapac qua những hình ảnh & video phong phú",
+      "filterContent": {
+        "title": "Lọc media",
+        "allLabel": "Tất cả",
+        "imageLabel": "Hình ảnh",
+        "videoLabel": "Video"
+      },
+      "resultLabel": {
+        "viewLabel": "Hiển thị",
+        "totalLabel": "Tổng"
+      },
+      "mediaItems": [
+        {
+          "id": "6c84a1de-b2ee-4844-8282-0d72fd1a7d66",
+          "title": "Lễ khánh thành nhà máy mới",
+          "description": "Buổi lễ khánh thành nhà máy sản xuất hiện đại với công nghệ tiên tiến nhất.",
+          "image": "/uploads/trans.png",
+          "tags": [
+            {
+              "id": "d68d9246-6ea5-4f6c-b371-ced096c6bd78",
+              "label": "Buổi lễ"
+            }
+          ],
+          "createdAt": "2025-07-13T17:00:00.000Z",
+          "dowloaded": 8000,
+          "items": [
+            {
+              "title": "Đội ngũ nhân viên chuyên nghiệp",
+              "description": "Hình ảnh đội ngũ nhân viên thực hiện quy trình dây chuyền sản xuất tại công ty",
+              "image": "/uploads/services/distribution.png",
+              "tags": [
+                {
+                  "id": "6269b2ef-08d9-40c6-b431-533b808e7a02",
+                  "label": "Sản xuất"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "media-001",
+          "title": "Khánh thành văn phòng đại diện Hà Nội",
+          "description": "Lễ ra mắt chi nhánh mới nhằm mở rộng thị trường phía Bắc.",
+          "image": "/uploads/office-opening.png",
+          "tags": [
+            {
+              "id": "tag-event",
+              "label": "Sự kiện"
+            }
+          ],
+          "createdAt": "2025-05-01T10:00:00.000Z",
+          "dowloaded": 2000,
+          "items": [
+            {
+              "title": "Nghi thức cắt băng",
+              "description": "Ban lãnh đạo cắt băng khánh thành văn phòng mới.",
+              "image": "/uploads/ribbon.png",
+              "tags": [
+                {
+                  "id": "tag-opening",
+                  "label": "Khánh thành"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "media-002",
+          "title": "Ngày hội thể thao nội bộ",
+          "description": "Tăng cường tinh thần đoàn kết giữa các phòng ban qua hoạt động thể thao.",
+          "image": "/uploads/sports-day.png",
+          "tags": [
+            {
+              "id": "tag-internal",
+              "label": "Nội bộ"
+            }
+          ],
+          "createdAt": "2025-04-10T08:00:00.000Z",
+          "dowloaded": 1000,
+          "items": [
+            {
+              "title": "Chạy tiếp sức",
+              "description": "Cuộc thi chạy kết hợp giữa các bộ phận.",
+              "image": "/uploads/running.png",
+              "tags": [
+                {
+                  "id": "tag-sport",
+                  "label": "Thể thao"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "media-003",
+          "title": "Xuất hàng đi châu Phi",
+          "description": "Lô hàng đầu tiên xuất khẩu nguyên liệu xây dựng sang Kenya.",
+          "image": "/uploads/africa-shipment.png",
+          "tags": [
+            {
+              "id": "tag-logistic",
+              "label": "Logistics"
+            }
+          ],
+          "createdAt": "2025-03-15T12:00:00.000Z",
+          "dowloaded": 1800,
+          "items": [
+            {
+              "title": "Chuẩn bị pallet",
+              "description": "Đóng hàng theo tiêu chuẩn xuất khẩu sang châu Phi.",
+              "image": "/uploads/pallet-wrap.png",
+              "tags": [
+                {
+                  "id": "tag-export",
+                  "label": "Xuất khẩu"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "media-004",
+          "title": "Tham quan nhà máy tại Bình Dương",
+          "description": "Chuyến đi tìm hiểu quy trình vận hành nhà máy hiện đại.",
+          "image": "/uploads/factory-tour.png",
+          "tags": [
+            {
+              "id": "tag-factory",
+              "label": "Nhà máy"
+            }
+          ],
+          "createdAt": "2025-03-05T09:00:00.000Z",
+          "dowloaded": 950,
+          "items": [
+            {
+              "title": "Dây chuyền đóng gói",
+              "description": "Máy móc tự động hóa quá trình đóng bao bì.",
+              "image": "/uploads/packing-line.png",
+              "tags": [
+                {
+                  "id": "tag-automation",
+                  "label": "Tự động"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "media-005",
+          "title": "Xuất khẩu gia vị sang Nhật",
+          "description": "Hợp đồng xuất khẩu gia vị đóng lọ sang Nhật Bản",
+          "image": "/uploads/spices-export.png",
+          "tags": [
+            {
+              "id": "tag-product",
+              "label": "Gia vị"
+            }
+          ],
+          "createdAt": "2025-02-20T13:00:00.000Z",
+          "dowloaded": 2400,
+          "items": [
+            {
+              "title": "Đóng thùng tiêu chuẩn",
+              "description": "Hộp carton chịu lực dùng vận chuyển gia vị.",
+              "image": "/uploads/box-pack.png",
+              "tags": [
+                {
+                  "id": "tag-package",
+                  "label": "Đóng gói"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "media-006",
+          "title": "Tổ chức hội chợ Vinhapac Fair",
+          "description": "Giới thiệu sản phẩm chủ lực đến đối tác quốc tế",
+          "image": "/uploads/trade-fair.png",
+          "tags": [
+            {
+              "id": "tag-expo",
+              "label": "Triển lãm"
+            }
+          ],
+          "createdAt": "2025-02-05T10:00:00.000Z",
+          "dowloaded": 5200,
+          "items": [
+            {
+              "title": "Gian hàng trưng bày",
+              "description": "Sản phẩm nông sản và hàng tiêu dùng trưng bày bắt mắt.",
+              "image": "/uploads/showcase.png",
+              "tags": [
+                {
+                  "id": "tag-display",
+                  "label": "Trưng bày"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "media-007",
+          "title": "Sự kiện tết cổ truyền cho nhân viên",
+          "description": "Tổ chức chương trình đón Tết cho toàn bộ nhân sự công ty.",
+          "image": "/uploads/tet-event.png",
+          "tags": [
+            {
+              "id": "tag-culture",
+              "label": "Văn hoá"
+            }
+          ],
+          "createdAt": "2025-01-25T18:00:00.000Z",
+          "dowloaded": 1200,
+          "items": [
+            {
+              "title": "Trò chơi dân gian",
+              "description": "Chơi ô ăn quan, nhảy bao bố, gói bánh chưng.",
+              "image": "/uploads/traditional-game.png",
+              "tags": [
+                {
+                  "id": "tag-fun",
+                  "label": "Hoạt động"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "media-008",
+          "title": "Lễ khen thưởng nhân viên xuất sắc",
+          "description": "Vinh danh các cá nhân có thành tích nổi bật trong năm.",
+          "image": "/uploads/award-ceremony.png",
+          "tags": [
+            {
+              "id": "tag-reward",
+              "label": "Vinh danh"
+            }
+          ],
+          "createdAt": "2025-01-05T17:00:00.000Z",
+          "dowloaded": 1700,
+          "items": [
+            {
+              "title": "Trao bằng khen",
+              "description": "Ban giám đốc lên trao phần thưởng cho nhân viên xuất sắc.",
+              "image": "/uploads/certificate.png",
+              "tags": [
+                {
+                  "id": "tag-honor",
+                  "label": "Khen thưởng"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "media-009",
+          "title": "Kiểm định chất lượng nhà máy",
+          "description": "Đoàn chuyên gia kiểm tra định kỳ quy trình sản xuất.",
+          "image": "/uploads/quality-check.png",
+          "tags": [
+            {
+              "id": "tag-qc",
+              "label": "Chất lượng"
+            }
+          ],
+          "createdAt": "2024-12-20T09:00:00.000Z",
+          "dowloaded": 1100,
+          "items": [
+            {
+              "title": "Đánh giá GMP",
+              "description": "Quy trình sản xuất được kiểm tra theo chuẩn quốc tế.",
+              "image": "/uploads/gmp-check.png",
+              "tags": [
+                {
+                  "id": "tag-standard",
+                  "label": "Tiêu chuẩn"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "media-010",
+          "title": "Hội nghị khách hàng chiến lược",
+          "description": "Mời các đối tác lớn thảo luận chiến lược dài hạn.",
+          "image": "/uploads/strategic-partners.png",
+          "tags": [
+            {
+              "id": "tag-customer",
+              "label": "Khách hàng"
+            }
+          ],
+          "createdAt": "2024-12-10T11:00:00.000Z",
+          "dowloaded": 2100,
+          "items": [
+            {
+              "title": "Bàn tròn đối tác",
+              "description": "Chia sẻ định hướng phát triển và cam kết cùng phát triển.",
+              "image": "/uploads/round-table.png",
+              "tags": [
+                {
+                  "id": "tag-meeting",
+                  "label": "Hội nghị"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "media-011",
+          "title": "Đào tạo nhân sự định kỳ",
+          "description": "Chương trình đào tạo kỹ năng chuyên môn và an toàn lao động cho toàn bộ nhân sự.",
+          "image": "/uploads/training-session.png",
+          "tags": [
+            {
+              "id": "tag-training",
+              "label": "Đào tạo"
+            }
+          ],
+          "createdAt": "2024-11-15T09:00:00.000Z",
+          "dowloaded": 800,
+          "items": [
+            {
+              "title": "Lớp kỹ năng kiểm định",
+              "description": "Chuyên gia hướng dẫn kiểm tra chất lượng sản phẩm.",
+              "image": "/uploads/inspection-class.png",
+              "tags": [
+                {
+                  "id": "tag-qc-skill",
+                  "label": "Kỹ năng QC"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "media-012",
+          "title": "Đóng gói sản phẩm gỗ nội thất",
+          "description": "Quá trình vận hành đóng gói sản phẩm gỗ xuất khẩu đi châu Âu.",
+          "image": "/uploads/furniture-packaging.png",
+          "tags": [
+            {
+              "id": "tag-furniture",
+              "label": "Nội thất"
+            }
+          ],
+          "createdAt": "2024-11-01T10:00:00.000Z",
+          "dowloaded": 1300,
+          "items": [
+            {
+              "title": "Bọc chống sốc",
+              "description": "Đóng gói chuyên dụng để giảm thiểu hư hại khi vận chuyển.",
+              "image": "/uploads/cushion-wrap.png",
+              "tags": [
+                {
+                  "id": "tag-protect",
+                  "label": "Bảo vệ hàng hóa"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "media-013",
+          "title": "Phân phối tại kho Thủ Đức",
+          "description": "Hoạt động luân chuyển hàng hóa từ kho trung tâm đến các chi nhánh.",
+          "image": "/uploads/thuduc-distribution.png",
+          "tags": [
+            {
+              "id": "tag-warehouse",
+              "label": "Kho vận"
+            }
+          ],
+          "createdAt": "2024-10-20T08:00:00.000Z",
+          "dowloaded": 980,
+          "items": [
+            {
+              "title": "Bốc xếp hàng hóa",
+              "description": "Sử dụng xe nâng và đội vận hành chuyên nghiệp.",
+              "image": "/uploads/forklift.png",
+              "tags": [
+                {
+                  "id": "tag-logistics",
+                  "label": "Vận hành"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "media-014",
+          "title": "Triển khai hệ thống quản lý kho WMS",
+          "description": "Ứng dụng công nghệ hiện đại để tối ưu hóa quy trình kiểm kê.",
+          "image": "/uploads/wms-system.png",
+          "tags": [
+            {
+              "id": "tag-tech",
+              "label": "Công nghệ"
+            }
+          ],
+          "createdAt": "2024-10-01T11:00:00.000Z",
+          "dowloaded": 1750,
+          "items": [
+            {
+              "title": "Quét mã QR",
+              "description": "Truy xuất sản phẩm theo thời gian thực.",
+              "image": "/uploads/qr-scan.png",
+              "tags": [
+                {
+                  "id": "tag-scan",
+                  "label": "Truy xuất"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "media-015",
+          "title": "Giao hàng tận nơi tại EU",
+          "description": "Vinhapac thực hiện thành công giao hàng tận nơi cho khách hàng tại Đức và Pháp.",
+          "image": "/uploads/delivery-eu.png",
+          "tags": [
+            {
+              "id": "tag-export-eu",
+              "label": "Xuất khẩu EU"
+            }
+          ],
+          "createdAt": "2024-09-10T10:00:00.000Z",
+          "dowloaded": 1450,
+          "items": [
+            {
+              "title": "Xe tải giao hàng",
+              "description": "Xe vận tải hạng nhẹ giao hàng tận kho đối tác.",
+              "image": "/uploads/europe-truck.png",
+              "tags": [
+                {
+                  "id": "tag-delivery",
+                  "label": "Giao hàng"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "media-016",
+          "title": "Phòng lab kiểm tra sản phẩm",
+          "description": "Thiết bị hiện đại đảm bảo chất lượng trước khi xuất hàng.",
+          "image": "/uploads/lab-inspection.png",
+          "tags": [
+            {
+              "id": "tag-lab",
+              "label": "Phòng lab"
+            }
+          ],
+          "createdAt": "2024-08-25T14:00:00.000Z",
+          "dowloaded": 1150,
+          "items": [
+            {
+              "title": "Kiểm tra độ ẩm",
+              "description": "Thiết bị đo độ ẩm cho các mặt hàng nông sản.",
+              "image": "/uploads/moisture-check.png",
+              "tags": [
+                {
+                  "id": "tag-check",
+                  "label": "Kiểm nghiệm"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "media-017",
+          "title": "Hội thảo đào tạo ISO",
+          "description": "Đào tạo và cập nhật kiến thức về ISO 9001 & 22000.",
+          "image": "/uploads/iso-training.png",
+          "tags": [
+            {
+              "id": "tag-iso",
+              "label": "ISO"
+            }
+          ],
+          "createdAt": "2024-08-10T08:00:00.000Z",
+          "dowloaded": 1020,
+          "items": [
+            {
+              "title": "Tài liệu chuyên đề",
+              "description": "Các tài liệu hướng dẫn về tiêu chuẩn ISO mới nhất.",
+              "image": "/uploads/iso-doc.png",
+              "tags": [
+                {
+                  "id": "tag-guide",
+                  "label": "Tài liệu"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "media-018",
+          "title": "Tổ chức trung thu cho con em nhân viên",
+          "description": "Đêm hội trăng rằm vui tươi và gắn kết.",
+          "image": "/uploads/mid-autumn.png",
+          "tags": [
+            {
+              "id": "tag-family",
+              "label": "Gia đình"
+            }
+          ],
+          "createdAt": "2024-08-01T18:00:00.000Z",
+          "dowloaded": 860,
+          "items": [
+            {
+              "title": "Múa lân khai hội",
+              "description": "Tiết mục múa lân rộn ràng mở đầu chương trình.",
+              "image": "/uploads/lion-dance.png",
+              "tags": [
+                {
+                  "id": "tag-festival",
+                  "label": "Lễ hội"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "media-019",
+          "title": "Triển khai hệ thống truy xuất Blockchain",
+          "description": "Ứng dụng blockchain đảm bảo minh bạch nguồn gốc hàng hoá.",
+          "image": "/uploads/blockchain-trace.png",
+          "tags": [
+            {
+              "id": "tag-blockchain",
+              "label": "Blockchain"
+            }
+          ],
+          "createdAt": "2024-07-15T09:00:00.000Z",
+          "dowloaded": 930,
+          "items": [
+            {
+              "title": "Kết nối hệ thống vận chuyển",
+              "description": "Tự động cập nhật trạng thái hàng hóa đến dashboard khách hàng.",
+              "image": "/uploads/shipment-dashboard.png",
+              "tags": [
+                {
+                  "id": "tag-dashboard",
+                  "label": "Quản lý"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "media-020",
+          "title": "Vinhapac ký hợp đồng chiến lược với đối tác Hàn Quốc",
+          "description": "Ký kết cung ứng nguyên vật liệu sản xuất kéo dài 5 năm.",
+          "image": "/uploads/korea-signing.png",
+          "tags": [
+            {
+              "id": "tag-strategy",
+              "label": "Chiến lược"
+            }
+          ],
+          "createdAt": "2024-07-01T16:00:00.000Z",
+          "dowloaded": 2000,
+          "items": [
+            {
+              "title": "Bắt tay hợp tác",
+              "description": "Khoảnh khắc ký kết giữa lãnh đạo hai bên.",
+              "image": "/uploads/handshake.png",
+              "tags": [
+                {
+                  "id": "tag-sign",
+                  "label": "Hợp đồng"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "media-021",
+          "title": "Hoạt động nội bộ #1",
+          "description": "Hoạt động định kỳ của các bộ phận tại nhà máy và văn phòng Vinhapac #1.",
+          "image": "/uploads/activity-1.png",
+          "tags": [
+            {
+              "id": "tag-internal-1",
+              "label": "Nội bộ"
+            }
+          ],
+          "createdAt": "2024-06-01T00:00:00.000Z",
+          "dowloaded": 876,
+          "items": [
+            {
+              "title": "Hình ảnh sự kiện #1",
+              "description": "Hình ảnh ghi lại hoạt động chính trong sự kiện #1.",
+              "image": "/uploads/event-1.png",
+              "tags": [
+                {
+                  "id": "tag-event-1",
+                  "label": "Sự kiện"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "media-022",
+          "title": "Hoạt động nội bộ #2",
+          "description": "Hoạt động định kỳ của các bộ phận tại nhà máy và văn phòng Vinhapac #2.",
+          "image": "/uploads/activity-2.png",
+          "tags": [
+            {
+              "id": "tag-internal-2",
+              "label": "Nội bộ"
+            }
+          ],
+          "createdAt": "2024-05-27T00:00:00.000Z",
+          "dowloaded": 1059,
+          "items": [
+            {
+              "title": "Hình ảnh sự kiện #2",
+              "description": "Hình ảnh ghi lại hoạt động chính trong sự kiện #2.",
+              "image": "/uploads/event-2.png",
+              "tags": [
+                {
+                  "id": "tag-event-2",
+                  "label": "Sự kiện"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "media-023",
+          "title": "Hoạt động nội bộ #3",
+          "description": "Hoạt động định kỳ của các bộ phận tại nhà máy và văn phòng Vinhapac #3.",
+          "image": "/uploads/activity-3.png",
+          "tags": [
+            {
+              "id": "tag-internal-3",
+              "label": "Nội bộ"
+            }
+          ],
+          "createdAt": "2024-05-22T00:00:00.000Z",
+          "dowloaded": 1764,
+          "items": [
+            {
+              "title": "Hình ảnh sự kiện #3",
+              "description": "Hình ảnh ghi lại hoạt động chính trong sự kiện #3.",
+              "image": "/uploads/event-3.png",
+              "tags": [
+                {
+                  "id": "tag-event-3",
+                  "label": "Sự kiện"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "media-024",
+          "title": "Hoạt động nội bộ #4",
+          "description": "Hoạt động định kỳ của các bộ phận tại nhà máy và văn phòng Vinhapac #4.",
+          "image": "/uploads/activity-4.png",
+          "tags": [
+            {
+              "id": "tag-internal-4",
+              "label": "Nội bộ"
+            }
+          ],
+          "createdAt": "2024-05-17T00:00:00.000Z",
+          "dowloaded": 1994,
+          "items": [
+            {
+              "title": "Hình ảnh sự kiện #4",
+              "description": "Hình ảnh ghi lại hoạt động chính trong sự kiện #4.",
+              "image": "/uploads/event-4.png",
+              "tags": [
+                {
+                  "id": "tag-event-4",
+                  "label": "Sự kiện"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "media-025",
+          "title": "Hoạt động nội bộ #5",
+          "description": "Hoạt động định kỳ của các bộ phận tại nhà máy và văn phòng Vinhapac #5.",
+          "image": "/uploads/activity-5.png",
+          "tags": [
+            {
+              "id": "tag-internal-5",
+              "label": "Nội bộ"
+            }
+          ],
+          "createdAt": "2024-05-12T00:00:00.000Z",
+          "dowloaded": 976,
+          "items": [
+            {
+              "title": "Hình ảnh sự kiện #5",
+              "description": "Hình ảnh ghi lại hoạt động chính trong sự kiện #5.",
+              "image": "/uploads/event-5.png",
+              "tags": [
+                {
+                  "id": "tag-event-5",
+                  "label": "Sự kiện"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "media-026",
+          "title": "Hoạt động nội bộ #6",
+          "description": "Hoạt động định kỳ của các bộ phận tại nhà máy và văn phòng Vinhapac #6.",
+          "image": "/uploads/activity-6.png",
+          "tags": [
+            {
+              "id": "tag-internal-6",
+              "label": "Nội bộ"
+            }
+          ],
+          "createdAt": "2024-05-07T00:00:00.000Z",
+          "dowloaded": 743,
+          "items": [
+            {
+              "title": "Hình ảnh sự kiện #6",
+              "description": "Hình ảnh ghi lại hoạt động chính trong sự kiện #6.",
+              "image": "/uploads/event-6.png",
+              "tags": [
+                {
+                  "id": "tag-event-6",
+                  "label": "Sự kiện"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "media-027",
+          "title": "Hoạt động nội bộ #7",
+          "description": "Hoạt động định kỳ của các bộ phận tại nhà máy và văn phòng Vinhapac #7.",
+          "image": "/uploads/activity-7.png",
+          "tags": [
+            {
+              "id": "tag-internal-7",
+              "label": "Nội bộ"
+            }
+          ],
+          "createdAt": "2024-05-02T00:00:00.000Z",
+          "dowloaded": 1881,
+          "items": [
+            {
+              "title": "Hình ảnh sự kiện #7",
+              "description": "Hình ảnh ghi lại hoạt động chính trong sự kiện #7.",
+              "image": "/uploads/event-7.png",
+              "tags": [
+                {
+                  "id": "tag-event-7",
+                  "label": "Sự kiện"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "media-028",
+          "title": "Hoạt động nội bộ #8",
+          "description": "Hoạt động định kỳ của các bộ phận tại nhà máy và văn phòng Vinhapac #8.",
+          "image": "/uploads/activity-8.png",
+          "tags": [
+            {
+              "id": "tag-internal-8",
+              "label": "Nội bộ"
+            }
+          ],
+          "createdAt": "2024-04-27T00:00:00.000Z",
+          "dowloaded": 1559,
+          "items": [
+            {
+              "title": "Hình ảnh sự kiện #8",
+              "description": "Hình ảnh ghi lại hoạt động chính trong sự kiện #8.",
+              "image": "/uploads/event-8.png",
+              "tags": [
+                {
+                  "id": "tag-event-8",
+                  "label": "Sự kiện"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "media-029",
+          "title": "Hoạt động nội bộ #9",
+          "description": "Hoạt động định kỳ của các bộ phận tại nhà máy và văn phòng Vinhapac #9.",
+          "image": "/uploads/activity-9.png",
+          "tags": [
+            {
+              "id": "tag-internal-9",
+              "label": "Nội bộ"
+            }
+          ],
+          "createdAt": "2024-04-22T00:00:00.000Z",
+          "dowloaded": 1108,
+          "items": [
+            {
+              "title": "Hình ảnh sự kiện #9",
+              "description": "Hình ảnh ghi lại hoạt động chính trong sự kiện #9.",
+              "image": "/uploads/event-9.png",
+              "tags": [
+                {
+                  "id": "tag-event-9",
+                  "label": "Sự kiện"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "media-030",
+          "title": "Hoạt động nội bộ #10",
+          "description": "Hoạt động định kỳ của các bộ phận tại nhà máy và văn phòng Vinhapac #10.",
+          "image": "/uploads/activity-10.png",
+          "tags": [
+            {
+              "id": "tag-internal-10",
+              "label": "Nội bộ"
+            }
+          ],
+          "createdAt": "2024-04-17T00:00:00.000Z",
+          "dowloaded": 1011,
+          "items": [
+            {
+              "title": "Hình ảnh sự kiện #10",
+              "description": "Hình ảnh ghi lại hoạt động chính trong sự kiện #10.",
+              "image": "/uploads/event-10.png",
+              "tags": [
+                {
+                  "id": "tag-event-10",
+                  "label": "Sự kiện"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "_template": "mediaLibrary"
+    },
+    {
+      "googleMapSrc": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29789.81542045978!2d105.8177024!3d21.0436096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135aba15ec15d17%3A0x620e85c2cfe14d4c!2zTMSDbmcgQ2jhu6cgdOG7i2NoIEjhu5MgQ2jDrSBNaW5o!5e0!3m2!1svi!2s!4v1752678809348!5m2!1svi!2s\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\" class=\"w-full\"></iframe>",
+      "_template": "companyMapSection"
+    }
+  ]
+}
